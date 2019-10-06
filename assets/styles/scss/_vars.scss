@@ -2,9 +2,6 @@
 $m_small: 5px;
 $m_big: 20px;
 
-/* 100 percent */
-$full: 100%;
-
 @mixin breakpoint($class) {
   @if $class == xs {
     @media (max-width: 767px) { @content; }
@@ -30,9 +27,4 @@ $full: 100%;
 %full-height-width {
 height: 100%;
 width: 100%;
-}
-%shadow-inset {
--moz-box-shadow: inset 0 0 10px #000;
--webkit-box-shadow: inset 0 0 10px #000;
-box-shadow: inset 0 0 10px #000;
 }

@@ -17,9 +17,3 @@ $(window).resize(checkWidth);
 	
 	
 })( jQuery );
-
-var $ = jQuery.noConflict();(function($) {
-	
-	
-	
-})( jQuery );
