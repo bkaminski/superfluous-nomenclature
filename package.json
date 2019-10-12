@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "bourbon": "^6.0.0",
-    "gulp-autoprefixer": "^7.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-load-plugins": "^2.0.1",
