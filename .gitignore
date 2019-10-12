@@ -1,3 +1,4 @@
 /node_modules
 /assets/img
+/assets/js/scripts.js
 gulpfile.js
