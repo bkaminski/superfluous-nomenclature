@@ -10,20 +10,4 @@ $('.dropdown').on('hide.bs.dropdown', function(e) {
 //REMOVE TITLE TAG FROM LINK HOVER
 $('.nav-link').removeAttr('title');
 
-//AGE VERIFICATION MODAL FIRES ON READY
-$(document).ready(function() {
-    $('#wbwbeerModal').modal('show');
-    $('#wbwbeerModal').on('hidden.bs.modal', function () {
-    $('#wbwbeerModal iframe').removeAttr('src');
-    })
-});
-
-//NO ESCAPE ON MODAL
-$('#wbwbeerModal').modal({
-  keyboard: false,
-  backdrop: 'static',
-});
-
-
-	
 })( jQuery );
