@@ -6,7 +6,7 @@
       </div>
       <div class="modal-body">
         <div class="age-modal"></div>
-        <p class="text-center font-weight-bold">Welcome to Wilmington Brew Works<br />
+        <p class="text-center font-weight-bold">Welcome to <?php echo get_bloginfo( 'name' ); ?><br />
         Please verify your age to enter</p>
       </div>
       <div class="modal-footer text-center">
