@@ -4,10 +4,10 @@ var $window = $(window);
 
 function checkWidth() {
     if ($window.width() < 768) {
-        $();
+        $(".navbar").css('background', '#fff');
     };
     if ($window.width() >= 768) {
-        $();
+        $(".navbar").css('background', 'transparent');
     }
 }
 checkWidth();

@@ -1,0 +1,61 @@
+a.nav-link {
+  color: #fff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 1em;
+  @include breakpoint (md) {
+  	font-size: 1em;
+  }
+  @include breakpoint (xs) {
+  	font-size: 1em;
+  	margin-left: 15px;
+  	margin-bottom: 15px;
+  	color: #000;
+  }
+  //LINK UNDERLINE HOVER EFFECT
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    @include breakpoint (sm) {
+    	background: #fff;
+    }
+  }
+  &:hover {
+  	color: #b6a268;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+.navbar-toggler {
+    background-color: #b6a268;
+    border: 0px solid transparent;
+    transition: 0.4s ease-in-out;
+    &:hover {
+    	background-color: #ceb877;
+    }
+    &:focus {
+    	outline: none;
+    }
+}
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    background: #fff;
+    margin-left: -15px;
+    margin-right: -15px;
+    @include breakpoint (sm) {
+    	background: transparent;
+    }
+}
