@@ -1,4 +1,4 @@
-var $ = jQuery.noConflict();(function($) {
+(function( $ ) {
 
 //Animate slide up and down nav dropdowns.
 $('.dropdown').on('show.bs.dropdown', function(e) {

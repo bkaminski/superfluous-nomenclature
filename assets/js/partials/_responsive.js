@@ -1,12 +1,13 @@
-var $ = jQuery.noConflict();(function($) {
-	// RESPONSIVE CONTROLS
+(function( $ ) {
+
+// RESPONSIVE CONTROLS
 var $window = $(window);
 
 function checkWidth() {
-    if ($window.width() < 768) {
+    if ($window.width() < 750) {
         $(".navbar").css('background', '#fff');
     };
-    if ($window.width() >= 768) {
+    if ($window.width() >= 750) {
         $(".navbar").css('background', 'transparent');
     }
 }

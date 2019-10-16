@@ -2,41 +2,24 @@ a.nav-link {
   color: #fff;
   font-size: 0.8em;
   text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
   position: relative;
+  border-bottom: 2px solid transparent;
   margin-right: 1em;
-  @include breakpoint (md) {
-  	font-size: 1em;
-  }
   @include breakpoint (xs) {
   	font-size: 1em;
   	margin-left: 15px;
   	margin-bottom: 15px;
   	color: #000;
   }
-  //LINK UNDERLINE HOVER EFFECT
-  &:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #000;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-    @include breakpoint (sm) {
-    	background: #fff;
-    }
+  @include breakpoint (sm) {
+  	font-size: 0.71em;
+  }
+  @include breakpoint (md) {
+  	font-size: 1em;
   }
   &:hover {
   	color: #b6a268;
-  }
-  &:hover:after {
-    width: 100%;
-    left: 0;
+  	border-bottom: 2px solid #b6a268;
   }
 }
 .navbar-toggler {

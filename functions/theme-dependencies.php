@@ -11,6 +11,7 @@ add_action('wp_enqueue_scripts', 'enqueue_wbwbeer_scripts');
 function enqueue_wbwbeer_styles() {
     wp_enqueue_style('bootstrap-4.3.1', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), null);
     wp_enqueue_style('integral-styles', get_template_directory_uri() . '/assets/styles/wbwStyles.min.css');
+    wp_enqueue_style('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css', array(), null);
 }
 add_action('wp_enqueue_scripts', 'enqueue_wbwbeer_styles');
 
