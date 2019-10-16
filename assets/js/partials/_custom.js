@@ -10,4 +10,13 @@ $('.dropdown').on('hide.bs.dropdown', function(e) {
 //REMOVE TITLE TAG FROM LINK HOVER
 $('.nav-link').removeAttr('title');
 
+//DONT SHOW LOGO ANIMATION UNTIL AFTER BUTTON CLICK
+$('#wbwbeerAgeConsent').on('shown.bs.modal', function () {
+    $('.logo-img').hide();
+});
+
+$('#wbwbeerAgeConsent').on('hidden.bs.modal', function () {
+    $('.logo-img').show();
+});
+
 })( jQuery );
