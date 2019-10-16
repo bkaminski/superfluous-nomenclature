@@ -10,6 +10,7 @@
 	background-image: url('../../../../uploads/2019/10/wbw-beginnings.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
+	border-bottom: 4px solid #b6a268;
 }
 .wbw-footer {
 	min-height: 100px;
@@ -18,4 +19,9 @@
 }
 .logo-img {
 	padding-top: 170px;
+}
+.carousel-area {
+	width: 100%;
+	min-height: 200px;
+	background: #fff;
 }

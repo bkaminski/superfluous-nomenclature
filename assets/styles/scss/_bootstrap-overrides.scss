@@ -10,6 +10,7 @@ a.nav-link {
   	margin-left: 15px;
   	margin-bottom: 15px;
   	color: #000;
+  	width: 45%;
   }
   @include breakpoint (sm) {
   	font-size: 0.71em;
