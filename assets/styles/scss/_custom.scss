@@ -25,3 +25,12 @@
 	min-height: 200px;
 	background: #fff;
 }
+.mission {
+	background: #13426b;
+	width: 100%;
+	min-height: 300px;
+	border-bottom: 4px solid #b6a268;
+}
+.kill-padding {
+	 @extend %kill-padding;
+}
