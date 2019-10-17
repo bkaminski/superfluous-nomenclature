@@ -19,4 +19,19 @@ $('#wbwbeerAgeConsent').on('hidden.bs.modal', function () {
     $('.logo-img').show();
 });
 
+//REMOVE TRANSPARENT HEADER ON SCROLL
+$(function() {
+    //caches a jQuery object containing the header element
+    var header = $(".wbw-navbar");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 300) {
+            header.removeClass('wbw-navbar').addClass('wbw-navbar-solid shadow-lg');
+        } else {
+            header.removeClass("wbw-navbar-solid shadow-lg").addClass('wbw-navbar');
+        }
+    });
+});
+
 })( jQuery );

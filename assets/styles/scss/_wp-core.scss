@@ -1,125 +1,113 @@
-/* ===================== BEGIN WP CORE CSS ===================== */
-blockquote {
-max-width: 100%;
-margin: $m_big;
-padding: $m_big;
-font-size: $m_big;
-font-style: italic;
-color: #222;
-background: #e9e9e9;
-border-left:$m_small solid #8cc63f;
-}
+/* =WordPress Core
+-------------------------------------------------------------- */
+
 .alignnone {
-margin:$m_small $m_big $m_big 0;
+  margin: 5px 20px 20px 0;
 }
+
 .aligncenter, div.aligncenter {
-display:block;
-margin:$m_small auto $m_small auto;
+  display: block;
+  margin: 5px auto 5px auto;
 }
+
 .alignright {
-float:right;
-margin:$m_small 0 $m_big $m_big;
+  float: right;
+  margin: 5px 0 20px 20px;
 }
+
 .alignleft {
-float:left;
-margin:$m_small $m_big $m_big 0;
+  float: left;
+  margin: 5px 20px 20px 0;
 }
-.aligncenter {
-display:block;
-margin:$m_small auto $m_small auto;
+
+a img {
+  &.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+
+  &.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+
+  &.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-a {
-img.alignright {
-float:right;
-margin:$m_small 0 $m_big $m_big;
-}
-img.alignnone {
-margin:$m_small $m_big $m_big 0;
-}
-img.alignleft {
-float:left;
-margin:$m_small $m_big $m_big 0;
-}
-img.aligncenter {
-display:block;
-margin-left:auto;
-margin-right:auto;
-}}
+
 .wp-caption {
-background:#fff;
-border:1px solid #f0f0f0;
-max-width:96%;
-padding:5px 3px 10px;
-text-align:center;
-&.alignnone {
-margin:$m_small $m_big $m_big 0;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+
+  &.alignnone, &.alignleft {
+    margin: 5px 20px 20px 0;
+  }
+
+  &.alignright {
+    margin: 5px 0 20px 20px;
+  }
+
+  img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+  }
+
+  p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+  }
 }
-&.alignleft {
-margin:$m_small $m_big $m_big 0;
-}
-&.alignright {
-margin:$m_small 0 $m_big $m_big;
-}
-img {
-border:0 none;
-height:auto;
-margin:0;
-max-width:98.5%;
-padding:0;
-width:auto;
-}
-p.wp-caption-text {
-font-size:11px;
-line-height:17px;
-margin:0;
-padding:0 4px 5px;
-}}
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
-clip: rect(1px, 1px, 1px, 1px);
-position: absolute !important;
-white-space: nowrap;
-height: 1px;
-width: 1px;
-overflow: hidden;
-&:focus {
-background-color: #f1f1f1;
-border-radius: 3px;
-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-clip: auto !important;
-color: #21759b;
-display: block;
-font-size: 14px;
-font-size: 0.875rem;
-font-weight: bold;
-height: auto;
-left: $m_small;
-line-height: normal;
-padding: 15px 23px 14px;
-text-decoration: none;
-top: $m_small;
-width: auto;
-z-index: 100000;
-}}
-.wp-block-columns {
-display: flex;
-margin: $m_big 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+  &:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+
+    /* Above WP toolbar. */
+  }
 }
-.wp-block-column {
-flex: 1;
-margin: 0 $m_big;
-}
-@media (max-width: 991px) {
-.wp-block-columns.has-2-columns {
-flex-flow: wrap;
-}
-.has-2-columns .wp-block-column:first-child {
-flex-basis: 100%;
-}}
-@media (max-width: 768px) {
-.wp-block-columns.has-2-columns {
-display: block;
-}
-.wp-block-column {
-margin: $m_big 0;
-}}

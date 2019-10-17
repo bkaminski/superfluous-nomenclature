@@ -19,6 +19,7 @@
 }
 .logo-img {
 	padding-top: 170px;
+	filter:drop-shadow(1px 1px 1px #fff);
 }
 .carousel-area {
 	width: 100%;
@@ -33,4 +34,30 @@
 }
 .kill-padding {
 	 @extend %kill-padding;
+}
+.wbw-social {
+	width: 100%;
+	min-height: 250px;
+	background: #b6a268;
+	border-top: 4px solid #13426b;
+}
+.wbw-card {
+	min-height: 200px;
+}
+.featured-card {
+	background: #ccc;
+	background-image: url('../../../../uploads/2019/10/WBW-EE-Blue3.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 320px;
+	@include breakpoint (xs) {
+  	background-size: 250px;
+  	min-height: 350px;
+  }
+  @include breakpoint (sm) {
+  	background-size: 300px;
+  }
+  @include breakpoint (md) {
+  	background-size: 100%;
+  }
 }

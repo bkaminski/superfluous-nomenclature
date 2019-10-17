@@ -17,6 +17,11 @@
 	<?php get_template_part( 'parts/home', 'carousel' ); ?>
 
 </aside>
+<section class="wbw-social">
+	<?php get_template_part( 'parts/page', 'social' ); ?>
+
+</section>
+
 
 <?php get_template_part( 'parts/home', 'modal' ); ?>
 

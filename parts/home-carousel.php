@@ -1,11 +1,10 @@
 <div class="carousel-area">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-4 pt-3">
-				<h2 class="text-center text-uppercase display-5">New at Wilmington Brew Works</h2>
+			<div class="col-md-4 pt-2 featured-card">
 				
 			</div>
-			<div class="col-sm-8 kill-padding">
+			<div class="col-md-8 kill-padding">
 				<div id="wbwbeerCarousel" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">

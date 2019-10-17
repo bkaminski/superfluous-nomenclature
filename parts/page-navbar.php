@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top">
+<nav class="navbar navbar-expand-md fixed-top wbw-navbar">
 	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 		<?php $uploads = wp_upload_dir(); 
 		echo '<img src="' . esc_url( $uploads['baseurl'] . '/2019/10/wbw-diamond.svg' ) . '" height="85" width="85" alt="Wilmington Brew Works Logo">'; ?>

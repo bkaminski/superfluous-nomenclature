@@ -1,0 +1,37 @@
+svg {
+  &.fa-youtube-square {
+    color: #fff;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      color: #FF0000;
+    }
+  }
+
+  &.fa-facebook-square {
+    color: #fff;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      color: #4267B2;
+    }
+  }
+
+  &.fa-instagram {
+    color: #fff;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+     color: #d6249f;
+    }
+  }
+
+  &.fa-twitter-square {
+    color: #fff;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      color: #00aced;
+    }
+  }
+}

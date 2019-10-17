@@ -1,6 +1,3 @@
-/* WordPress Helpers */
-$m_small: 5px;
-$m_big: 20px;
 
 @mixin breakpoint($class) {
   @if $class == xs {
