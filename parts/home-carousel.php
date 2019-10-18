@@ -2,7 +2,10 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-4 pt-2 featured-card">
-				
+				<div class="col text-center">
+					<?php dynamic_sidebar( 'wbwbeer_enjoyed' ); ?>
+
+				</div>
 			</div>
 			<div class="col-md-8 kill-padding">
 				<div id="wbwbeerCarousel" class="carousel slide" data-ride="carousel">

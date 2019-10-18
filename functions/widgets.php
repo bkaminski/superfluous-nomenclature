@@ -2,9 +2,9 @@
 //DECLARE WIDGETS HERE
 function wbwbeer_widgets_init() {
     register_sidebar( array(
-        'name'          => 'New Release Widget Area',
-        'id'            => 'wbwbeer_new',
-        'before_widget' => '<div">',
+        'name'          => 'Easily Enjoyed Text Widget Area',
+        'id'            => 'wbwbeer_enjoyed',
+        'before_widget' => '<div class="easily-enjoyed">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3>',
         'after_title'   => '</h3>',
