@@ -14,7 +14,7 @@
 	</div>
 </main>
 <aside>
-	<?php get_template_part( 'parts/home', 'carousel' ); ?>
+	<?php get_template_part( 'parts/home', 'event-carousel' ); ?>
 
 </aside>
 <section class="wbw-social">

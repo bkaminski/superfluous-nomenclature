@@ -24,10 +24,10 @@
 	padding-top: 170px;
 	filter:drop-shadow(1px 1px 1px #fff);
 }
-.carousel-area {
+.event-carousel-area {
 	width: 100%;
 	min-height: 200px;
-	background: #fff;
+	background: #ccc;
 }
 .mission {
 	background: #13426b;
@@ -47,42 +47,4 @@
 .wbw-card {
 	min-height: 200px;
 }
-.featured-card {
-	background: #ccc;
-	background-image: url('../../../../uploads/2019/10/WBW-EE-Blue3.png');
-	background-position: center 20px;
-	background-repeat: no-repeat;
-	background-size: 220px;
-	min-height: 300px;
-		@include breakpoint (xs) {
-  			background-size: 250px;
-  			min-height: 360px;
-  			padding-bottom: 1em;
-  			background-position: center -40px;
-		}
-		@include breakpoint (sm) {
-  			background-size: 200px;
-  			background-position: center -40px;
-  		}
-  		@include breakpoint (md) {
-  			background-position: center -50px;
-  			background-size: 100%;
-  		}
-}		
-.easily-enjoyed {
-	margin-top: 175px;
-	background: #f8f9fa;
-	padding: 1em;
-		@include breakpoint (sm) {
-			margin-top: 130px;
-		}
-		@include breakpoint (md) {
-			margin-top: 85%;
-		}
-		@include breakpoint (lg) {
-			margin-top: 90%;
-			padding: 1.2em;
-		}
-}
-
 		
