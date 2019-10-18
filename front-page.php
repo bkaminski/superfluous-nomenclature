@@ -21,6 +21,9 @@
 	<?php get_template_part( 'parts/page', 'social' ); ?>
 
 </section>
+<section class="new-release pb-5">
+	<?php get_template_part( 'parts/home', 'new-brews' ); ?>
+</section>
 
 
 <?php get_template_part( 'parts/home', 'modal' ); ?>

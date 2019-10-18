@@ -1,7 +1,7 @@
 <div class="event-carousel-area">
 	<div class="container-fluid">
 		<div class="col-md-12">
-			<h3 class="text-center pt-4 pb-4 text-uppercase">Upcoming Events</h3>
+			<h3 class="text-center pt-4 pb-4 text-uppercase">Upcoming Events:</h3>
 		</div>
 		<div class="card-deck pb-5">
 			<div class="col-lg-4 card rounded-0">

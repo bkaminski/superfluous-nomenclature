@@ -17,5 +17,11 @@
 		duration: '5000',
 		offset: '100%'
 	});
+	$('.new-fade').waypoint(function() {
+		$('.new-fade').addClass('animated fadeInLeft');
+	}, {
+		duration: '5000',
+		offset: '100%'
+	});
 
 })( jQuery );
