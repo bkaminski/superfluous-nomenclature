@@ -7,6 +7,10 @@
 .wbw-navbar-solid {
 	background: #f8f9fa;
 	transition: 0.4s ease-in-out;
+	opacity: 0.9;
+	@include breakpoint (xs) {
+		opacity: 1;
+	}
 }
 .wbw-navbar-solid a.nav-link {
 	color: #222;

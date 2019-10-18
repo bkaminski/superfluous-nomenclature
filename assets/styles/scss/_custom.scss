@@ -56,29 +56,33 @@
 	min-height: 300px;
 		@include breakpoint (xs) {
   			background-size: 250px;
-  			height: 360px;
+  			min-height: 360px;
+  			padding-bottom: 1em;
   			background-position: center -40px;
 		}
-			@include breakpoint (sm) {
-  				background-size: 200px;
-  				background-position: center -40px;
-  			}
-  				@include breakpoint (md) {
-  					background-position: center -50px;
-  					background-size: 100%;
-  				}
+		@include breakpoint (sm) {
+  			background-size: 200px;
+  			background-position: center -40px;
+  		}
+  		@include breakpoint (md) {
+  			background-position: center -50px;
+  			background-size: 100%;
+  		}
 }		
 .easily-enjoyed {
 	margin-top: 175px;
-	@include breakpoint (sm) {
-		margin-top: 130px;
-	}
-		@include breakpoint (md) {
-			margin-top:290px;
+	background: #f8f9fa;
+	padding: 1em;
+		@include breakpoint (sm) {
+			margin-top: 130px;
 		}
-			@include breakpoint (lg) {
-				margin-top: 90%;
-			}
+		@include breakpoint (md) {
+			margin-top: 85%;
+		}
+		@include breakpoint (lg) {
+			margin-top: 90%;
+			padding: 1.2em;
+		}
 }
 
 		

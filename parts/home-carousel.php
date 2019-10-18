@@ -1,6 +1,6 @@
 <div class="carousel-area">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row match">
 			<div class="col-md-4 pt-2 featured-card">
 				<div class="col text-center">
 					<?php dynamic_sidebar( 'wbwbeer_enjoyed' ); ?>
