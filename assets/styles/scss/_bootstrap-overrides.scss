@@ -60,3 +60,10 @@ a.nav-link {
     	background: transparent;
     }
 }
+.embed-responsive .embed-responsive-item, 
+.embed-responsive embed, 
+.embed-responsive iframe, 
+.embed-responsive object, 
+.embed-responsive video {
+    height: 101%;
+}

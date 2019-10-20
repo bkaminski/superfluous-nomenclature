@@ -12,6 +12,15 @@
 		}
 	}
 	checkWidth();
+	function checkWidth2() {
+		if ($window.width() < 850) {
+
+		};
+		if ($window.width() >= 850) {
+
+		}
+	}
+	checkWidth2();
 	$(window).resize(checkWidth);
 	// END RESPONSIVE CONTROLS
 	});	
