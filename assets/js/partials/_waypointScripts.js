@@ -23,5 +23,11 @@
 		duration: '5000',
 		offset: '100%'
 	});
+	$('.events-up').waypoint(function() {
+		$('.events-up').addClass('animated fadeInUp');
+	}, {
+		duration: '12000',
+		offset: '100%'
+	});
 
 })( jQuery );

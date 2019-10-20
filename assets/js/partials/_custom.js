@@ -19,6 +19,15 @@ $('#wbwbeerAgeConsent').on('hidden.bs.modal', function () {
     $('.logo-img').show();
 });
 
+//Hover effect on Ben's logo
+$("img.a").hover(
+ function() {
+ 	$(this).stop().animate({"opacity": "0"}, "slow");
+ },
+ function() {
+ 	$(this).stop().animate({"opacity": "1"}, "slow");
+ });
+
 //REMOVE TRANSPARENT HEADER ON SCROLL
 $(function() {
     //caches a jQuery object containing the header element
