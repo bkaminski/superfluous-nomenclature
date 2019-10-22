@@ -43,5 +43,14 @@
     });
   });
 });
+//TOGGLE FONTAWESOME ON CLICK
+document.addEventListener('DOMContentLoaded', function () {
+	$('button').on('click', function () {
+		$(this)
+		.find('[data-fa-i2svg]')
+		.toggleClass('fa-bars')
+		.toggleClass('fa-times');
+	});
+});
 
 })( jQuery );

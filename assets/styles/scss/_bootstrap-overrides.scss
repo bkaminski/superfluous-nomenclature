@@ -1,10 +1,15 @@
-.wbw-navbar {
-	transition: 0.4s ease-in-out;
+.home > {
+  .wbw-navbar {
+    transition: 0.4s ease-in-out;
+  }
+
+  .wbw-navbar-solid {
+    > a.nav-link, a.nav-link {
+      color: #222;
+    }
+  }
 }
-.wbw-navbar-solid > a.nav-link {
-	color: #222;
-}
-.wbw-navbar-solid {
+.home > .wbw-navbar-solid {
 	background: #f8f9fa;
 	transition: 0.4s ease-in-out;
 	opacity: 0.9;
@@ -12,9 +17,15 @@
 		opacity: 1;
 	}
 }
-.wbw-navbar-solid a.nav-link {
-	color: #222;
+.wbw-navbar-solid {
+	background: #f8f9fa;
+	transition: 0.4s ease-in-out;
 }
+ .wbw-navbar-solid {
+    > a.nav-link, a.nav-link {
+      color: #222;
+    }
+  }
 a.nav-link {
   color: #fff;
   font-size: 0.8em;
