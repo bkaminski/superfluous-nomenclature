@@ -7,3 +7,5 @@ require_once(get_template_directory().'/functions/theme-helpers.php');
 require_once(get_template_directory().'/functions/theme-customizer.php');
 //THEME WIDGETS
 require_once(get_template_directory(). '/functions/widgets.php');
+//CUSTOM POST TYPES
+require_once(get_template_directory(). '/functions/custom-post-types.php');
