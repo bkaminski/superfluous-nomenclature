@@ -1,7 +1,7 @@
 	<div class="new-release">
 		<div class="container-fluid new-fade">
 			<div class="col-md-12">
-				<h3 class="text-center pt-4 pb-4 text-uppercase">New at Wilmington Brew Works:</h3>
+				<h3 class="text-center pt-4 pb-4 text-uppercase"><?php echo get_bloginfo( 'name' ); ?></h3>
 			</div>
 			<div class="card-deck pb-3">
 				<div class="col-lg-5 card rounded-0">
