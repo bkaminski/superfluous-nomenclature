@@ -47,7 +47,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 	$('button').on('click', function () {
 		$(this)
-		.find('[data-fa-i2svg]')
+		.find('i')
 		.toggleClass('fa-bars')
 		.toggleClass('fa-times');
 	});

@@ -72,7 +72,7 @@ add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 function excerpt_read_more_link($output)
 {
     global $post;
-    return $output . '<a class="btn btn-lg btn-success text-uppercase" href="' . get_permalink() . '">Read More <i class="fas fa-angle-double-right fa-fw fa-lg"></i></a>';
+    return $output . '<a class="btn btn-lg btn-success text-uppercase rounded-0" href="' . get_permalink() . '">Read More <i class="fas fa-angle-double-right fa-fw fa-lg"></i></a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 //REMOVE COMMENTS FEED RSS
