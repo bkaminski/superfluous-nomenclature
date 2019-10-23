@@ -78,3 +78,9 @@ a.nav-link {
 .embed-responsive video {
     height: 101%;
 }
+#wbwFrame.embed-responsive {
+	overflow: visible;
+	@include breakpoint (md) {
+		overflow: hidden;
+	}
+}

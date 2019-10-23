@@ -15,10 +15,10 @@
 	checkWidth();
 	function checkWidth2() {
 		if ($window.width() < 828) {
-			$('#wbwFrame').addClass('embed-responsive-1by1').css('height', '200vh');
+			$('#wbwFrame').addClass('embed-responsive-1by1 pb-5').css('height', '200vh');
 		};
 		if ($window.width() >= 828) {
-			$('#wbwFrame').removeClass('embed-responsive-1by1').addClass('embed-responsive-16by9').css('height', 'inherit');
+			$('#wbwFrame').removeClass('embed-responsive-1by1 pb-5').addClass('embed-responsive-16by9').css('height', 'inherit');
 		}
 	}
 	checkWidth2();
