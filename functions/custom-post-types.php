@@ -1,4 +1,3 @@
-
 <?php 
 
 function fontawesome_dashboard() {
@@ -148,14 +147,8 @@ function custom_post_type_ciders() {
         'label'               => __( 'New Cider', 'superflous-nomenclature' ),
         'description'         => __( 'Inclusive Cider List', 'superflous-nomenclature' ),
         'labels'              => $labels,
-        // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
         'taxonomies'          => array( 'cider-styles' ),
-        /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */ 
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -170,7 +163,6 @@ function custom_post_type_ciders() {
         'capability_type'     => 'page',
     );
      
-    // Registering your Custom Post Type
     register_post_type( 'ciders', $args );
  
 }
