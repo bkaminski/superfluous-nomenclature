@@ -7,23 +7,24 @@
 				<h3 class="text-center pt-4 pb-4 text-uppercase">New at Wilmington Brew Works</h3>
 			</div>
 			<div class="card-deck pb-3">
-				<div class="col-lg-5 card rounded-0">
+				<div class="card rounded-0 kill-padding img-card shadow">
+					<div class="card-header img-header-card">
+						<h4 class="text-center pt-1 h2 text-uppercase"><?php the_title(); ?></h4>
+					</div>
 					<div class="card-body">
-						<h4 class="card-title text-center"><?php the_title(); ?></h4>
-						<?php the_post_thumbnail( 'medium', array( 'class' => 'img-thumbnail aligncenter mt-4 shadow' ) ); ?>
+						<?php the_post_thumbnail( 'medium', array( 'class' => 'img-thumbnail aligncenter mt-2 shadow' ) ); ?>
 
 					</div>
 				</div>
-				<div class="col-lg-7 card rounded-0">
-					<div class="card-header">
-						<h4 class="card-title text-center">About <?php the_title(); ?></h4>
+				<div class="card rounded-0 kill-padding shadow wbw-about-beer-bg">
+					<div class="card-header v-waves-bg">
+						<h4 class="text-center pt-1 h2 text-uppercase">About <?php the_title(); ?></h4>
 					</div>
-					<div class="card-body">
-						
-						<?php the_excerpt(); ?>
-						
-					</div>
-					<div class="card-footer text-center"><?php echo get_the_date(); ?></div>
+						<div class="card-body wbw-beer-bg">
+							<?php the_excerpt(); ?>
+								
+						</div>
+					<div class="card-footer text-center kill-padding v-waves-bg">Posted on: <?php echo get_the_date(); ?></div>
 				</div>
 			</div>
 			<!-- do stuff -->

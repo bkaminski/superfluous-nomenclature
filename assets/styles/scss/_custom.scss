@@ -15,6 +15,32 @@
 		min-height: 1000px;
 	}
 }
+.v-waves-bg {
+	background-image: url('../../../../uploads/2019/10/vertical-waves.png');
+}
+.wbw-beer-bg {
+	height: 700px;
+	width: 100%;
+	background-image: url('../../../../uploads/2019/10/WBW-EE-Blue3.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: 265px 265px;
+	margin-bottom: -15px;
+	@include breakpoint (sm) {
+		background-size: 500px 500px;
+
+	}
+	@include breakpoint (md) {
+		background-size: 400px 400px;
+	}
+	@include breakpoint (lg) {
+		background-size: 500px 500px;
+	}
+}
+.wbw-beer-bg::after {
+	content:"\A";
+	padding-top: 500px;
+}
 .wbw-footer {
 	min-height: 300px;
 	background: #1d547e;
@@ -60,25 +86,31 @@
 .left-foot, 
 .middle-foot, 
 .right-foot {
-  min-height: 250px;
-  width: 100%;
+  	min-height: 250px;
+  	width: 100%;
 }
 .fadehover {
-position: relative;
+	position: relative;
 }
 .a {
-position: absolute;
-right: 0;
-padding-right: 15px;
-top: 0;
-margin-top: -8px;
-z-index: 10;
+	position: absolute;
+	right: 0;
+	padding-right: 15px;
+	top: 0;
+	margin-top: -8px;
+	z-index: 10;
 }	
 .b {
-position: absolute;
-right: 0;
-padding-right: 15px;
-margin-top: -8px;
-top: 0;
+	position: absolute;
+	right: 0;
+	padding-right: 15px;
+	margin-top: -8px;
+	top: 0;
 }
-
+.img-card {
+	background: #b6a268;
+}
+.img-header-card {
+	background: #1d547e;
+	color: #b6a268;
+}

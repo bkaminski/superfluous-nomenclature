@@ -4,7 +4,7 @@
 			<h3 class="text-center pt-4 pb-4 text-uppercase">Upcoming Events:</h3>
 		</div>
 		<div class="card-deck pb-5">
-			<div class="col-lg-8 card rounded-0">
+			<div class="card rounded-0">
 				<div class="card-body">
 					<div id="wbwbeerCarousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 card rounded-0">
+			<div class="card rounded-0">
 				<div class="card-body">
 					<h5 class="card-title">On Deck at WBW:</h5>
 					<ul class="list-group list-group-flush">
