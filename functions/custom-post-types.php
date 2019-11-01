@@ -1,5 +1,7 @@
 <?php 
 
+//FONTAWESOME ICONS ON DASHBOARD MENU
+
 function fontawesome_dashboard() {
    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/9a1bb2c83f.js'); 
 }
@@ -13,14 +15,15 @@ function fontawesome_icon_dashboard() {
      	}
      	#adminmenu .menu-icon-ciders div.wp-menu-image:before {
    			font-family: Fontawesome !important;
-   			content: '\\f000';
+   			content: '\\f179';
      	}
      	</style>";
  }
 add_action('admin_head', 'fontawesome_icon_dashboard');
 
+// =============================================================================== //
 
-// Our custom post type function --beers
+// CREATE CUSTOM POST TYPE
 function create_posttype_beers() {
  
     register_post_type( 'beers',
@@ -32,18 +35,39 @@ function create_posttype_beers() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'wbw-beers'),
+            'rewrite' => array('slug' => 'wbwbeer'),
         )
     );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype_beers' );
 
+// =============================================================================== //
 
-/*
-* Creating a function to create our CPT
-*/
- 
+//META BOX ADDITION
+function beer_info_meta_box() {
+
+    $screens = array( 'beers' );
+
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'beer-abv',
+            __( 'Beer ABV (percent sign auto generated, just input numbers)', 'superflous-nomenclature' ),
+            'beer_abv_meta_box_callback',
+            $screen
+        );
+        add_meta_box(
+        	'beer-style',
+        	__('Beer Style (please select)', 'superflous-nomenclature'),
+        	$screen
+        );
+    }
+}
+
+add_action( 'add_meta_boxes', 'beer_info_meta_box' );
+
+// =============================================================================== //
+
 function custom_post_type_beers() {
  
 // Set UI labels for Custom Post Type
@@ -66,37 +90,96 @@ function custom_post_type_beers() {
 // Set other options for Custom Post Type
      
     $args = array(
-        'label'               => __( 'New Beer', 'superflous-nomenclature' ),
+        'label'               => __( 'WBW Beers', 'superflous-nomenclature' ),
         'description'         => __( 'Inclusive Beer List', 'superflous-nomenclature' ),
         'labels'              => $labels,
-        // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
-        // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'beer-styles' ),
-        /* A hierarchical CPT is like Pages and can have
-        * Parent and child items. A non-hierarchical CPT
-        * is like Posts.
-        */ 
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+        'taxonomies'          => array( 'category' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
+        'menu_position'       => 4,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
+        'register_meta_box_cb' => 'beer_info_meta_box', //Meta Box Callback
     );
-     
+	// Add Tag Support
+    function beer_tag() {
+    	register_taxonomy_for_object_type('post_tag', 'beers');
+    }
+    add_action('init', 'beer_tag');
     // Registering your Custom Post Type
     register_post_type( 'beers', $args );
- 
 }
- 
+
 add_action( 'init', 'custom_post_type_beers', 0 );
+
+// =============================================================================== //
+
+//META BOX STRUCTURE
+function beer_abv_meta_box_callback( $post ) {
+    // Add a nonce field so we can check for it later.
+    wp_nonce_field( 'beer_abv_nonce', 'beer_abv_nonce' );
+
+    $value = get_post_meta( $post->ID, '_beer_abv', true );
+
+    echo '<textarea style="width:50%" id="beer_abv" name="beer_abv">' . esc_attr( $value ) . '</textarea>';
+}
+
+function save_beer_abv_meta_box_data( $post_id ) {
+	
+	//SECURITY CHECKS
+
+    if ( ! isset( $_POST['beer_abv_nonce'] ) ) {
+        return;
+    }
+    if ( ! wp_verify_nonce( $_POST['beer_abv_nonce'], 'beer_abv_nonce' ) ) {
+        return;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+
+        if ( ! current_user_can( 'edit_page', $post_id ) ) {
+            return;
+        }
+    }
+    else {
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
+        }
+    }
+    //SECURITY PASSED VALIDATION
+
+    if ( ! isset( $_POST['beer_abv'] ) ) {
+        return;
+    }
+
+    //SANITIZE USER INPUT
+    $my_data = sanitize_text_field( $_POST['beer_abv'] );
+    update_post_meta( $post_id, '_beer_abv', $my_data );
+}
+add_action( 'save_post', 'save_beer_abv_meta_box_data' );
+
+//META BOX OUTPUT
+function beer_abv( $content ) {
+	global $post;
+    $beer_abv = esc_attr( get_post_meta( $post->ID, '_beer_abv', true ) );
+    $abv_notice = "<div class=\"alert alert-success rounded-0\">ABV: $beer_abv%</div>";
+    return $abv_notice . $content;
+}
+
+add_filter( 'the_content', 'beer_abv' );
+
+
+// =============================================================================== //
 
 //CIDERS
 function create_posttype_ciders() {
@@ -105,12 +188,12 @@ function create_posttype_ciders() {
     // CPT Options
         array(
             'labels' => array(
-                'name' => __( 'WBW Ciders' ),
+                'name' => __( 'Urban Orchard' ),
                 'singular_name' => __( 'Cider' )
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'wbw-ciders'),
+            'rewrite' => array('slug' => 'urban-orchard-works'),
         )
     );
 }
@@ -147,8 +230,8 @@ function custom_post_type_ciders() {
         'label'               => __( 'New Cider', 'superflous-nomenclature' ),
         'description'         => __( 'Inclusive Cider List', 'superflous-nomenclature' ),
         'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
-        'taxonomies'          => array( 'cider-styles' ),
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+        'taxonomies'          => array( 'category' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -163,11 +246,14 @@ function custom_post_type_ciders() {
         'capability_type'     => 'page',
     );
      
+     // Add Tag Support
+    function cider_tag() {
+    	register_taxonomy_for_object_type('post_tag', 'ciders');
+	}
+	add_action('init', 'cider_tag');
+     
     register_post_type( 'ciders', $args );
  
 }
  
 add_action( 'init', 'custom_post_type_ciders', 2 );
-
-
-

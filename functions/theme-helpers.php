@@ -82,10 +82,10 @@ remove_action( 'wp_head', 'rest_output_link_wp_head');
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links');
 remove_action( 'template_redirect', 'rest_output_link_header', 11);
 //REMOVE WP VERSION FROM CODE
-function intSound_remove_version() {
+function wbwBeer_remove_version() {
 return '';
 }
-add_filter('the_generator', 'intSound_remove_version');
+add_filter('the_generator', 'wbwBeer_remove_version');
 //REMOVE YOAST SEO COMMENTS
 if (defined('WPSEO_VERSION')) {
  add_action('wp_head',function() { ob_start(function($o) {
@@ -94,3 +94,9 @@ if (defined('WPSEO_VERSION')) {
 }
 //AUTO UPDATE PLUGINS
 add_filter( 'auto_update_plugin', '__return_true' );
+
+//DISABLE GUTENBERG CSS
+add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+}
