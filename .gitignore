@@ -1,4 +1,5 @@
 /node_modules
+/cmb2
 /assets/img
 /assets/js/scripts.js
 gulpfile.js
