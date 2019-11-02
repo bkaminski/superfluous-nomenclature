@@ -44,30 +44,6 @@ add_action( 'init', 'create_posttype_beers' );
 
 // =============================================================================== //
 
-//META BOX ADDITION
-function beer_info_meta_box() {
-
-    $screens = array( 'beers' );
-
-    foreach ( $screens as $screen ) {
-        add_meta_box(
-            'beer-abv',
-            __( 'Beer ABV (percent sign auto generated, just input numbers)', 'superflous-nomenclature' ),
-            'beer_abv_meta_box_callback',
-            $screen
-        );
-        add_meta_box(
-        	'beer-style',
-        	__('Beer Style (please select)', 'superflous-nomenclature'),
-        	$screen
-        );
-    }
-}
-
-add_action( 'add_meta_boxes', 'beer_info_meta_box' );
-
-// =============================================================================== //
-
 function custom_post_type_beers() {
  
 // Set UI labels for Custom Post Type
@@ -107,7 +83,6 @@ function custom_post_type_beers() {
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
-        'register_meta_box_cb' => 'beer_info_meta_box', //Meta Box Callback
     );
 	// Add Tag Support
     function beer_tag() {
@@ -122,64 +97,50 @@ add_action( 'init', 'custom_post_type_beers', 0 );
 
 // =============================================================================== //
 
-//META BOX STRUCTURE
-function beer_abv_meta_box_callback( $post ) {
-    // Add a nonce field so we can check for it later.
-    wp_nonce_field( 'beer_abv_nonce', 'beer_abv_nonce' );
 
-    $value = get_post_meta( $post->ID, '_beer_abv', true );
 
-    echo '<textarea style="width:50%" id="beer_abv" name="beer_abv">' . esc_attr( $value ) . '</textarea>';
+add_action( 'cmb2_admin_init', 'wbwbeer_beer_info_metabox' );
+/**
+ * Define the metabox and field configurations.
+ */
+function wbwbeer_beer_info_metabox() {
+
+	/**
+	 * Initiate the metabox
+	 */
+	$cmb = new_cmb2_box( array(
+		'id'            => 'beer_info',
+		'title'         => __( 'Beer Information', 'superflous-nomenclature' ),
+		'object_types'  => array( 'beers', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+	));
+
+	// Regular text field
+	$cmb->add_field( array(
+		'name'       => __( 'ABV', 'superflous-nomenclature' ),
+		'desc'       => __( 'Enter Beer ABV Here', 'superflous-nomenclature' ),
+		'id'         => 'beer_abv',
+		'type'       => 'text',
+	));
+
+	// Select Box
+	$cmb->add_field( array(
+		'name' => __( 'Beer Style', 'superflous-nomenclature' ),
+		'desc' => __( 'Choose style of beer', 'superflous-nomenclature' ),
+		'id'   => 'beer_style',
+		'type' => 'select',
+		'show_option_none' => false,
+		'default'          => 'custom',
+		'options'          => array(
+			'custom'   	=> __( 'Choose One', 'superflous-nomenclature' ),
+			'none1' 	=> __( 'Lager', 'superflous-nomenclature' ),
+			'none2'     => __( 'IPA - New England', 'superflous-nomenclature' ),
+			'none3'     => __( 'IPA - Milkshake', 'superflous-nomenclature' ),
+	),
+	));
 }
-
-function save_beer_abv_meta_box_data( $post_id ) {
-	
-	//SECURITY CHECKS
-
-    if ( ! isset( $_POST['beer_abv_nonce'] ) ) {
-        return;
-    }
-    if ( ! wp_verify_nonce( $_POST['beer_abv_nonce'], 'beer_abv_nonce' ) ) {
-        return;
-    }
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return;
-    }
-    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
-
-        if ( ! current_user_can( 'edit_page', $post_id ) ) {
-            return;
-        }
-    }
-    else {
-        if ( ! current_user_can( 'edit_post', $post_id ) ) {
-            return;
-        }
-    }
-    //SECURITY PASSED VALIDATION
-
-    if ( ! isset( $_POST['beer_abv'] ) ) {
-        return;
-    }
-
-    //SANITIZE USER INPUT
-    $my_data = sanitize_text_field( $_POST['beer_abv'] );
-    update_post_meta( $post_id, '_beer_abv', $my_data );
-}
-add_action( 'save_post', 'save_beer_abv_meta_box_data' );
-
-//META BOX OUTPUT
-function beer_abv( $content ) {
-	global $post;
-    $beer_abv = esc_attr( get_post_meta( $post->ID, '_beer_abv', true ) );
-    $abv_notice = "<div class=\"alert alert-success rounded-0\">ABV: $beer_abv%</div>";
-    return $abv_notice . $content;
-}
-
-add_filter( 'the_content', 'beer_abv' );
-
-
-// =============================================================================== //
 
 //CIDERS
 function create_posttype_ciders() {
