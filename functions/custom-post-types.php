@@ -98,16 +98,11 @@ add_action( 'init', 'custom_post_type_beers', 0 );
 // =============================================================================== //
 
 
-
+//CMB2 Integration == BEER INFO
 add_action( 'cmb2_admin_init', 'wbwbeer_beer_info_metabox' );
-/**
- * Define the metabox and field configurations.
- */
+
 function wbwbeer_beer_info_metabox() {
 
-	/**
-	 * Initiate the metabox
-	 */
 	$cmb = new_cmb2_box( array(
 		'id'            => 'beer_info',
 		'title'         => __( 'Beer Information', 'superflous-nomenclature' ),
@@ -134,11 +129,61 @@ function wbwbeer_beer_info_metabox() {
 		'show_option_none' => false,
 		'default'          => 'custom',
 		'options'          => array(
-			'custom'   	=> __( 'Choose One', 'superflous-nomenclature' ),
-			'none1' 	=> __( 'Lager', 'superflous-nomenclature' ),
-			'none2'     => __( 'IPA - New England', 'superflous-nomenclature' ),
-			'none3'     => __( 'IPA - Milkshake', 'superflous-nomenclature' ),
-	),
+			'custom'   									=> __( 'Choose One', 'superflous-nomenclature' ),
+			'Barrel Aged Black Imperial IPA' 			=> __( 'Barrel Aged Black Imperial IPA', 'superflous-nomenclature' ),
+			'Barrel Aged Imperial Stout'     			=> __( 'Barrel Aged Imperial Stout', 'superflous-nomenclature' ),
+			'Bavarian Style Wheat Lager'     			=> __( 'Bavarian Style Wheat Lager', 'superflous-nomenclature' ),
+			'Belgian Dubbel'							=> __( 'Belgian Dubbel', 'superflous-nomenclature'),
+			'Belgian Rye Stout'							=> __( 'Belgian Rye Stout' , 'superflous-nomenclature'),
+			'Belgian Tripel'							=> __( 'Belgian Tripel', 'superflous-nomenclature'),
+			'Black Imperial IPA'						=> __( 'Black Imperial IPA', 'superflous-nomenclature'),
+			'Camp-Out Stout'							=> __( 'Camp-Out Stout', 'superflous-nomenclature'),
+			'Chocolate Cherry Cordial' 					=> __( 'Chocolate Cherry Cordial', 'superflous-nomenclature'),
+			'Classic IPA'								=> __( 'Classic IPA', 'superflous-nomenclature'),
+			'Collaboration Beer'						=> __( 'Collaboration Beer', 'superflous-nomenclature'), 
+			'Danish Pastry Quad'						=> __( 'Danish Pastry Quad', 'superflous-nomenclature'),
+			'Dark Chocolate Milkshake Stout' 			=> __( 'Dark Chocolate Milkshake Stout', 'superflous-nomenclature'),
+			'Desert Colada Sour'						=> __( 'Desert Colada Sour', 'superflous-nomenclature'),
+			'Dessert Stout'								=> __( 'Dessert Stout', 'superflous-nomenclature'),
+			'Doppelbock'								=> __( 'Doppelbock', 'superflous-nomenclature'),
+			'Double NEIPA'								=> __( 'Double NEIPA', 'superflous-nomenclature'),
+			'Dunkel'									=> __( 'Dunkel', 'superflous-nomenclature'),
+			'Dry Hopped Milkshake Sour'					=> __( 'Dry Hopped Milkshake Sour', 'superflous-nomenclature'),
+			'Espresso Stout'							=> __( 'Espresso Stout', 'superflous-nomenclature'),
+			'Experimental NEIPA'						=> __( 'Experimental NEIPA', 'superflous-nomenclature'),
+			'Farmhouse Saison'							=> __( 'Farmhouse Saison', 'superflous-nomenclature'),
+			'Flanders Style Sour Lager'					=> __( 'Flanders Style Sour Lager', 'superflous-nomenclature'),
+			'Fruited Milkshake Glitter Sour'			=> __( 'Fruited Milkshake Glitter Sour', 'superflous-nomenclature'),
+			'Helles Bock'								=> __( 'Helles Bock', 'superflous-nomenclature'),
+			'Helles Lager'								=> __( 'Helles Lager', 'superflous-nomenclature'), 
+			'Imperial English Extra Special Brown Ale'	=> __( 'Imperial English Extra Special Brown Ale', 'superflous-nomenclature'),
+			'Imperial Stout'							=> __( 'Imperial Stout', 'superflous-nomenclature'),
+			'Imperial Viennese Lager'					=> __( 'Imperial Viennese Lager', 'superflous-nomenclature'),
+			'Key Lime Pina Colada Sour'					=> __( 'Key Lime Pina Colada Sour', 'superflous-nomenclature'),
+			'Lactose NEIPA'								=> __( 'Lactose NEIPA', 'superflous-nomenclature'),
+			'Lager'										=> __( 'Lager', 'superflous-nomenclature'),
+			'Mango Milkshake NEIPA'						=> __( 'Mango Milkshake NEIPA', 'superflous-nomenclature'),
+			'Marzen'									=> __( 'Marzen', 'superflous-nomenclature'),
+			'Milkshake IPA'								=> __( 'Milkshake IPA', 'superflous-nomenclature'),
+			'Milkshake Sour'							=> __( 'Milkshake Sour', 'superflous-nomenclature'),
+			'Milkshake Stout'							=> __( 'Milkshake Stout', 'superflous-nomenclature'),
+			'Modern Pale Ale'							=> __( 'Modern Pale Ale', 'superflous-nomenclature'),
+			'Northeast IPA'								=> __( 'Northeast IPA', 'superflous-nomenclature'),
+			'Northeast Rye IPA'							=> __( 'Northeast Rye IPA', 'superflous-nomenclature'),
+			'Pale Ale'									=> __( 'Pale Ale', 'superflous-nomenclature'),
+			'Raz-Peach Milkshake IPA'					=> __( 'Raz-Peach Milkshake IPA', 'superflous-nomenclature'),
+			'Sour Fruited Milkshake IPA'				=> __( 'Sour Fruited Milkshake IPA', 'superflous-nomenclature'),
+			'Spicy Tropical Sour'						=> __( 'Spicy Tropical Sour', 'superflous-nomenclature'),
+			'Strawberry Milkshake NEIPA'				=> __( 'Strawberry Milkshake NEIPA', 'superflous-nomenclature'),
+			'Strong Ale'								=> __( 'Strong Ale', 'superflous-nomenclature'),
+			'Triple IPA'								=> __( 'Triple IPA', 'superflous-nomenclature'),
+			'Tropical NEIPA'							=> __( 'Tropical NEIPA', 'superflous-nomenclature'),
+			'West Coast IPA'							=> __( 'West Coast IPA', 'superflous-nomenclature'),
+			'Wild Belgian Wit'							=> __( 'Wild Belgian Wit', 'superflous-nomenclature'),
+			'Wild Soured Belgian Wit'					=> __( 'Wild Soured Belgian Wit', 'superflous-nomenclature'),
+			'Wild Wit with Hibiscus Tea'				=> __( 'Wild Wit with Hibiscus Tea', 'superflous-nomenclature'),
+			'Yacht Deck Sour'							=> __( 'Yacht Deck Sour', 'superflous-nomenclature'),
+		),
 	));
 }
 

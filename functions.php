@@ -1,14 +1,14 @@
 <?php 
 //INIT DEPENDENCIES
-require_once(get_template_directory().'/functions/theme-dependencies.php'); 
+require_once(get_template_directory(). '/functions/theme-dependencies.php'); 
 //INIT THEME HELPERS
-require_once(get_template_directory().'/functions/theme-helpers.php'); 
+require_once(get_template_directory(). '/functions/theme-helpers.php'); 
 //THEME CUSTOMIZER STUFF
-require_once(get_template_directory().'/functions/theme-customizer.php');
+require_once(get_template_directory(). '/functions/theme-customizer.php');
 //THEME WIDGETS
 require_once(get_template_directory(). '/functions/widgets.php');
 //CUSTOM POST TYPES
 require_once(get_template_directory(). '/functions/custom-post-types.php');
 //CMB2
-require_once(get_template_directory(). '/cmb2/functions.php');
+//require_once(get_template_directory(). '/cmb2/cmb_functions.php');
 
