@@ -1,6 +1,5 @@
 	<div class="new-release">
 		<div class="container-fluid new-fade">
-			<!-- CPT loop -->
 			<?php $loop = new WP_Query( array( 'post_type' => 'beers', 'posts_per_page' => 1 ));?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<div class="col-md-12">
@@ -17,7 +16,7 @@
 					</div>
 				</div>
 				<div class="card rounded-0 kill-padding shadow wbw-about-beer-bg">
-					<div class="card-header v-waves-bg">
+					<div class="card-header">
 						<h4 class="text-center pt-1 h2 text-uppercase">About <?php the_title(); ?></h4>
 					</div>
 						<div class="card-body wbw-beer-bg">

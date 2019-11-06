@@ -128,8 +128,31 @@ function wbwbeer_beer_info_metabox() {
 		'id'         => 'beer_style',
 		'type'       => 'text',
 	));
-}
 
+	//BEER LOGO 
+	$cmb->add_field( array(
+	'name'    => 'Beer Logo',
+	'desc'    => 'Upload an image or enter an URL.',
+	'id'      => 'beer_logo_image',
+	
+	'type'    => 'file',
+	'options' => array(
+		'url' => true, 
+	),
+	'text'    => array(
+		'add_upload_file_text' => 'Add Logo'
+	),
+	'query_args' => array(
+		 'type' => array(
+		 	'image/gif',
+		 	'image/jpeg',
+		 	'image/png',
+		 	'image/svg+xml',
+		 ),
+	),
+	'preview_size' => 'small',
+));
+}
 //CIDERS
 function create_posttype_ciders() {
  

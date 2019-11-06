@@ -29,6 +29,15 @@
     	$(this).stop().animate({"opacity": "1"}, "slow");
     });
 
+    //ADD RESPONSIVE IMAGE CLASS TO CMB2 IMAGE UPLOAD
+    $('#cmb2Image').find('img').removeClass('attachment-thumbnail size-thumbnail').addClass('img-fluid');
+
+    //REMOVE WIDTH HEIGHT ATTRS FROM IMAGES
+    $('#cmb2Image img').each(function(){ 
+        $(this).removeAttr('width')
+        $(this).removeAttr('height');
+    });
+
     //REMOVE TRANSPARENT HEADER ON SCROLL
     $(function() {
     //caches a jQuery object containing the header element

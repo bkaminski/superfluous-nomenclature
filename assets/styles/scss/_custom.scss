@@ -15,9 +15,7 @@
 		min-height: 1000px;
 	}
 }
-.v-waves-bg {
-	background-image: url('../../../../uploads/2019/10/vertical-waves.png');
-}
+
 .wbw-beer-bg {
 	height: 700px;
 	width: 100%;
@@ -118,4 +116,13 @@
 }
 .beer-container {
 	min-height: 1000px;
+}
+.beer-header {
+	background: #1d547e;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-bottom: 4px solid #b6a268;
+}
+.beer-tags {
+	background: #f8f9fa;
 }
