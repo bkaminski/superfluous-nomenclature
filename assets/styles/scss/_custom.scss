@@ -10,7 +10,7 @@
 	background-image: url('../../../../uploads/2019/10/wbw-beginnings.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
-	border-bottom: 4px solid #b6a268;
+	border-bottom: 4px solid #b4a269ff;
 	@include breakpoint (md) {
 		min-height: 1000px;
 	}
@@ -42,7 +42,7 @@
 .wbw-footer {
 	min-height: 300px;
 	background: #1d547e;
-	border-top: 4px solid #b6a268;
+	border-top: 4px solid #b4a269ff;
 	padding-bottom: 0.2em;
 }
 .logo-img {
@@ -57,7 +57,7 @@
 	background: #1d547e;
 	width: 100%;
 	min-height: 300px;
-	border-bottom: 4px solid #b6a268;
+	border-bottom: 4px solid #b4a269ff;
 }
 .kill-padding {
 	 @extend %kill-padding;
@@ -65,7 +65,7 @@
 .wbw-social {
 	width: 100%;
 	min-height: 250px;
-	background: #b6a268;
+	background: #b4a269ff;
 	border-top: 4px solid #1d547e;
 }
 .new-release {
@@ -105,11 +105,11 @@
 	top: 0;
 }
 .img-card {
-	background: #b6a268;
+	background: #b4a269ff;
 }
 .img-header-card {
 	background: #1d547e;
-	color: #b6a268;
+	color: #b4a269ff;
 }
 .beers-template-default {
 	padding-top: 111px;
@@ -121,7 +121,7 @@
 	background: #1d547e;
 	padding-right: 15px;
 	padding-left: 15px;
-	border-bottom: 4px solid #b6a268;
+	border-bottom: 4px solid #b4a269ff;
 }
 .beer-tags {
 	background: #f8f9fa;

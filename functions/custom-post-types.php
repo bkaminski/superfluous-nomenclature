@@ -115,7 +115,7 @@ function wbwbeer_beer_info_metabox() {
 	// Regular text field
 	$cmb->add_field( array(
 		'name'       => __( 'ABV', 'superflous-nomenclature' ),
-		'desc'       => __( 'Enter Beer ABV Here', 'superflous-nomenclature' ),
+		'desc'       => __( 'Enter Beer ABV Here (percent sign is auto generated)', 'superflous-nomenclature' ),
 		'id'         => 'beer_abv',
 		'type'       => 'text',
 	));
@@ -173,10 +173,7 @@ function create_posttype_ciders() {
 add_action( 'init', 'create_posttype_ciders' );
 
 
-/*
-* Creating a function to create our CPT
-*/
- 
+
 function custom_post_type_ciders() {
  
 // Set UI labels for Custom Post Type

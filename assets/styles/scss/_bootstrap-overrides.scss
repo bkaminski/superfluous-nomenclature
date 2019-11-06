@@ -74,12 +74,12 @@ a.nav-link {
   	font-size: 1em;
   }
   &:hover {
-  	color: #b6a268;
-  	border-bottom: 2px solid #b6a268;
+  	color: #b4a269ff;
+  	border-bottom: 2px solid #b4a269ff;
   }
 }
 .navbar-toggler {
-    background-color: #b6a268;
+    background-color: #b4a269ff;
     border: 0px solid transparent;
     transition: 0.4s ease-in-out;
     &:hover {
@@ -112,5 +112,5 @@ a.nav-link {
 	}
 }
 .bg-beer-card {
-	background: #b6a268;
+	background: #b4a269ff;
 }

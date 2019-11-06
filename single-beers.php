@@ -16,6 +16,7 @@ get_header();  ?>
 					
 		</div>
 		<div class="col-md-6">
+			
 			<?php get_template_part( 'parts/page', 'beer-desc'); ?>
 				
 				<?php endwhile; else : ?>
@@ -26,6 +27,7 @@ get_header();  ?>
 	</div>
 	<br />
 	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
+		
 		<?php the_tags('Related: '); ?>
 			
 	</div>
