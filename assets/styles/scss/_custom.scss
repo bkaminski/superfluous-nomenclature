@@ -45,6 +45,11 @@
 	border-top: 4px solid #b4a269ff;
 	padding-bottom: 0.2em;
 }
+.left-foot {
+	background-image: url('../../../../uploads/2019/11/Independent-craft-seal-Gold-01.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 .logo-img {
 	padding-top: 170px;
 }
@@ -114,15 +119,18 @@
 .beers-template-default {
 	padding-top: 111px;
 }
-.beer-container {
+.beer-container,
+.cider-container {
 	min-height: 1000px;
 }
-.beer-header {
+.beer-header,
+.cider-header {
 	background: #1d547e;
 	padding-right: 15px;
 	padding-left: 15px;
 	border-bottom: 4px solid #b4a269ff;
 }
-.beer-tags {
+.beer-tags,
+.cider-tags {
 	background: #f8f9fa;
 }

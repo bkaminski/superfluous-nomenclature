@@ -5,8 +5,8 @@
 		}, {
 			duration: '600'
 		});
-		$('.beer-header').waypoint(function() {
-			$('.beer-header').find('img').addClass('animated fadeInDown');
+		$('.beer-header, .cider-header').waypoint(function() {
+			$('.beer-header, .cider-header').find('img').addClass('animated fadeInDown');
 		}, {
 			offset: '100%'
 		});

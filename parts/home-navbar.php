@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-md fixed-top wbw-navbar">
 	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 		<?php $uploads = wp_upload_dir(); 
