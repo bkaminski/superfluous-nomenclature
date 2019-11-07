@@ -7,8 +7,8 @@
 				
 		</div>
 		<ul class="list-group list-group-flush">
-			<li class="list-group-item bg-beer-card">ABV: <?php $text = get_post_meta( get_the_ID(), 'cider_abv', true ); echo esc_html( $text ); ?>%</li>
-			<li class="list-group-item bg-beer-card">Style: <?php $text1 = get_post_meta( get_the_ID(), 'cider_style', true ); echo esc_html( $text1 ); ?></li>
+			<li class="list-group-item bg-beer-card font-weight-bold">ABV: <?php $text = get_post_meta( get_the_ID(), 'cider_abv', true ); echo esc_html( $text ); ?>%</li>
+			<li class="list-group-item bg-beer-card font-weight-bold">Style: <?php $text1 = get_post_meta( get_the_ID(), 'cider_style', true ); echo esc_html( $text1 ); ?></li>
 			<li class="list-group-item bg-beer-card" style="margin-bottom: -25px;"></li>
 		</ul>
 		<div class="container">

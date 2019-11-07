@@ -114,3 +114,12 @@ a.nav-link {
 .bg-beer-card {
 	background: #b4a269ff;
 }
+.btn-blue {
+	color: #b4a269ff;
+	background-color: #1d547e;
+	border-color: #b4a269ff;
+	&:hover {
+		background-color: #143b59;
+		color: #b4a269ff;
+	}
+}

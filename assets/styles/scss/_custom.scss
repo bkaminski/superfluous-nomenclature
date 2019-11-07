@@ -133,4 +133,21 @@
 .beer-tags,
 .cider-tags {
 	background: #f8f9fa;
+	font-size: 14px;
+	a {
+		color: #222;
+		font-size: 14px;
+	}
+	a:hover {
+		color: #b4a269ff;
+	}
+}
+.untappd {
+	width: 100%;
+	min-height: 50px;
+	margin-top: 1rem;
+}
+/* No ABV for Ciderosa */
+.postid-98 .list-group-item:first-child {
+	display: none;
 }

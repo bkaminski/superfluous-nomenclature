@@ -141,6 +141,14 @@ function wbwbeer_beer_info_metabox() {
 		),
 		'preview_size' => 'small',
 	));
+
+	//UNTAPPD LINK
+	$cmb->add_field( array(
+		'name' => __( 'Untappd Link URL', 'superflous-nomenclature' ),
+		'id'   => 'untappd_url',
+		'type' => 'text_url',
+		'protocols' => array( 'http', 'https' ), 
+	));
 }
 
 // =============================================================================== //

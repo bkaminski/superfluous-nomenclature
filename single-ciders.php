@@ -28,7 +28,7 @@ get_header();  ?>
 	<br />
 	<div class="col-md-12 pt-3 pb-3 cider-tags shadow">
 		
-		<?php the_tags('Related: '); ?>
+		<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
 			
 	</div>
 </div>
