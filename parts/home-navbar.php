@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md fixed-top wbw-navbar">
 	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 		<?php $uploads = wp_upload_dir(); 
-		echo '<img src="' . esc_url( $uploads['baseurl'] . '/2019/10/wbw-diamond.svg' ) . '" height="85" width="85" alt="Wilmington Brew Works Logo">'; ?>
+		echo '<img src="' . esc_url( $uploads['baseurl'] . '/2019/11/wbw-branding-icon.svg' ) . '" width="130" alt="Wilmington Brew Works Logo">'; ?>
 	</a>
 	<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#wbwbeerNav" aria-controls="wbwbeerNav" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fas fa-bars fa-2x"></i>

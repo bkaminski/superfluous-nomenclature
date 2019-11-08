@@ -27,9 +27,28 @@
 				</div>
 			</div>
 		</div>
-		<div class="container bg-beer-card text-center pb-2"><hr />
-			<small class="text-uppercase">Share:</small>
-			<?php echo do_shortcode('[addthis tool="addthis_inline_share_toolbox_shjo"]'); ?>
-
+		<div class="container bg-beer-card text-center pb-3"><hr />
+			<a class="btn btn-lg btn-block btn-blue rounded-0 text-uppercase" href=" <?php $text2 = get_post_meta( get_the_ID(), 'untappd_url', true ); echo esc_html( $text2 ); ?>" target="_blank"><i class="fab fa-untappd"></i> Check in on Untappd</a>
 		</div>
 	</div>
+	<div class="container kill-padding text-center">
+		<div class="addthis-social pb-2">
+			<small class="text-uppercase">Share:</small>
+			<div class="addthis_inline_share_toolbox"></div> 
+		</div>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			setTimeout(addScript, 1000)
+		});
+		function addScript() {
+			script = document.createElement('script');
+			script.async = true;
+			script.onload = function() {
+				console.log("Added Script");
+			};
+			script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dc4a6918644ec08';
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}
+	</script>
+

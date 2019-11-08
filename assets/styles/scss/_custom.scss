@@ -45,11 +45,6 @@
 	border-top: 4px solid #b4a269ff;
 	padding-bottom: 0.2em;
 }
-.left-foot {
-	background-image: url('../../../../uploads/2019/11/Independent-craft-seal-Gold-01.svg');
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 .logo-img {
 	padding-top: 170px;
 }
@@ -142,10 +137,11 @@
 		color: #b4a269ff;
 	}
 }
-.untappd {
+.addthis-social {
 	width: 100%;
 	min-height: 50px;
 	margin-top: 1rem;
+	background: #f8f9fa;
 }
 /* No ABV for Ciderosa */
 .postid-98 .list-group-item:first-child {

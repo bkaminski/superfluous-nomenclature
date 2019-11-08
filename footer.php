@@ -1,8 +1,13 @@
 <footer class="wbw-footer">
 	<div class="container-fluid pt-3">
 		<div class="row">
-			<div class="col-md-4">
-				<div class="left-foot"></div>
+			<div class="col">
+				<?php $uploads = wp_upload_dir(); 
+				echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Independent-craft-seal-Gold-01.svg' ) . '" width="200px" alt="Proudly Crafted in the First State">'; ?>
+			</div>
+			<div class="col">
+				<?php $uploads = wp_upload_dir(); 
+				echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/proudly-brewed-first-state.svg' ) . '" width="215px" alt="Proudly Crafted in the First State">'; ?>
 			</div>
 			<div class="col-md-4">
 				<div class="middle-foot">

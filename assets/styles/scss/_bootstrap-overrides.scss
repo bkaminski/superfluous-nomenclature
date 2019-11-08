@@ -55,11 +55,11 @@ $cards-per-line: (
   }
 a.nav-link {
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1rem;
   text-transform: uppercase;
   position: relative;
   border-bottom: 2px solid transparent;
-  margin-right: 1em;
+  margin-right: 1.3em;
   @include breakpoint (xs) {
   	font-size: 1em;
   	margin-left: 15px;
@@ -68,10 +68,13 @@ a.nav-link {
   	width: 45%;
   }
   @include breakpoint (sm) {
-  	font-size: 0.71em;
+  	font-size: 0.65rem;
   }
   @include breakpoint (md) {
-  	font-size: 1em;
+  	font-size: 0.9rem;
+  }
+  @include breakpoint (lg) {
+  	font-size: 1.2rem;
   }
   &:hover {
   	color: #b4a269ff;
@@ -117,7 +120,7 @@ a.nav-link {
 .btn-blue {
 	color: #b4a269ff;
 	background-color: #1d547e;
-	border-color: #b4a269ff;
+	border-color: #222;
 	&:hover {
 		background-color: #143b59;
 		color: #b4a269ff;
