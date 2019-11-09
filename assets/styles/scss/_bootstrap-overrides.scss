@@ -59,7 +59,7 @@ a.nav-link {
   text-transform: uppercase;
   position: relative;
   border-bottom: 2px solid transparent;
-  margin-right: 1.3em;
+  margin-right: 1.1rem;
   @include breakpoint (xs) {
   	font-size: 1em;
   	margin-left: 15px;
@@ -68,13 +68,13 @@ a.nav-link {
   	width: 45%;
   }
   @include breakpoint (sm) {
-  	font-size: 0.65rem;
+  	font-size: 0.53rem;
   }
   @include breakpoint (md) {
   	font-size: 0.9rem;
   }
   @include breakpoint (lg) {
-  	font-size: 1.2rem;
+  	font-size: 1.1rem;
   }
   &:hover {
   	color: #b4a269ff;
@@ -125,4 +125,9 @@ a.nav-link {
 		background-color: #143b59;
 		color: #b4a269ff;
 	}
+}
+.alert-blue {
+    color: #b4a269ff;
+	background-color: #1d547e;
+	border-color: #b4a269ff;
 }

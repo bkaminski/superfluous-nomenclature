@@ -45,7 +45,7 @@
 			script = document.createElement('script');
 			script.async = true;
 			script.onload = function() {
-				console.log("Added Script");
+				console.log("Addthis script loaded");
 			};
 			script.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dc4a6918644ec08';
 			document.getElementsByTagName('head')[0].appendChild(script);

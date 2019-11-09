@@ -137,6 +137,13 @@
 		color: #b4a269ff;
 	}
 }
+.tag-link a {
+	color: #222;
+	&:hover {
+		color: #b4a269ff;
+	}
+
+}
 .addthis-social {
 	width: 100%;
 	min-height: 50px;
@@ -146,4 +153,7 @@
 /* No ABV for Ciderosa */
 .postid-98 .list-group-item:first-child {
 	display: none;
+}
+.tag {
+	padding-top: 111px;
 }

@@ -30,6 +30,11 @@
 		}, {
 			offset: '100%'
 		});
+		$('.feat--img').waypoint(function() {
+			$('.feat--img').addClass('animated fadeIn');
+		}, {
+			offset: '100%'
+		});
 	});
 
 })( jQuery );

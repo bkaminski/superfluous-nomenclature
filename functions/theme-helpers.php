@@ -72,7 +72,7 @@ add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 function excerpt_read_more_link($output)
 {
     global $post;
-    return $output . '<a class="btn btn-lg btn-success text-uppercase rounded-0 pr-4 pl-4" href="' . get_permalink() . '">Read More <i class="fas fa-angle-double-right fa-fw fa-lg"></i></a>';
+    return $output . '<a class="btn btn-lg btn-blue text-uppercase rounded-0 pr-4 pl-4" href="' . get_permalink() . '">Read More <i class="fas fa-angle-double-right fa-fw fa-lg"></i></a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 //REMOVE COMMENTS FEED RSS
@@ -100,3 +100,87 @@ add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
 function wps_deregister_styles() {
     wp_dequeue_style( 'wp-block-library' );
 }
+
+//begin pagination
+function wbwbeer_pagination($pages = '', $range = 1)
+{
+    $showitems = ($range * 2) + 1;
+    
+    global $paged;
+    if (empty($paged))
+        $paged = 1;
+    
+    if ($pages == '') {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if (!$pages) {
+            $pages = 1;
+        }
+    }
+    
+    if (1 != $pages) {
+        echo "<nav aria-label='Blog Navigation pagination'>";
+        echo "<ul class='pagination justify-content-center'>";
+        echo "<li class='page-item'>";
+        if ($paged > 2 && $paged > $range + 1 && $showitems < $pages)
+            echo "<a class='page-link' aria-label='First Page' href='" . get_pagenum_link(1) . "'>
+                          <i class='fas fa-angle-double-left fa-lg'></i>
+                          <span class='sr-only'>go to first page</span>
+                      </a>";
+        echo "</li>";
+        echo "<li class='page-item'>";
+        if ($paged > 1 && $showitems < $pages)
+            echo "<a class='page-link' href='" . get_pagenum_link($paged - 1) . "'>
+                          <i class='fas fa-angle-left fa-lg'></i>
+                          <span class='sr-only'>go to previous page</span>
+                      </a>";
+        echo "</li>";
+        for ($i = 1; $i <= $pages; $i++) {
+            if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+                echo ($paged == $i) ? "<li class='page-link'>" . $i . "</li>" : "<a href='" . get_pagenum_link($i) . "' class='page-link' >" . $i . "</a>";
+            }
+        }
+        if ($paged < $pages && $showitems < $pages)
+            echo "<a class='page-link' aria-label='Next Page' href='" . get_pagenum_link($paged + 1) . "'>
+                          <i class='fas fa-angle-right fa-lg'></i>
+                          <span class='sr-only'>go to next page</span>
+                        </a>";
+        if ($paged < $pages - 1 && $paged + $range - 1 < $pages && $showitems < $pages)
+            echo "<a class='page-link' aria-label='Last Page' href='" . get_pagenum_link($pages) . "'>
+                          <i class='fas fa-angle-double-right fa-lg'></i>
+                          <span class='sr-only'>go to last page</span>
+                        </a>";
+        global $wp_query;
+        echo "</ul></nav>";
+    }
+}
+//end pagination
+
+// REMOVE ALL COMMENT OPTIONS
+add_action( 'admin_menu', 'wbwbeer_remove_admin_menus' );
+function wbwbeer_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+// Removes from post and pages
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
+}
+// Removes from admin bar
+function wbwbeer_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'wbwbeer_admin_bar_render' );
+
+//REMOVE COMMENTS FROM MEDIA
+function filter_media_comment_status( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+        return false;
+    }
+    return $open;
+}
+add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
