@@ -4,13 +4,13 @@
 		</div>
 		<div class="card-body">
 			<span itemprop="description">
-				<?php the_content(); ?>
+				<?php the_field('description'); ?>
 				
 			</span>
 		</div>
 		<ul class="list-group list-group-flush">
-			<li class="list-group-item bg-beer-card font-weight-bold">ABV: <?php $text = get_post_meta( get_the_ID(), 'beer_abv', true ); echo esc_html( $text ); ?>%</li>
-			<li class="list-group-item bg-beer-card font-weight-bold">Style: <?php $text1 = get_post_meta( get_the_ID(), 'beer_style', true ); echo esc_html( $text1 ); ?></li>
+			<li class="list-group-item bg-beer-card font-weight-bold">ABV: <?php the_field('abv'); ?>%</li>
+			<li class="list-group-item bg-beer-card font-weight-bold">Style: <?php the_field('style'); ?></li>
 			<li class="list-group-item bg-beer-card" style="margin-bottom: -25px;"></li>
 		</ul>
 		<div class="container">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="container bg-beer-card text-center pb-3"><hr />
-				<a class="btn btn-lg btn-block btn-blue rounded-0 text-uppercase" href=" <?php $text2 = get_post_meta( get_the_ID(), 'untappd_url', true ); echo esc_html( $text2 ); ?>" target="_blank"><i class="fab fa-untappd"></i> Check in on Untappd</a>
+				<a class="btn btn-lg btn-block btn-blue rounded-0 text-uppercase" href="<?php the_field('untappd_link'); ?>" target="_blank"><i class="fab fa-untappd"></i> Check in on Untappd</a>
 			</div>
 		</div>
 		<div class="container kill-padding text-center">

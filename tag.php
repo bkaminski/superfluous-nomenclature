@@ -18,7 +18,7 @@
 				</h1>
 					<?php the_excerpt(); ?>
 				
-				<hr class="shadow" />
+				<hr>
 			</main>
 		</div>
 		<?php endwhile; else : ?>

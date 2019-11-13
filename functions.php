@@ -10,4 +10,9 @@ require_once(get_template_directory(). '/functions/widgets.php');
 //LOG IN SCREEN CUSTOMIZATION
 require_once(get_template_directory(). '/functions/log-in-screen.php');
 //GET WBW API
-require_once(get_template_directory(). '/functions/wbw-api.php');
+require_once(get_template_directory(). '/functions/beers-api.php');
+//GET URBAN CIDERS API
+require_once(get_template_directory(). '/functions/ciders-api.php');
+
+
+

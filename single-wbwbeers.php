@@ -1,14 +1,14 @@
 <?php
 /*
  * Template Name: WBW BEERS
- * Template Post Type: post, page, product
+ * Template Post Type: wbwbeers
  */
   
 get_header();  ?>
 <div itemscope itemtype="http://schema.org/IndividualProduct" itemid="#product">
 	<div class="sr-only" itemprop="brand">Wilmington Brew Works</div>
 	<?php get_template_part( 'parts/page', 'beer-header' ); ?>
-	<div class="container pt-5 beer-container">
+	<div class="container pt-4 beer-container">
 		<div class="row">
 			<div class="col-md-6">
 				

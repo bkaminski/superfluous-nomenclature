@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: URBAN ORCHARD WORKS
- * Template Post Type: post, page, product
+ * Template Post Type: urban-orchard-ciders
  */
   
 get_header();  ?>
