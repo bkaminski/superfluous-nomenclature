@@ -68,13 +68,14 @@ a.nav-link {
   	width: 45%;
   }
   @include breakpoint (sm) {
-  	font-size: 0.53rem;
+  	font-size: 1.1rem;
+  	margin-left: 15px;
   }
   @include breakpoint (md) {
-  	font-size: 0.9rem;
+  	font-size: 0.76rem;
   }
   @include breakpoint (lg) {
-  	font-size: 1.1rem;
+  	font-size: 1rem;
   }
   &:hover {
   	color: #b4a269ff;
@@ -117,6 +118,7 @@ a.nav-link {
 .bg-beer-card {
 	background: #b4a269ff;
 }
+/* WBW COLOR CODED BUTTONS AND ALERTS */
 .btn-blue {
 	color: #b4a269ff;
 	background-color: #1d547e;

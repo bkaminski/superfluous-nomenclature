@@ -7,5 +7,7 @@ require_once(get_template_directory(). '/functions/theme-helpers.php');
 require_once(get_template_directory(). '/functions/theme-customizer.php');
 //THEME WIDGETS
 require_once(get_template_directory(). '/functions/widgets.php');
-//CUSTOM POST TYPES
-require_once(get_template_directory(). '/functions/custom-post-types.php');
+//LOG IN SCREEN CUSTOMIZATION
+require_once(get_template_directory(). '/functions/log-in-screen.php');
+//GET WBW API
+require_once(get_template_directory(). '/functions/wbw-api.php');
