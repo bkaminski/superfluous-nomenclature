@@ -21,7 +21,7 @@ function get_ciders_from_api() {
 		$inserted_uowcider = wp_insert_post([
 			'post_name' => $cider_slug,
 			'post_title' => $cider_slug,
-			'post_type' => 'urban-orchard-ciders',
+			'post_type' => 'urban-orchard-works',
 			'post_status' => 'publish'
 		]);
 

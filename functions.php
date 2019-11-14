@@ -19,4 +19,4 @@ require_once(get_template_directory(). '/functions/beers-api.php');
 require_once(get_template_directory(). '/functions/ciders-api.php');
 
 
-
+//flush_rewrite_rules( false );
