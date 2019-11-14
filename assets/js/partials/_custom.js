@@ -32,12 +32,6 @@
     //ADD RESPONSIVE IMAGE CLASS TO CMB2 IMAGE UPLOAD
     $('#logoVector').find('img').addClass('img-fluid');
 
-    //REMOVE WIDTH HEIGHT ATTRS FROM IMAGES
-   // $('#logoVector img').each(function(){ 
-     //   $(this).removeAttr('width')
-      //  $(this).removeAttr('height');
-   // });
-
     //REMOVE TRANSPARENT HEADER ON SCROLL
     $(function() {
     //caches a jQuery object containing the header element
