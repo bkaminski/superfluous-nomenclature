@@ -1,26 +1,5 @@
 <?php 
 
-// ======================================================================================== //
-
-add_action('init', 'register_ciders_cpt');
-function register_ciders_cpt() {
-	register_post_type('urban-orchard-ciders', [
-		'label' => 'Urban Orchard Works',
-		'public' => true, 
-		'capability_type' => 'post',
-		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
-	]);
-}
-
-// Add Tag Support
-function cider_tag() {
-	register_taxonomy_for_object_type('post_tag', 'urban-orchard-ciders');
-}
-add_action('init', 'cider_tag');
-
-// ======================================================================================== //
-
-
 add_action('wp_ajax_nopriv_get_ciders_from_api', 'get_ciders_from_api');
 add_action('wp_ajax_get_ciders_from_api', 'get_ciders_from_api');
 

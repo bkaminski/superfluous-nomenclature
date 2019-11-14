@@ -17,8 +17,8 @@ function enqueue_wbwbeer_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_wbwbeer_styles');
 
 // Register Custom Navigation Walker
-require_once get_template_directory() . '/classes/class-wp-bootstrap-navwalker.php';
+require_once get_template_directory() . '/functions/class-wp-bootstrap-navwalker.php';
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'superfluous-nomenclature' ),
-) );
+));
 // Nav Walker
