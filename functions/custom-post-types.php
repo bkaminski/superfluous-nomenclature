@@ -31,6 +31,7 @@ function register_beers_cpt() {
 		'public' => true, 
 		'capability_type' => 'post',
 		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'  => array( 'category' ),
 	]);
 }
 
@@ -50,6 +51,7 @@ function register_ciders_cpt() {
 		'public' => true, 
 		'capability_type' => 'post',
 		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'  => array( 'category' ),
 	]);
 }
 

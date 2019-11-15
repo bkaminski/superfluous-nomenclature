@@ -1,24 +1,30 @@
 	<footer class="wbw-footer">
 		<div class="container-fluid pt-3">
 			<div class="row">
-				<div class="col">
-					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Independent-craft-seal-Gold-01.svg' ) . '" width="200px" alt="Proudly Crafted in the First State">'; ?>
-				</div>
-				<div class="col">
-					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/proudly-brewed-first-state.svg' ) . '" width="215px" alt="Proudly Crafted in the First State">'; ?>
+				<div class="col-md-4">
+					<div class="left-foot text-center pt-3">
+						<?php $uploads = wp_upload_dir(); 
+						echo '<img class="img-fluid pb-3" src="' . esc_url( $uploads['baseurl'] . '/2019/11/proudly-independent-delaware.svg' ) . '" width="250px" alt="Proudly Independently Crafted in the First State">'; ?>
+						
+						<ul class="list-inline text-center">
+							<li class="list-inline-item pr-4 pb-4"><a href=""><i class="fab fa-footer fa-facebook-square fa-2x"></i></a></li>
+							<li class="list-inline-item pr-4"><a href=""><i class="fab fa-footer fa-instagram fa-2x"></i></a></li>
+							<li class="list-inline-item pr-4 pb-4"><a href=""><i class="fab fa-footer fa-twitter-square fa-2x"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="fab fa-footer fa-youtube-square fa-2x"></i></a></li>
+						</ul>
+					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="middle-foot">
-						<h5 class="text-white">Middle Footer</h5>
+					<div class="middle-foot pt-4">
+						<h5 class="text-white pb-2">Email List:</h5>
+						<small class="mt-0 text-white">Subscribe to our emailing list and never miss an update.</small>
+						<?php echo do_shortcode('[mc4wp_form id="69012"]'); ?>
 
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="right-foot">
-						<h5 class="text-white">Right Footer</h5>
-
+					<div class="right-foot pt-4">
+						<h5 class="text-white">Wilmington Brew Works:</h5>
 					</div>
 				</div>
 			</div>

@@ -12,7 +12,7 @@ function get_beers_from_api() {
 	$current_page = ( ! empty($_POST['current_page']) ) ? $_POST['current_page'] : 1;
 	$wbwbeers = [];
 
-	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?archived=false&tier=!cider'));
+	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider'));
 
 	$results = json_decode($results);
 
@@ -22,7 +22,7 @@ function get_beers_from_api() {
 
 		$beer_slug = $wbwbeer->name;
 
-		//$existing_beer = get_page_by_path($beer_slug, 'OBJECT', 'wbwbeer');
+		$existing_beer = get_page_by_path($beer_slug, 'OBJECT', 'wbwbeers');
 
 		if ($existing_beer === null ) {
 
@@ -42,27 +42,30 @@ function get_beers_from_api() {
 			'field_5dc862ec19531' => 'style',
 			'field_5dc863269b298' => 'description',
 			'field_5dc8633738fad' => 'abv',
+			'field_5dcebb57d83c3' => 'updatedSince',
 		];
 
 		foreach ( $fillable as $key => $name ) {
 			update_field( $key, $wbwbeer->$name, $inserted_wbwbeer);
 		}
-	} //else {
-	//	$existing_beer = $existing_beer;
-	//	$existing_beer_updatedOn = get_field('updated_at', $existing_beer );
+	} else {
+		
+		$existing_beer = $existing_beer;
+		$existing_beer_timestamp = get_field('updatedSince', $existing_beer );
 
-	//	if ( $wbwbeer->updated_at >= $existing_beer_updatedOn ) {
-	//		$fillable = [
-	//		'field_5dc862b619530' => 'name',
-	//		'field_5dc862ec19531' => 'style',
-	//		'field_5dc863269b298' => 'description',
-	//		'field_5dc8633738fad' => 'abv',
-	//	];
+		if ( $wbwbeer->updatedSince >= $existing_beer_timestamp ) {
+			$fillable = [
+			'field_5dc862b619530' => 'name',
+			'field_5dc862ec19531' => 'style',
+			'field_5dc863269b298' => 'description',
+			'field_5dc8633738fad' => 'abv',
+			'field_5dcebb57d83c3' => 'updatedSince',
+		];
 
-	//	foreach ( $fillable as $key => $name ) {
-	//		update_field( $key, $wbwbeer->$name, $existing_beer);
-	//	}
-	//}
-//}
+		foreach ( $fillable as $key => $name ) {
+			updatedSince( $key, $wbwbeer->$name, $existing_beer);
+		}
+	}
+}
 }
 }
