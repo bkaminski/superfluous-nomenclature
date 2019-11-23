@@ -1,6 +1,6 @@
 	<div class="new-release">
 		<div class="container-fluid new-fade">
-			<?php $loop = new WP_Query( array( 'post_type' => 'beers', 'posts_per_page' => 1 ));?>
+			<?php $loop = new WP_Query( array( 'post_type' => 'wbwbeers', 'posts_per_page' => 1 ));?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 			<div class="col-md-12">
 				<h3 class="text-center pt-4 pb-4 text-uppercase">New at Wilmington Brew Works</h3>

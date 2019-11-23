@@ -41,7 +41,7 @@ add_filter( 'login_headerurl', 'wbw_login_logo_url' );
 function wbw_login_logo_url_title() {
     return 'Wilmington Brew Works';
 }
-add_filter( 'login_headertitle', 'wbw_login_logo_url_title' );
+//add_filter( 'login_headertitle', 'wbw_login_logo_url_title' );
 /* End Style Login */
 
 

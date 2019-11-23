@@ -20,6 +20,9 @@
     	$('.logo-img').show();
     });
 
+    //HIDE OFFERINGS WITH NO ABV
+    $(".list-group-item:contains('-1')").hide();
+
     //Hover effect on Ben's logo
     $("img.a").hover(
     function() {

@@ -30,8 +30,8 @@
 		}, {
 			offset: '100%'
 		});
-		$('.feat--img').waypoint(function() {
-			$('.feat--img').addClass('animated fadeIn');
+		$('.feat--img, .video').waypoint(function() {
+			$('.feat--img, .video').addClass('animated fadeIn');
 		}, {
 			offset: '100%'
 		});

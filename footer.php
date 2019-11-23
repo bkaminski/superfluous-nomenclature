@@ -7,10 +7,10 @@
 						echo '<img class="img-fluid pb-3" src="' . esc_url( $uploads['baseurl'] . '/2019/11/proudly-independent-delaware.svg' ) . '" width="250px" alt="Proudly Independently Crafted in the First State">'; ?>
 						
 						<ul class="list-inline text-center">
-							<li class="list-inline-item pr-4 pb-4"><a href=""><i class="fab fa-footer fa-facebook-square fa-2x"></i></a></li>
-							<li class="list-inline-item pr-4"><a href=""><i class="fab fa-footer fa-instagram fa-2x"></i></a></li>
-							<li class="list-inline-item pr-4 pb-4"><a href=""><i class="fab fa-footer fa-twitter-square fa-2x"></i></a></li>
-							<li class="list-inline-item"><a href=""><i class="fab fa-footer fa-youtube-square fa-2x"></i></a></li>
+							<li class="list-inline-item pr-4 pb-4"><a target="_blank" href="https://www.facebook.com/wilmingtonbrewworks/"><i class="fab fa-footer fa-facebook-square fa-2x"></i></a></li>
+							<li class="list-inline-item pr-4"><a target="_blank" href="https://www.instagram.com/wilmingtonbrewworks/"><i class="fab fa-footer fa-instagram fa-2x"></i></a></li>
+							<li class="list-inline-item pr-4 pb-4"><a target="_blank" href="https://twitter.com/WBWbeer"><i class="fab fa-footer fa-twitter-square fa-2x"></i></a></li>
+							<li class="list-inline-item"><a target="_blank" href="https://www.youtube.com/channel/UCsq7IZYAhRAeYo9u-yIvr8w"><i class="fab fa-footer fa-youtube-square fa-2x"></i></a></li>
 						</ul>
 					</div>
 				</div>

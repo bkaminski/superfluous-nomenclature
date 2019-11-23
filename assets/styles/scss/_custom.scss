@@ -1,5 +1,5 @@
 .age-modal {
-	background-image: url('../../../../uploads/2019/10/wbw-diamond.svg');
+	background-image: url('../../../../uploads/2019/11/wbw-diamond.svg');
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	min-height: 300px;
@@ -7,7 +7,7 @@
 .wbw-home-head {
 	min-height: 700px;
 	width: 100%;
-	background-image: url('../../../../uploads/2019/10/wbw-beginnings.jpg');
+	background-image: url('../../../../uploads/2019/11/wbw-beginnings.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
 	border-bottom: 4px solid #b4a269ff;
@@ -16,25 +16,6 @@
 	}
 }
 
-.wbw-beer-bg {
-	height: 700px;
-	width: 100%;
-	background-image: url('../../../../uploads/2019/10/WBW-EE-Blue3.png');
-	background-position: bottom center;
-	background-repeat: no-repeat;
-	background-size: 265px 265px;
-	margin-bottom: -15px;
-	@include breakpoint (sm) {
-		background-size: 500px 500px;
-
-	}
-	@include breakpoint (md) {
-		background-size: 400px 400px;
-	}
-	@include breakpoint (lg) {
-		background-size: 500px 500px;
-	}
-}
 .wbw-beer-bg::after {
 	content:"\A";
 	padding-top: 500px;
@@ -126,6 +107,14 @@
 	border-bottom: 4px solid #b4a269ff;
 	margin-top: 111px;
 }
+.page-header {
+	background: #1d547e;
+	border-bottom: 4px solid #b4a269ff;
+	margin-top: 111px;
+	min-height: 330px;
+	padding-top: 7rem;
+	color: #b4a269ff;
+}
 .beer-tags,
 .cider-tags {
 	background: #f8f9fa;
@@ -151,10 +140,6 @@
 	margin-top: 1rem;
 	background: #f8f9fa;
 }
-/* No ABV for Ciderosa */
-.postid-68980 .list-group-item:first-child {
-	display: none;
-}
 .tag {
 	padding-top: 111px;
 }
@@ -166,4 +151,19 @@
 	&:hover {
 		color: #ccc !important;
 	} 
+}
+.video {
+	border-top: 4px solid #1d547e;
+	background: #b4a269ff;
+}
+.main-content-area {
+	min-height: 1000px;
+	background: #f8f9fa;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.contact {
+	min-height: 200px;
+	background: #b4a269ff;
+	border-top: 4px solid #1d547e; 
 }

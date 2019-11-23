@@ -15,7 +15,7 @@ function fontawesome_icon_dashboard() {
      	}
      	#adminmenu .menu-icon-urban-orchard-works div.wp-menu-image:before {
    			font-family: Fontawesome !important;
-   			content: '\\f179';
+   			content: '\\f000';
      	}
      	</style>";
  }

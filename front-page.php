@@ -18,10 +18,18 @@
 <section class="wbw-social">
 	<?php get_template_part( 'parts/page', 'social' ); ?>
 
-</section> 	
+</section>
 <section class="new-release pb-5">
 	<?php get_template_part( 'parts/home', 'new-brews' ); ?>
 </section>
+<aside class="video pt-3">
+	<h3 class="text-center pb-2">Welcome to Wilmington Brew Works</h3>
+	<div class="container-fluid kill-padding">
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/T5TW5XNeVYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</aside>
 
 
 <?php get_template_part( 'parts/home', 'modal' ); ?>

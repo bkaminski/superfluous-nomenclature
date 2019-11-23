@@ -10,6 +10,8 @@ get_header(); ?>
 <main>
 	<div class="on-tap pb-5">
 		<div class="container-fluid">
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 			<h1 class="pl-3 text-uppercase pt-3 pb-4"><?php the_title(); ?></h1>
 			<div class="col-md-12">
 				<div id="wbwFrame" class="embed-responsive">
@@ -22,5 +24,11 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<?php if( ! is_page( array ('contact') ) ) {
+		get_template_part( 'parts/page', 'contact-us' );
+	}?>
+	<?php endwhile; else : ?>
+		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+	<?php endif; ?>
 </main>
 <?php get_footer(); ?>

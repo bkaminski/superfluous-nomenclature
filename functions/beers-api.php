@@ -1,7 +1,7 @@
 <?php
 
-//if ( !wp_next_scheduled('update_beer_list') ) {
-//	wp_schedule_event(time(), 'hourly', 'get_beers_from_api');
+//if ( ! wp_next_scheduled('update_beer_list') ) {
+//	wp_schedule_event(time(), 'daily', 'get_beers_from_api');
 //}
 
 add_action('wp_ajax_nopriv_get_beers_from_api', 'get_beers_from_api');
@@ -9,12 +9,19 @@ add_action('wp_ajax_get_beers_from_api', 'get_beers_from_api');
 
 function get_beers_from_api() {
 
+	//$file = get_stylesheet_directory() . '/jsontest.txt';
 	$current_page = ( ! empty($_POST['current_page']) ) ? $_POST['current_page'] : 1;
 	$wbwbeers = [];
 
-	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider'));
+	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=Tier1&tier=Tier2&tier=Tier3'));
+
+	//file_put_contents($file, "Current Page: " . $current_page. "\n\n", FILE_APPEND);
 
 	$results = json_decode($results);
+
+	if ( ! is_array( $results ) || empty( $results) ) {
+		return false;
+	}
 
 	$wbwbeers[] = $results;
 
@@ -42,7 +49,7 @@ function get_beers_from_api() {
 			'field_5dc862ec19531' => 'style',
 			'field_5dc863269b298' => 'description',
 			'field_5dc8633738fad' => 'abv',
-			'field_5dcebb57d83c3' => 'updatedSince',
+			//'field_5dcebb57d83c3' => 'updatedSince',
 		];
 
 		foreach ( $fillable as $key => $name ) {
@@ -50,22 +57,32 @@ function get_beers_from_api() {
 		}
 	} else {
 		
-		$existing_beer = $existing_beer;
-		$existing_beer_timestamp = get_field('updatedSince', $existing_beer );
+		//$existing_beer_name = $existing_beer->name;
+		//$existing_beer_timestamp = get_field('updatedSince', $existing_beer_name );
 
-		if ( $wbwbeer->updatedSince >= $existing_beer_timestamp ) {
-			$fillable = [
-			'field_5dc862b619530' => 'name',
-			'field_5dc862ec19531' => 'style',
-			'field_5dc863269b298' => 'description',
-			'field_5dc8633738fad' => 'abv',
-			'field_5dcebb57d83c3' => 'updatedSince',
-		];
+		//if ( $wbwbeer->updatedSince >= $existing_beer_timestamp ) {
+		//	$fillable = [
+		//	'field_5dc862b619530' => 'name',
+		//	'field_5dc862ec19531' => 'style',
+		//	'field_5dc863269b298' => 'description',
+		//	'field_5dc8633738fad' => 'abv',
+		//	'field_5dcebb57d83c3' => 'updatedSince',
+	//	];
 
-		foreach ( $fillable as $key => $name ) {
-			updatedSince( $key, $wbwbeer->$name, $existing_beer);
-		}
-	}
+	//	foreach ( $fillable as $key => $name ) {
+	//		updatedSince( $key, $wbwbeer->$name, $existing_beer_name);
+	//	}
+//	}
+
+	//$current_page = $current_page;
+	//wp_remote_post( admin_url('admin-ajax.php?action=get_beers_from_api'), [
+	//	'blocking' =>false,
+	//	'sslverify' =>false,
+	//	'body' => [
+	//		'current_page' => $current_page
+	//	]
+	//] );
+
+	 //
 }
-}
-}
+}}
