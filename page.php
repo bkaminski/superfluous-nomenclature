@@ -13,7 +13,7 @@
 			
 	</div>
 </div>
-<?php if( ! is_page( array ('contact') ) ) {
+<?php if( ! is_page( array ('contact', 'events') ) ) {
 	get_template_part( 'parts/page', 'contact-us' );
 }?>	
 	<?php endwhile; else : ?>

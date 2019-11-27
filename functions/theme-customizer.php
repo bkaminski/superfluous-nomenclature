@@ -1,8 +1,9 @@
 <?
 function wbwbeer_theme_customize_register( $wp_customize ) {
  $wp_customize->remove_control('header_image');
- $wp_customize->remove_panel('widgets');
- $wp_customize->remove_panel('nav_menus');
+ // removing panels now throws PHP error
+ //$wp_customize->remove_panel('widgets');
+ //$wp_customize->remove_panel('nav_menus');
  $wp_customize->remove_section('colors');
  $wp_customize->remove_section('background_image');
  $wp_customize->remove_section('static_front_page');
@@ -19,7 +20,7 @@ function wbwbeerCarousel_image_area( $wp_customize ) {
     ));
     $wp_customize->add_setting( 'wbwbeer_img_upload_1' );
  	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wbwbeer_img_upload_1', array(
-        'label'    => __( 'Upload first image:', 'superflous-nomenclature' ),
+        'label'    => __( 'Upload first image:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images',
         'settings' => 'wbwbeer_img_upload_1',
         'description' => 'Upload your first carousel image here.'
@@ -33,14 +34,14 @@ function wbwbeerCarousel_image_area( $wp_customize ) {
 	}
 	$wp_customize->add_control( 'wbwbeer_Image_Alt_1', array(
         'type' => 'text',
-        'label'    => __( 'Image Alt Text Here:', 'superflous-nomenclature' ),
+        'label'    => __( 'Image Alt Text Here:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images'
     ));
 
 
     $wp_customize->add_setting( 'wbwbeer_img_upload_2' );
  	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wbwbeer_img_upload_2', array(
-        'label'    => __( 'Upload second image:', 'superflous-nomenclature' ),
+        'label'    => __( 'Upload second image:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images',
         'settings' => 'wbwbeer_img_upload_2',
         'description' => 'Upload your second carousel image here.'
@@ -54,14 +55,14 @@ function wbwbeerCarousel_image_area( $wp_customize ) {
 	}
 	$wp_customize->add_control( 'wbwbeer_Image_Alt_2', array(
         'type' => 'text',
-        'label'    => __( 'Image Alt Text Here:', 'superflous-nomenclature' ),
+        'label'    => __( 'Image Alt Text Here:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images'
     ));
 
     
 	$wp_customize->add_setting( 'wbwbeer_img_upload_3' );
  	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wbwbeer_img_upload_3', array(
-        'label'    => __( 'Upload third image:', 'superflous-nomenclature' ),
+        'label'    => __( 'Upload third image:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images',
         'settings' => 'wbwbeer_img_upload_3',
         'description' => 'Upload your third carousel image here.'
@@ -75,7 +76,7 @@ function wbwbeerCarousel_image_area( $wp_customize ) {
 	}
 	$wp_customize->add_control( 'wbwbeer_Image_Alt_3', array(
         'type' => 'text',
-        'label'    => __( 'Image Alt Text Here:', 'superflous-nomenclature' ),
+        'label'    => __( 'Image Alt Text Here:', 'superfluous-nomenclature' ),
         'section' => 'home_carousel_images'
     ));
  	

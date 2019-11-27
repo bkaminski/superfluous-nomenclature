@@ -11,16 +11,12 @@
 	<?php get_template_part( 'parts/home', 'about' ); ?>
 
 </main>
-<aside>
-	<?php get_template_part( 'parts/home', 'event-carousel' ); ?>
-
-</aside>
 <section class="wbw-social">
 	<?php get_template_part( 'parts/page', 'social' ); ?>
 
 </section>
 <section class="new-release pb-5">
-	<?php get_template_part( 'parts/home', 'new-brews' ); ?>
+	<?php get_template_part( 'parts/home', 'new-brews-events' ); ?>
 </section>
 <aside class="video pt-3">
 	<h3 class="text-center pb-2">Welcome to Wilmington Brew Works</h3>
@@ -30,7 +26,6 @@
 		</div>
 	</div>
 </aside>
-
 
 <?php get_template_part( 'parts/home', 'modal' ); ?>
 

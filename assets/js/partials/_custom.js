@@ -35,6 +35,9 @@
     //ADD RESPONSIVE IMAGE CLASS TO CMB2 IMAGE UPLOAD
     $('#logoVector').find('img').addClass('img-fluid');
 
+    //ADD RESPONSIVE CLASS TO EVENT IMAGE
+    $('.eme_event_image').addClass('img-fluid');
+
     //REMOVE TRANSPARENT HEADER ON SCROLL
     $(function() {
     //caches a jQuery object containing the header element

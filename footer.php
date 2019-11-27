@@ -24,7 +24,14 @@
 				</div>
 				<div class="col-md-4">
 					<div class="right-foot pt-4">
-						<h5 class="text-white">Wilmington Brew Works:</h5>
+						<h5 class="text-white">Wilmington Brew Works</h5>
+						<address class="text-white">
+							3129 Miller Rd.<br />
+							Wilmington DE, 19802<br />
+							(302) 722-4828<br />
+						</address>
+						<p><a class="text-white" href="https://g.page/wilmingtonbrewworks?share" target="_blank">Map</a><br />
+						<a class="text-white" href="#">Privacy Policy</a></p>
 					</div>
 				</div>
 			</div>

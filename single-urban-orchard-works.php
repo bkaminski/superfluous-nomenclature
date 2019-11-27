@@ -32,4 +32,7 @@ get_header();  ?>
 			
 	</div>
 </div>
+<?php if( ! is_page( array ('contact') ) ) {
+	get_template_part( 'parts/page', 'contact-us' );
+}?>	
 <?php get_footer(); ?>

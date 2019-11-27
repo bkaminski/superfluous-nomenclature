@@ -13,7 +13,7 @@ function get_beers_from_api() {
 	$current_page = ( ! empty($_POST['current_page']) ) ? $_POST['current_page'] : 1;
 	$wbwbeers = [];
 
-	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=Tier1&tier=Tier2&tier=Tier3'));
+	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider&tier=!soda'));
 
 	//file_put_contents($file, "Current Page: " . $current_page. "\n\n", FILE_APPEND);
 
