@@ -1,8 +1,7 @@
 /node_modules
-/cmb2
 /assets/img
 /assets/js/scripts.js
 gulpfile.js
 screenshot.png
 screenshot.png.webp
-class-wp-bootsrap-navwalker.php
+/functions/class-wp-bootsrap-navwalker.php
