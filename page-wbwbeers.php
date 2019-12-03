@@ -8,6 +8,8 @@
 */
 get_header(); ?>
 <div class="page-header">
+	<div class="header-img-left"></div>
+	<div class="header-img-right"></div>
 	<h1 class="display-3 text-center"><?php the_title(); ?></h1>
 </div>
 <div class="container">

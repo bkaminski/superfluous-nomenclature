@@ -24,7 +24,7 @@
 				</div>
 				<div class="col-md-4">
 					<div class="right-foot pt-4">
-						<h5 class="text-white">Wilmington Brew Works</h5>
+						<h5 class="text-white">Wilmington Brew Works:</h5>
 						<address class="text-white">
 							3129 Miller Rd.<br />
 							Wilmington DE, 19802<br />
@@ -40,6 +40,7 @@
 			<p class="text-center text-white copyright">Copyright &copy; <?php echo date('Y'); ?> Wilmington Brew Works <a target="_blank" href="https://benkaminski.com"><img src="https://benkaminski.com/files/kaminski-consulting-dark.png" class="img-fluid a" alt="Website Design by Benjamin Kaminski Consulting" style="opacity: 1;"><img src="https://benkaminski.com/files/kaminski-consulting.png" class="img-fluid b" alt="Website Design by Benjamin Kaminski Consulting"></a></p>
 		</div>
 	</footer>
+	<?php get_template_part( 'parts/page', 'search-modal' ); ?>
 	<?php wp_footer(); ?>
 
 	</body>

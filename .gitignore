@@ -1,7 +1,8 @@
 /node_modules
 /assets/img
+/functions/class-wp-bootsrap-navwalker.php
 /assets/js/scripts.js
 gulpfile.js
 screenshot.png
 screenshot.png.webp
-/functions/class-wp-bootsrap-navwalker.php
+

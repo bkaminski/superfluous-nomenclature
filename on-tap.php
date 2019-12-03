@@ -7,18 +7,23 @@
  * 
  */
 get_header(); ?>
+<div class="page-header">
+	<div class="header-img-left"></div>
+	<div class="header-img-right"></div>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<h1 class="display-3 text-center pg-title"><?php the_title(); ?></h1>
+
+</div>
 <main>
 	<div class="on-tap pb-5">
 		<div class="container-fluid">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-			<h1 class="pl-3 text-uppercase pt-3 pb-4"><?php the_title(); ?></h1>
+			<h4 class="text-center">Currently On Tap:</h4>
 			<div class="col-md-12">
 				<div id="wbwFrame" class="embed-responsive">
 					<iframe class="embed-responsive-item" src="https://wilmington-brew-works.firebaseapp.com/#/active_digital_menu"></iframe>
 				</div>
 			</div>
-			<div class="col-md-12 pt-5">
+			<div class="col-md-12 pt-5 text-center">
 				<?php the_content(); ?>
 							
 			</div>

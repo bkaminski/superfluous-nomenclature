@@ -15,6 +15,8 @@ require_once(get_template_directory(). '/functions/log-in-screen.php');
 require_once(get_template_directory(). '/functions/beers-api.php');
 //GET URBAN CIDERS API
 require_once(get_template_directory(). '/functions/ciders-api.php');
+//INCLUDE ACF IN SEARCH RESULTS
+require_once(get_template_directory(). '/functions/acf-search.php');
 
 
 //flush_rewrite_rules( false );

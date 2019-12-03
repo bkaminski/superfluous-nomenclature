@@ -32,6 +32,11 @@
     	$(this).stop().animate({"opacity": "1"}, "slow");
     });
 
+    //TRIGGER SEARCH MODAL
+    $(".wbw-search-modal").click(function(){
+        $("#searchModal").modal('show');
+    });
+
     //ADD RESPONSIVE IMAGE CLASS TO CMB2 IMAGE UPLOAD
     $('#logoVector').find('img').addClass('img-fluid');
 
@@ -54,7 +59,7 @@
 });
 //TOGGLE FONTAWESOME ON CLICK
 document.addEventListener('DOMContentLoaded', function () {
-	$('button').on('click', function () {
+	$('.navbar-toggler').on('click', function () {
 		$(this)
 		.find('i')
 		.toggleClass('fa-bars')

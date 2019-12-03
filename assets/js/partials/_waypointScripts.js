@@ -35,6 +35,21 @@
 		}, {
 			offset: '100%'
 		});
+		$('.aboutwbw').waypoint(function() {
+			$('.aboutwbw').addClass('animated fadeInLeft');
+		}, {
+			offset: '100%'
+		});
+		$('.about--img').waypoint(function() {
+			$('.about--img').addClass('animated fadeInUp');
+		}, {
+			offset: '100%'
+		});
+		$('.about--img2').waypoint(function() {
+			$('.about--img2').addClass('animated fadeInUp');
+		}, {
+			offset: '100%'
+		});
 	});
 
 })( jQuery );

@@ -15,7 +15,54 @@
 		min-height: 1000px;
 	}
 }
-
+.header-img-right {
+	position: absolute;
+	width: 100%;
+	min-height: 300px;
+	background-image: url('../../../../uploads/2019/12/Playfully-Pretentious-GoldArtboard-1.svg');
+	background-repeat: no-repeat;
+	background-position: top right 15px;
+	margin-top: 75px;
+	@include breakpoint (xs) {
+		background-size: 145px;
+	}
+	@include breakpoint (sm) {
+		background-size: 145px;
+		margin-top: 75px;
+	}
+	@include breakpoint (md) {
+		background-size: 180px;
+		margin-top: 40px;
+	}
+	@include breakpoint (lg) {
+		background-size: 300px;
+		margin-top: -65px;
+  }
+}
+.header-img-left {
+	position: absolute;
+	width: 100%;
+	min-height: 300px;
+	background-image: url('../../../../uploads/2019/12/easily-gold.svg');
+	background-repeat: no-repeat;
+	background-position: top left 15px;
+	margin-top: 90px;
+	@include breakpoint (xs) {
+		background-size: 160px;
+	}
+	@include breakpoint (sm) {
+		background-size: 160px;
+		margin-top: 90px;
+	}
+	@include breakpoint (md) {
+		background-size: 210px;
+		margin-top: 50px;
+	}
+	@include breakpoint (lg) {
+		background-size: 340px;
+		margin-top: -40px;
+  }
+}
 .wbw-beer-bg::after {
 	content:"\A";
 	padding-top: 500px;
@@ -91,7 +138,8 @@
 	background: #1d547e;
 	color: #b4a269ff;
 }
-.beers-template-default {
+.beers-template-default,
+.search-results {
 	padding-top: 111px;
 }
 .beer-container,
@@ -165,4 +213,15 @@
 	min-height: 200px;
 	background: #b4a269ff;
 	border-top: 4px solid #1d547e; 
+}
+.about-wbw {
+	background: #b4a269ff;
+	width: 100%;
+	min-height: 200px;
+}
+.pg-title {
+	font-size: 3rem;
+	@include breakpoint (md) {
+		font-size: 4rem;
+	}
 }

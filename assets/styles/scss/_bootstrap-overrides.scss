@@ -1,5 +1,5 @@
 // Bootstrap 4 breakpoints & gutter
-$grid-breakpoints: (
+/*$grid-breakpoints: (
     xs: 0,
     sm: 576px,
     md: 768px,
@@ -7,7 +7,7 @@ $grid-breakpoints: (
     xl: 1200px
 ) !default;
 
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 10px !default;
 
 // number of cards per line for each breakpoint
 $cards-per-line: (
@@ -24,7 +24,7 @@ $cards-per-line: (
 			flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
 		}
 	}
-}
+}*/
 .home > {
   .wbw-navbar {
     transition: 0.4s ease-in-out;
@@ -133,3 +133,4 @@ a.nav-link {
 	background-color: #1d547e;
 	border-color: #b4a269ff;
 }
+
