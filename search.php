@@ -10,13 +10,13 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="col-md-12 mb-4">
 			<main>
-				<h1 class="tag-link">
+				<h1 class="tag-link mb-5">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_title(); ?>
+						<?php search_title_highlight(); ?>
 						
 					</a>
 				</h1>
-					<?php the_excerpt(); ?>
+					<?php search_excerpt_highlight(); ?>
 				
 				<hr>
 			</main>

@@ -1,7 +1,5 @@
 <?php
-//GUTENBERG SUPPORT
-add_theme_support( 'align-wide' );
-add_theme_support( 'responsive-embeds' );
+
 //HTML 5 SUPPORT
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 //HIDE ADMIN BAR FROM FRONT END
@@ -44,10 +42,7 @@ add_action('wp_loaded', 'prefix_output_buffer_start');
 function prefix_output_buffer_start() { 
 	ob_start("prefix_output_callback"); 
 }
-//add_action('shutdown', 'prefix_output_buffer_end');
-//function prefix_output_buffer_end() { 
-//	ob_end_flush(); 
-//}
+
 function prefix_output_callback($buffer) {
 	return preg_replace( "%[ ]type=[\'\"]text\/(javascript|css)[\'\"]%", '', $buffer );
 }
@@ -184,3 +179,21 @@ function filter_media_comment_status( $open, $post_id ) {
     return $open;
 }
 add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
+
+//HIGHLIGHT SEARCH TERMS
+function search_excerpt_highlight() {
+    $excerpt = get_the_excerpt();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
+
+    echo '<p>' . $excerpt . '</p>';
+    echo '<a href="' . get_permalink() . '" class="btn btn-lg btn-blue text-uppercase rounded-0 pr-4 pl-4" />Read More <i class="fas fa-angle-double-right fa-fw fa-lg"></i></a>';
+}
+
+function search_title_highlight() {
+    $title = get_the_title();
+    $keys = implode('|', explode(' ', get_search_query()));
+    $title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
+
+    echo $title;
+}

@@ -17,6 +17,7 @@ get_header(); ?>
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		
 		$args = array(
+			'posts_per_page' => 10,
 			'post_type' => 'wbwbeers',
 			'paged' => $paged,
 		);

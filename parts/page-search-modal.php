@@ -10,7 +10,7 @@
 				<div class="modal-body">
 					<form method="get" id="searchform" action="<?php echo home_url() ; ?>/">
 	                	<div class="input-group">
-		                	<input class="form-control form-control-lg search-form" type="text" placeholder="Search this site" value="<?php echo esc_html($s, 1); ?>" name="s" id="s" maxlength="33" required />
+		                	<input class="form-control form-control-lg search-form" type="text" placeholder="Search this site" value="<?php echo esc_html($s, 1); ?>" name="s" id="searchWbw" maxlength="33" required />
 		                		<div class="input-group-append">
 		                    		<button class="btn btn-secondary my-sm-0" type="submit">
 		                    			<i class="fas fa-search fa-lg fa-fw"></i>
