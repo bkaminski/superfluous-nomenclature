@@ -40,7 +40,7 @@
     //FOCUS SEARCH INPUT
     $('#searchModal').on('shown.bs.modal', function () {
     	$('#searchWbw').trigger('focus')
-    })
+    });
 
     //ADD RESPONSIVE IMAGE CLASS TO CMB2 IMAGE UPLOAD
     $('#logoVector').find('img').addClass('img-fluid');

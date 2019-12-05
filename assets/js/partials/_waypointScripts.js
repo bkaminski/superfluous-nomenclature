@@ -50,6 +50,11 @@
 		}, {
 			offset: '100%'
 		});
+		$('.pg-title').waypoint(function() {
+			$('.pg-title').addClass('animated fadeInUp');
+		}, {
+			offset: '100%'
+		});
 	});
 
 })( jQuery );

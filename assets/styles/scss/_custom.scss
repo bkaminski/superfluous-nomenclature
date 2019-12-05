@@ -39,6 +39,9 @@
 		margin-top: -95px;
   }
 }
+.modal-open > .page-header > .header-img-right {
+background-position: top right 32px;
+}
 .header-img-left {
 	position: absolute;
 	width: 100%;
@@ -231,6 +234,6 @@
 	}
 }
 .search-highlight {
-	color: #1d547e;
+	color: #1d547e ;
 	text-decoration: underline;
 }
