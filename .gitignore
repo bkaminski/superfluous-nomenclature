@@ -1,6 +1,8 @@
+/functions/beers-api.php
+/functions/ciders-api.php
+/functions/class-wp-bootstrap-navwalker.php
 /node_modules
 /assets/img
-/functions/class-wp-bootsrap-navwalker.php
 /assets/js/scripts.js
 gulpfile.js
 screenshot.png

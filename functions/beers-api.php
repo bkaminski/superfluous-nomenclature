@@ -13,7 +13,7 @@ function get_beers_from_api() {
 	$current_page = ( ! empty($_POST['current_page']) ) ? $_POST['current_page'] : 1;
 	$wbwbeers = [];
 
-	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider&tier=!soda'));
+	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider&tier=!soda&tier=!cans'));
 
 	//file_put_contents($file, "Current Page: " . $current_page. "\n\n", FILE_APPEND);
 
@@ -27,9 +27,9 @@ function get_beers_from_api() {
 
 	foreach ( $wbwbeers[0] as $wbwbeer ) {
 
-		$beer_slug = $wbwbeer->name;
+		$beer_slug = sanitize_title( $wbwbeer->name . '-' . $wbwbeer->id );
 
-		$existing_beer = get_page_by_path($beer_slug, 'OBJECT', 'wbwbeers');
+		$existing_beer = get_page_by_path( $beer_slug, 'OBJECT', 'wbwbeers' );
 
 		if ($existing_beer === null ) {
 
@@ -49,40 +49,38 @@ function get_beers_from_api() {
 			'field_5dc862ec19531' => 'style',
 			'field_5dc863269b298' => 'description',
 			'field_5dc8633738fad' => 'abv',
-			//'field_5dcebb57d83c3' => 'updatedSince',
+			'field_5debe196fece1' => 'updatedAt',
 		];
 
 		foreach ( $fillable as $key => $name ) {
-			update_field( $key, $wbwbeer->$name, $inserted_wbwbeer);
+			update_field( $key, $wbwbeer->$name, $inserted_wbwbeer );
 		}
 	} else {
 		
-		//$existing_beer_name = $existing_beer->name;
-		//$existing_beer_timestamp = get_field('updatedSince', $existing_beer_name );
+		$existing_beer_id = $existing_beer->id;
+		$existing_beer_timestamp = get_field('updatedAt', $existing_beer_id );
 
-		//if ( $wbwbeer->updatedSince >= $existing_beer_timestamp ) {
-		//	$fillable = [
-		//	'field_5dc862b619530' => 'name',
-		//	'field_5dc862ec19531' => 'style',
-		//	'field_5dc863269b298' => 'description',
-		//	'field_5dc8633738fad' => 'abv',
-		//	'field_5dcebb57d83c3' => 'updatedSince',
-	//	];
+		if ( $wbwbeer->updatedAt >= $existing_beer_timestamp ) {
+			$fillable = [
+			'field_5dc862b619530' => 'name',
+			'field_5dc862ec19531' => 'style',
+			'field_5dc863269b298' => 'description',
+			'field_5dc8633738fad' => 'abv',
+			'field_5debe196fece1' => 'updatedAt',
+		];
 
-	//	foreach ( $fillable as $key => $name ) {
-	//		updatedSince( $key, $wbwbeer->$name, $existing_beer_name);
-	//	}
-//	}
+		foreach ( $fillable as $key => $name ) {
+			update_field( $key, $wbwbeer->$name, $existing_beer_id);
+		}
+	}
 
-	//$current_page = $current_page;
-	//wp_remote_post( admin_url('admin-ajax.php?action=get_beers_from_api'), [
-	//	'blocking' =>false,
-	//	'sslverify' =>false,
-	//	'body' => [
-	//		'current_page' => $current_page
-	//	]
-	//] );
-
-	 //
+	$current_page = $current_page;
+	wp_remote_post( admin_url('admin-ajax.php?action=get_beers_from_api'), [
+		'blocking' =>false,
+		'sslverify' =>false,
+		'body' => [
+			'current_page' => $current_page
+		]
+	]);	 
 }
 }}
