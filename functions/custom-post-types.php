@@ -15,7 +15,7 @@ function fontawesome_icon_dashboard() {
      	}
      	#adminmenu .menu-icon-urban-orchard-works div.wp-menu-image:before {
    			font-family: Fontawesome !important;
-   			content: '\\f000';
+   			content: '\\f179';
      	}
      	</style>";
  }
@@ -47,7 +47,7 @@ add_action('init', 'beer_tag');
 add_action('init', 'register_ciders_cpt');
 function register_ciders_cpt() {
 	register_post_type('urban-orchard-works', [
-		'label' => 'Urban Orchard Works',
+		'label' => 'Urban Orchard',
 		'public' => true, 
 		'capability_type' => 'post',
 		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
