@@ -30,7 +30,7 @@ function get_beers_from_api() {
   $wbwbeers[] = $results;
   foreach( $wbwbeers[0] as $wbwbeer ){
     
-    $wbwbeer_slug = $wbwbeer->name;     
+    $wbwbeer_slug = slugify( $wbwbeer->name . '-' . $wbwbeer->id );     
     $existing_wbwbeer = get_page_by_path( $wbwbeer_slug, 'OBJECT', 'wbwbeers' );
     if( $existing_wbwbeer === null  ){
       
@@ -78,3 +78,17 @@ function get_beers_from_api() {
 
 }
 
+function slugify($text){
+  // remove unwanted characters
+  $text = preg_replace('~[^-\w]+~', '', $text);
+  // trim
+  $text = trim($text, '-');
+  // remove duplicate -
+  $text = preg_replace('~-+~', '-', $text);
+  // lowercase
+  $text = strtolower($text);
+  if (empty($text)) {
+    return 'n-a';
+  }
+  return $text;
+}
