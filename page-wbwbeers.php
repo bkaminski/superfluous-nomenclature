@@ -36,7 +36,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-9">
-					<h2><?php the_title(); ?></h2>
+					<h2><?php the_field('name'); ?></h2>
 					<?php the_excerpt(); ?>
 
 				</div>

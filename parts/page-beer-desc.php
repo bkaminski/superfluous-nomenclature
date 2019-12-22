@@ -1,6 +1,6 @@
 	<div class="card rounded-0">
 		<div class="card-header">
-			<h1><span itemprop="name"><?php the_title(); ?></span></h1>
+			<h1><span itemprop="name"><?php the_field('name'); ?></span></h1>
 		</div>
 		<div class="card-body">
 			<span itemprop="description">

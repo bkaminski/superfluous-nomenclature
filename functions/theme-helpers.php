@@ -26,16 +26,6 @@ remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 //REMOVE EDITOR EMOJIS
 add_filter( 'tiny_mce_plugins', 'disable_emoji_tinymce' );
-
-//MAKE MAIL COME FROM EMAIL ADDRESS RATHER THAN WORDPRESS
-function wbwbeer_mail_name( $email ){
-  return 'Wilmington Brew Works'; // new email name from sender.
-}
-add_filter( 'wp_mail_from_name', 'wbwbeer_mail_name' );
-function wbwbeer_mail_from ($email ){
-  return 'ben@wilmingtonbrewworks.com'; // new email address from sender.
-}
-add_filter( 'wp_mail_from', 'wbwbeer_mail_from' );
   
 //REMOVE DNS PREFETCH
 add_filter( 'emoji_svg_url', '__return_false' );
@@ -47,6 +37,17 @@ if ( is_array( $plugins ) ) {
 } else {
 	return array();
 }}
+
+//MAKE MAIL COME FROM EMAIL ADDRESS RATHER THAN WORDPRESS
+function wbwbeer_mail_name( $email ){
+  return 'Wilmington Brew Works'; // new email name from sender.
+}
+add_filter( 'wp_mail_from_name', 'wbwbeer_mail_name' );
+function wbwbeer_mail_from ($email ){
+  return 'ben@wilmingtonbrewworks.com'; // new email address from sender.
+}
+add_filter( 'wp_mail_from', 'wbwbeer_mail_from' );
+
 //REMOVE THE TYPE ATTRIBUTE FROM JAVASCRIPT FILES
 add_action('wp_loaded', 'prefix_output_buffer_start');
 function prefix_output_buffer_start() { 

@@ -23,7 +23,8 @@
 				<main>
 					<h1 class="tag-link mb-5">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php search_title_highlight(); ?>
+							<?php //search_title_highlight(); ?>
+							<?php the_field('name'); ?>
 								
 						</a>
 					</h1>
@@ -33,7 +34,10 @@
 				</main>
 			</div>
 		<?php endwhile; else : ?>
-			<div class="col alert alert-blue text-center font-weight-bold"><?php esc_html_e( 'Sorry, we could not find what you were searching for, please try again.' ); ?></div>
+			<div class="col alert alert-blue text-center font-weight-bold">
+				<?php esc_html_e( 'Sorry, we could not find what you were searching for, please try again.' ); ?>
+					
+			</div>
 		<?php endif; ?>
 	</div>
 	<div class="col">

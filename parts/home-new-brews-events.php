@@ -11,7 +11,7 @@
 						<h4 class="text-center pt-1 h2 text-uppercase">New Release:</h4>
 					</div>
 					<div class="card-body">
-						<h3 class="text-center"><?php the_title(); ?></h3>
+						<h3 class="text-center"><?php the_field('name'); ?></h3>
 							<div class="row">
 								<div class="col-md-6">
 									<a href="<?php the_permalink(); ?>">
