@@ -7,11 +7,11 @@ function clear_wbwbeers_from_db() {
   $wpdb->query("DELETE FROM wp_postmeta WHERE post_id NOT IN (SELECT id FROM wp_posts);");
   $wpdb->query("DELETE FROM wp_term_relationships WHERE object_id NOT IN (SELECT id FROM wp_posts)");
 }
-//clear_wbwbeers_from_db();
+clear_wbwbeers_from_db();
 
-// if ( ! wp_next_scheduled( 'update_beers_list' ) ) {
-  // wp_schedule_event( time(), 'weekly', 'update_beers_list' );
-// }
+if ( ! wp_next_scheduled( 'update_beers_list' ) ) {
+   wp_schedule_event( time(), 'hourly', 'update_beers_list' );
+ }
 add_action( 'update_beers_list', 'get_beers_from_api' );
 add_action( 'wp_ajax_nopriv_get_beers_from_api', 'get_beers_from_api' );
 add_action( 'wp_ajax_get_beers_from_api', 'get_beers_from_api' );
@@ -21,7 +21,7 @@ function get_beers_from_api() {
   // Should return an array of objects
   $results = wp_remote_retrieve_body( wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider&tier=!soda&tier=!cans') );
   // turn it into a PHP array from JSON string
-  $results = json_decode( $results );   
+  $results = json_decode( $results );    
   
   // Either the API is down or something else spooky happened. Just be done.
   if( ! is_array( $results ) || empty( $results ) ){

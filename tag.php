@@ -12,8 +12,15 @@
 			<main>
 				<h1 class="tag-link">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_title(); ?>
-						
+						<?php 
+						$value = get_field( "name" );
+						if( $value ) {
+							echo $value;
+						} else {
+							the_title(); 
+						}
+						?>
+							
 					</a>
 				</h1>
 					<?php the_excerpt(); ?>

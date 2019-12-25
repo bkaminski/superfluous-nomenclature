@@ -1,10 +1,12 @@
 	<div class="card rounded-0">
 		<div class="card-header">
-			<h1><?php the_title(); ?></h1>
+			<h1><span itemprop="name"><?php the_field('name'); ?></span></h1>
 		</div>
 		<div class="card-body">
-			<?php the_field('description'); ?>
+			<span itemprop="description">
+				<?php the_field('description'); ?>
 				
+			</span>
 		</div>
 		<ul class="list-group list-group-flush">
 			<li class="list-group-item bg-beer-card font-weight-bold">ABV: <?php the_field('abv'); ?>%</li>

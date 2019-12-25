@@ -1,16 +1,27 @@
 <?php
 
-add_action('wp_ajax_nopriv_get_ciders_from_api', 'get_ciders_from_api');
-add_action('wp_ajax_get_ciders_from_api', 'get_ciders_from_api');
+function clear_wbwciders_from_db() {
+  
+  global $wpdb;
+  $wpdb->query("DELETE FROM wp_posts WHERE post_type='urban-orchard-works'");
+  $wpdb->query("DELETE FROM wp_postmeta WHERE post_id NOT IN (SELECT id FROM wp_posts);");
+  $wpdb->query("DELETE FROM wp_term_relationships WHERE object_id NOT IN (SELECT id FROM wp_posts)");
+}
+clear_wbwciders_from_db();
+
+if ( ! wp_next_scheduled( 'update_ciders_list' ) ) {
+   wp_schedule_event( time(), 'hourly', 'update_ciders_list' );
+ }
+add_action( 'update_ciders_list', 'get_ciders_from_api' );
+add_action( 'wp_ajax_nopriv_get_ciders_from_api', 'get_ciders_from_api' );
+add_action( 'wp_ajax_get_ciders_from_api', 'get_ciders_from_api' );
 
 function get_ciders_from_api() {
-
-	$current_page = ( ! empty($_POST['current_page']) ) ? $_POST['current_page'] : 1;
-	$wbwciders = [];
-
-	$results = wp_remote_retrieve_body(wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!soda&tier=!tier1&tier=!tier2&tier=!tier3&tier=!cask&tier=!can'));
-
-	$results = json_decode($results);
+  $wbwciders = [];
+  // Should return an array of objects
+  $results = wp_remote_retrieve_body( wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!soda&tier=!tier1&tier=!tier2&tier=!tier3&tier=!cask&tier=!can') );
+  // turn it into a PHP array from JSON string
+  $results = json_decode( $results );
 
 	if ( ! is_array( $results ) || empty( $results) ) {
 		return false;
@@ -65,15 +76,8 @@ function get_ciders_from_api() {
 		foreach ( $fillable as $key => $name ) {
 			update_field( $key, $wbwcider->$name, $existing_cider_id);
 		}
-	}
+      }
+    }
+  }
 
-	$current_page = $current_page = 1;
-	wp_remote_post( admin_url('admin-ajax.php?action=get_ciders_from_api'), [
-		'blocking' =>false,
-		'sslverify' =>false,
-		'body' => [
-			'current_page' => $current_page
-		]
-	]);	 
 }
-}}

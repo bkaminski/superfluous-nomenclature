@@ -23,8 +23,13 @@
 				<main>
 					<h1 class="tag-link mb-5">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php //search_title_highlight(); ?>
-							<?php the_field('name'); ?>
+							<?php 
+							$value = get_field( "name" );
+							if( $value ) {
+								echo $value;
+							} else {
+								the_title();
+							}?>
 								
 						</a>
 					</h1>
