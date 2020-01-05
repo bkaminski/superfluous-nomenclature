@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Main Ciders Page
+* Template Name: Main CIDERS Page
 *
 * @package WordPress
 * @subpackage Superfluous Nomenclature
@@ -14,7 +14,8 @@ get_header(); ?>
 </div>
 <div class="container">
 	<main class="main-content-area pt-3">
-		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		<?php 
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		
 		$args = array(
 			'posts_per_page' => 10,
@@ -44,25 +45,21 @@ get_header(); ?>
 			<hr />
 
 		<?php endwhile;
-
 		$total_pages = $loop->max_num_pages; 
-
 		if ($total_pages > 1){
+			$current_page = max(1, get_query_var('paged'));
+			echo paginate_links(array(
+				'base' => get_pagenum_link(1) . '%_%',
+				'format' => '/page/%#%',
+				'current' => $current_page,
+				'total' => $total_pages,
+				'prev_text'    => __('« prev'),
+				'next_text'    => __('next »'),
+			));
+		}}
+		wp_reset_postdata(); ?>
 
-        $current_page = max(1, get_query_var('paged'));
-
-        echo paginate_links(array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
-            'current' => $current_page,
-            'total' => $total_pages,
-            'prev_text'    => __('« prev'),
-            'next_text'    => __('next »'),
-        ));
-    }}
-    wp_reset_postdata(); ?>
-	
 	</main>
 </div>
-
+	
 <?php get_footer(); ?>

@@ -14,7 +14,8 @@ get_header(); ?>
 </div>
 <div class="container">
 	<main class="main-content-area pt-3">
-		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		<?php 
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		
 		$args = array(
 			'posts_per_page' => 10,

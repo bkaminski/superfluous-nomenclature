@@ -1,6 +1,6 @@
 	<div class="card rounded-0">
 		<div class="card-header">
-			<h1><span itemprop="name"><?php the_field('name'); ?></span></h1>
+			<h1><span itemprop="name"><?php the_title(); ?></span></h1>
 		</div>
 		<div class="card-body">
 			<span itemprop="description">
@@ -17,17 +17,17 @@
 			<div class="row">
 				<div class="col bg-beer-card">
 					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Easily-Enjoyed-01-01.svg' ) . '" height="150" width="150" alt="Easily Enjoyed">'; ?>
+					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/Easily-Enjoyed-01-01.svg' ) . '" height="150" width="150" alt="Easily Enjoyed">'; ?>
 						
 					</div>
 					<div class="col bg-beer-card">
 						<?php $uploads = wp_upload_dir(); 
-						echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/WBW-W-Diamond1-01.svg' ) . '" height="150" width="150" alt="WBWBEER">'; ?>
+						echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/WBW-W-Diamond1-01.svg' ) . '" height="150" width="150" alt="WBWBEER">'; ?>
 							
 					</div>
 					<div class="col bg-beer-card">
 						<?php $uploads = wp_upload_dir(); 
-						echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Playfully-Pretentious-01.svg' ) . '" height="150" width="150" alt="Playfully Pretentious">'; ?>
+						echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/Playfully-Pretentious-01.svg' ) . '" height="150" width="150" alt="Playfully Pretentious">'; ?>
 							
 					</div>
 				</div>

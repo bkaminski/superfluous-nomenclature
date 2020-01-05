@@ -3,10 +3,8 @@
 			<h1><span itemprop="name"><?php the_field('name'); ?></span></h1>
 		</div>
 		<div class="card-body">
-			<span itemprop="description">
-				<?php the_field('description'); ?>
+			<?php the_field('description'); ?>
 				
-			</span>
 		</div>
 		<ul class="list-group list-group-flush">
 			<li class="list-group-item bg-beer-card font-weight-bold">ABV: <?php the_field('abv'); ?>%</li>
@@ -17,15 +15,15 @@
 			<div class="row">
 				<div class="col bg-beer-card pt-2 pb-2">
 					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Easily-Enjoyed-01-01.svg' ) . '" height="150" width="150" alt="Easily Enjoyed">'; ?>
+					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/Easily-Enjoyed-01-01.svg' ) . '" height="150" width="150" alt="Easily Enjoyed">'; ?>
 				</div>
 				<div class="col bg-beer-card pt-2 pb-2">
 					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Urban-Orchard-Works-01.svg' ) . '" height="150" width="150" alt="Urban Orchard Works">'; ?>
+					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/Urban-Orchard-Works-01.svg' ) . '" height="150" width="150" alt="Urban Orchard Works">'; ?>
 				</div>
 				<div class="col bg-beer-card pt-2 pb-2">
 					<?php $uploads = wp_upload_dir(); 
-					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/11/Playfully-Pretentious-01.svg' ) . '" height="150" width="150" alt="Playfully Pretentious">'; ?>
+					echo '<img class="img-fluid" src="' . esc_url( $uploads['baseurl'] . '/2019/12/Playfully-Pretentious-01.svg' ) . '" height="150" width="150" alt="Playfully Pretentious">'; ?>
 				</div>
 			</div>
 		</div>

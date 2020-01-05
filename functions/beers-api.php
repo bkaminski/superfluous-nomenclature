@@ -7,19 +7,19 @@ function clear_wbwbeers_from_db() {
   $wpdb->query("DELETE FROM wp_postmeta WHERE post_id NOT IN (SELECT id FROM wp_posts);");
   $wpdb->query("DELETE FROM wp_term_relationships WHERE object_id NOT IN (SELECT id FROM wp_posts)");
 }
-clear_wbwbeers_from_db();
+//clear_wbwbeers_from_db();
 
-if ( ! wp_next_scheduled( 'update_beers_list' ) ) {
-   wp_schedule_event( time(), 'hourly', 'update_beers_list' );
- }
-add_action( 'update_beers_list', 'get_beers_from_api' );
+//if ( ! wp_next_scheduled( 'update_beers_list' ) ) {
+  // wp_schedule_event( time(), 'hourly', 'update_beers_list' );
+// }
+//add_action( 'update_beers_list', 'get_beers_from_api' );
 add_action( 'wp_ajax_nopriv_get_beers_from_api', 'get_beers_from_api' );
 add_action( 'wp_ajax_get_beers_from_api', 'get_beers_from_api' );
 
 function get_beers_from_api() {
   $wbwbeers = [];
   // Should return an array of objects
-  $results = wp_remote_retrieve_body( wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=!cider&tier=!soda&tier=!cans') );
+  $results = wp_remote_retrieve_body( wp_remote_get('https://wbwbeer.app/api/v1/beers?tier=Tier1&tier=Tier2&tier=Tier3') );
   // turn it into a PHP array from JSON string
   $results = json_decode( $results );    
   
@@ -30,7 +30,7 @@ function get_beers_from_api() {
   $wbwbeers[] = $results;
   foreach( $wbwbeers[0] as $wbwbeer ){
     
-    $wbwbeer_slug = slugify( $wbwbeer->name . '-' . $wbwbeer->id );     
+    $wbwbeer_slug = $wbwbeer->name;     
     $existing_wbwbeer = get_page_by_path( $wbwbeer_slug, 'OBJECT', 'wbwbeers' );
     if( $existing_wbwbeer === null  ){
       
@@ -76,19 +76,4 @@ function get_beers_from_api() {
     }
   }
 
-}
-
-function slugify($text){
-  // remove unwanted characters
-  $text = preg_replace('~[^-\w]+~', '', $text);
-  // trim
-  $text = trim($text, '-');
-  // remove duplicate -
-  $text = preg_replace('~-+~', '-', $text);
-  // lowercase
-  $text = strtolower($text);
-  if (empty($text)) {
-    return 'n-a';
-  }
-  return $text;
 }
