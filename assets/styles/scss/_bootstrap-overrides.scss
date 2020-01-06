@@ -50,12 +50,12 @@ a.nav-link {
   	font-size: 1rem;
   }
   &:hover {
-  	color: #b4a269ff;
-  	border-bottom: 2px solid #b4a269ff;
+  	color: #b4a269;
+  	border-bottom: 2px solid #b4a269;
   }
 }
 .navbar-toggler {
-    background-color: #b4a269ff;
+    background-color: #b4a269;
     border: 0px solid transparent;
     transition: 0.4s ease-in-out;
     &:hover {
@@ -88,20 +88,20 @@ a.nav-link {
 	}
 }
 .bg-beer-card {
-	background: #b4a269ff;
+	background: #b4a269;
 }
 /* WBW COLOR CODED BUTTONS AND ALERTS */
 .btn-blue {
-	color: #b4a269ff;
+	color: #b4a269;
 	background-color: #1d547e;
 	border-color: #222;
 	&:hover {
 		background-color: #143b59;
-		color: #b4a269ff;
+		color: #b4a269;
 	}
 }
 .alert-blue {
-    color: #b4a269ff;
+    color: #b4a269;
 	background-color: #1d547e;
-	border-color: #b4a269ff;
+	border-color: #b4a269;
 }
