@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 <div class="page-header">
-	<div class="header-img-left"></div>
-	<div class="header-img-right"></div>
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1 class="display-3 text-center pg-title"><?php the_title(); ?></h1>
+				<h1 class="display-3 text-center pg-title text-uppercase"><?php the_title(); ?></h1>
 
 			</div>
 		</div>
 	</div>
 	<div class="container">
-		<main class="main-content-area pt-3">
+		<main class="main-content-area pb-3 pt-3">
+			<figure class="pb-3 pr-4 pl-4 pt-2">
+			<?php the_post_thumbnail( 'large', array( 'class' => 'aligncenter shadow mb-3 img-fluid aboutwbw' ) ); ?>
+				
+			</figure>
 			<?php the_content(); ?>
 				
 		</main>
@@ -19,10 +21,10 @@
 			<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
 				
 		</div>
-		</div>
-		<?php if( ! is_page( array ('contact', 'events') ) ) {
-			get_template_part( 'parts/page', 'contact-us' );
-		}?>
+	</div>
+	<?php if( ! is_page( array ('contact', 'events') ) ) {
+		get_template_part( 'parts/page', 'contact-us' );
+	}?>
 	<?php endwhile; else : ?>
 	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>

@@ -46,7 +46,7 @@
     $('#logoVector').find('img').addClass('img-fluid');
 
     //ADD RESPONSIVE CLASS TO EVENT IMAGE
-    $('.eme_event_image').addClass('img-fluid');
+    $('.eme_event_image').addClass('img-fluid mx-auto d-block');
 
     //REMOVE TRANSPARENT HEADER ON SCROLL
     $(function() {

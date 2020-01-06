@@ -8,10 +8,8 @@
  */
 get_header(); ?>
 <div class="page-header">
-	<div class="header-img-left"></div>
-	<div class="header-img-right"></div>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<h1 class="display-3 text-center pg-title"><?php the_title(); ?></h1>
+		<h1 class="display-3 text-center pg-title text-uppercase"><?php the_title(); ?></h1>
 
 </div>
 <main>
