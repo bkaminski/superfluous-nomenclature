@@ -48,7 +48,7 @@ background-position: top right 32px;
 .wbw-social {
 	width: 100%;
 	min-height: 250px;
-	background: #b4a269ff;
+	background: #b4a269;
 }
 .new-release {
 	width: 100%;
@@ -112,6 +112,9 @@ background-position: top right 32px;
 }
 .page-header {
 	background: #1d547e;
+	background-image: url('../../../../uploads/2020/01/wilmington-brew-works-taproom-crowd.jpg');
+	background-repeat: no-repeat;
+	background-position:center center;
 	border-bottom: 4px solid #b4a269;
 	margin-top: 111px;
 	min-height: 180px;
@@ -153,7 +156,7 @@ background-position: top right 32px;
 	font-size: 12px;
 }
 .fa-footer {
-	color: #b4a269ff !important;
+	color: #b4a269 !important;
 	&:hover {
 		color: #ccc !important;
 	} 
@@ -174,7 +177,7 @@ background-position: top right 32px;
 	border-top: 4px solid #1d547e; 
 }
 .about-wbw {
-	background: #b4a269ff;
+	background: #b4a269;
 	width: 100%;
 	min-height: 200px;
 	margin-top: -5px;
