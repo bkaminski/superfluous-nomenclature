@@ -9,7 +9,7 @@
 		</h4>
 	</div>
 	<?php foreach ($events as $event) {
-		print "<h1 class='tag-link mb-2'><a href='".eme_event_url($event)."'>".$event['event_name']."</a></h1>";
+		print "<h1 class='tag-link mb-2 text-uppercase'><a href='".eme_event_url($event)."'>".$event['event_name']."</a></h1>";
 		print "".$event['event_start_date']."<br /><br />";
 		print substr($event['event_notes'],0,250)."[...]<br />";
 		print "<a class='btn btn-blue btn-lg mt-4 pr-4 pl-4 rounded-0 text-uppercase' href='".eme_event_url($event)."'>Read More<i class='fas fa-angle-double-right fa-fw fa-lg'></i></a>";
@@ -21,7 +21,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="col-md-12 mb-4">
 				<main>
-					<h1 class="tag-link mb-5">
+					<h1 class="tag-link mb-5 text-uppercase">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_title(); ?>
 								

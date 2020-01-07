@@ -30,6 +30,8 @@ get_header(); ?>
 					</p>
 				</div>
 			</div>
+		</div>
+		<div class="card-deck">
 			<div class="card">
 				<?php 
 				$image = get_field('keith_image');

@@ -10,7 +10,7 @@
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="col-md-12 mb-4">
 			<main>
-				<h1 class="tag-link">
+				<h1 class="tag-link text-uppercase">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 						<?php the_title(); ?>
 							
