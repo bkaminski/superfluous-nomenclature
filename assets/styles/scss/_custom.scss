@@ -114,9 +114,12 @@ background-position: top right 32px;
 	background: #1d547e;
 	border-bottom: 4px solid #b4a269;
 	margin-top: 111px;
-	min-height: 330px;
-	padding-top: 7rem;
-	color: #b4a269ff;
+	min-height: 180px;
+	padding-top: 5.4rem;
+	color: #b4a269;
+	@include breakpoint (md) {
+		min-height: 250px;
+	}
 }
 .beer-tags,
 .cider-tags {
@@ -174,10 +177,11 @@ background-position: top right 32px;
 	background: #b4a269ff;
 	width: 100%;
 	min-height: 200px;
+	margin-top: -5px;
 }
 .pg-title {
 	font-size: 2.5rem;
-	margin-top: -60px;
+	margin-top: -40px;
 	@include breakpoint (sm) {
 		font-size: 3rem;
 		margin-top: 0px;

@@ -34,7 +34,12 @@
 					</div>
 					<?php echo do_shortcode('[eme_events limit=4]'); ?>
 
+
 				</div>
+
+			</div>
+			<div class="text-center">
+				<a href="taproom/events/" class="btn btn-blue btn-lg rounded-0 mt-3 pr-5 pl-5">View All Events</a>
 			</div>
 			<!-- <?php //endwhile; wp_reset_query(); ?> -->
 		
