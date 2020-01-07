@@ -20,6 +20,9 @@
 <meta name="msapplication-TileColor" content="#e9e9e9">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/ms-icon-144x144.png">
 <meta name="theme-color" content="#ccc">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
+</style> 
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -2,17 +2,20 @@
 .home > {
   .wbw-navbar {
     transition: none;
+    transition: 0.4s ease-in-out;
   }
 
   .wbw-navbar-solid {
     > a.nav-link, a.nav-link {
       color: #222;
+      transition: 0.4s ease-in-out;
     }
   }
 }
 .home > .wbw-navbar-solid {
 	background: #f8f9fa;
 	opacity: 0.9;
+	transition: 0.4s ease-in-out;
 	@include breakpoint (xs) {
 		opacity: 1;
 	}
@@ -50,12 +53,12 @@ a.nav-link {
   	font-size: 1rem;
   }
   &:hover {
-  	color: #b4a269;
-  	border-bottom: 2px solid #b4a269;
+  	color: #b4a269ff;
+  	border-bottom: 2px solid #b4a269ff;
   }
 }
 .navbar-toggler {
-    background-color: #b4a269;
+    background-color: #b4a269ff;
     border: 0px solid transparent;
     transition: 0.4s ease-in-out;
     &:hover {
@@ -88,20 +91,20 @@ a.nav-link {
 	}
 }
 .bg-beer-card {
-	background: #b4a269;
+	background: #b4a269ff;
 }
 /* WBW COLOR CODED BUTTONS AND ALERTS */
 .btn-blue {
-	color: #b4a269;
+	color: #b4a269ff;
 	background-color: #1d547e;
 	border-color: #222;
 	&:hover {
 		background-color: #143b59;
-		color: #b4a269;
+		color: #b4a269ff;
 	}
 }
 .alert-blue {
-    color: #b4a269;
+    color: #b4a269ff;
 	background-color: #1d547e;
-	border-color: #b4a269;
+	border-color: #b4a269ff;
 }
