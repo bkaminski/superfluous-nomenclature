@@ -1,7 +1,11 @@
-<?php get_header(); ?>
+<?php
+/*
+ * Template Name: Cornhole Single Post
+ * Template Post Type: cornhole-league
+ */
+  
+get_header();  ?>
 <div class="page-header">
-	<div class="header-img-left"></div>
-	<div class="header-img-right"></div>
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -9,13 +13,11 @@
 
 			</div>
 		</div>
+
 	</div>
-	<div class="container">
-		<main class="main-content-area pt-3 pb-3">
-			<figure class="pb-3 pr-4 pl-4 pt-2">
-			<?php the_post_thumbnail( 'large', array( 'class' => 'aligncenter shadow mb-3 img-fluid aboutwbw' ) ); ?>
-				
-			</figure>
+		<div class="container">
+		<main class="main-content-area pt-3 pb-3" style="margin-top:0px;">
+			<small>Posted on: <?php echo get_the_date(); ?></small>
 			<?php the_content(); ?>
 				
 		</main>

@@ -17,6 +17,10 @@ function fontawesome_icon_dashboard() {
    			font-family: Fontawesome !important;
    			content: '\\f179';
      	}
+     	#adminmenu .menu-icon-cornhole-league div.wp-menu-image:before {
+   			font-family: Fontawesome !important;
+   			content: '\\f091';
+     	}
      	</style>";
  }
 add_action('admin_head', 'fontawesome_icon_dashboard');
@@ -60,3 +64,23 @@ function cider_tag() {
 	register_taxonomy_for_object_type('post_tag', 'urban-orchard-works');
 }
 add_action('init', 'cider_tag');
+
+// ======================================================================================== //
+
+
+add_action('init', 'register_cornhole_cpt');
+function register_cornhole_cpt() {
+	register_post_type('cornhole-league', [
+		'label' => 'Cornhole',
+		'public' => true, 
+		'capability_type' => 'post',
+		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'  => array( 'category' ),
+	]);
+}
+
+// Add Tag Support
+function cornhole_tag() {
+	register_taxonomy_for_object_type('post_tag', 'cornhole-league');
+}
+add_action('init', 'cornhole_tag');

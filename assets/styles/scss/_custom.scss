@@ -170,6 +170,7 @@ background-position: top right 32px;
 	background: #f8f9fa;
 	padding-right: 15px;
 	padding-left: 15px;
+	margin-top: -5px;
 }
 .contact {
 	min-height: 200px;
@@ -187,10 +188,22 @@ background-position: top right 32px;
 	margin-top: -40px;
 	@include breakpoint (sm) {
 		font-size: 3rem;
-		margin-top: 0px;
+		margin-top: -22px;
 	}
 	@include breakpoint (md) {
 		font-size: 3.5rem;
+		margin-top: 0px;
+	}
+}
+.feat-img {
+	display: block;
+	margin-top: 0px;
+	overflow: visible;
+	@include breakpoint (md) {
+		position: relative;
+		height: 350px;
+		overflow: hidden;
+		margin-bottom: 20px;
 	}
 }
 .search-highlight {
