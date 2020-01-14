@@ -4,7 +4,7 @@
 		<div class="header-img-right"></div>
 		<div class="container-fluid">
 			<div class="col-md-12">
-				<h1 class="display-3 text-center pg-title"><?php _e( '404: Page Not Found', 'superfluous-nomenclature' ); ?></h1>
+				<h1 class="display-3 text-center pg-title text-uppercase"><?php _e( '404: Page Not Found', 'superfluous-nomenclature' ); ?></h1>
 			</div>
 		</div>
 	</div>

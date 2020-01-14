@@ -32,6 +32,17 @@
     	$(this).stop().animate({"opacity": "1"}, "slow");
     });
 
+    //Parallax Background
+	$window = $(window);
+	$('section[data-type="background"]').each(function(){
+		var $scroll = $(this);
+		$(window).scroll(function() {
+			var yPos = -($window.scrollTop() / $scroll.data('speed'));
+			var coords = '80% '+ yPos + 'px';
+			$scroll.css({ backgroundPosition: coords });
+		});
+	});
+
     //TRIGGER SEARCH MODAL
     $(".wbw-search-modal").click(function(){
         $("#searchModal").modal('show');
