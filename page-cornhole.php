@@ -10,12 +10,12 @@ get_header(); ?>
 <div class="page-header">
 	<h1 class="display-3 text-center pg-title text-uppercase">Cornhole League</h1>
 </div>
+<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+
+	<section id="home" data-speed="3" data-type="background" style="background: url('<?php echo $backgroundImg[0]; ?>') 50% 0 fixed;background-repeat: no-repeat;background-size:cover;"></section>
 <div class="container">
-	<main class="main-content-area pt-3 pb-3" style="margin-top:0px;">
-		<figure class="pb-3">
-			<?php the_post_thumbnail( 'full', array( 'class' => 'aligncenter shadow mb-3 img-fluid aboutwbw mt-0' ) ); ?>
-				
-			</figure>
+	<main class="main-content-area pt-3 pb-3">
+
 			<?php the_content(); ?>
 			<br />
 		<?php 

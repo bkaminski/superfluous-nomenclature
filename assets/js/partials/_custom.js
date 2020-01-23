@@ -1,6 +1,17 @@
 (function( $ ) {
 	$( document ).ready(function() {
 	
+	//Parallax Background
+	$window = $(window);
+	$('section[data-type="background"]').each(function(){
+		var $scroll = $(this);
+		$(window).scroll(function() {
+			var yPos = -($window.scrollTop() / $scroll.data('speed'));
+			var coords = '70% '+ yPos + 'px';
+			$scroll.css({ backgroundPosition: coords });
+		});
+	});
+
 	//Animate slide up and down nav dropdowns.
 	$('.dropdown').on('show.bs.dropdown', function(e) {
 		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -32,17 +43,7 @@
     	$(this).stop().animate({"opacity": "1"}, "slow");
     });
 
-    //Parallax Background
-	$window = $(window);
-	$('section[data-type="background"]').each(function(){
-		var $scroll = $(this);
-		$(window).scroll(function() {
-			var yPos = -($window.scrollTop() / $scroll.data('speed'));
-			var coords = '80% '+ yPos + 'px';
-			$scroll.css({ backgroundPosition: coords });
-		});
-	});
-
+    
     //TRIGGER SEARCH MODAL
     $(".wbw-search-modal").click(function(){
         $("#searchModal").modal('show');

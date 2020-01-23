@@ -209,10 +209,14 @@ background-position: top right 32px;
 	color: #1d547e ;
 	text-decoration: underline;
 }
-#home { 
-	height: 450px;  
+#hero-img { 
+	height: 420px;  
 	margin: 0 auto; 
 	width: 100%; 
 	position: relative; 
-	
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	@include breakpoint (md) {
+		
+	}
 }
