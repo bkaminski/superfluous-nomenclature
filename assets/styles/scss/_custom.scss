@@ -4,10 +4,10 @@
 	background-position: 50% 50%;
 	min-height: 300px;
 }
-.wbw-home-head {
+.wbw-home-head1 {
 	min-height: 700px;
 	width: 100%;
-	background-image: url('../../../../uploads/2020/01/wbw-beginnings-dark-scaled.jpg');
+	background-image: url('../../../../uploads/2020/01/wbw-beginnings-dark-scaled-cropped.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
 	border-bottom: 4px solid #b4a269;
@@ -15,6 +15,131 @@
 		min-height: 1000px;
 	}
 }
+.wbw-home-head2 {
+	min-height: 700px;
+	width: 100%;
+	background-image: url('../../../../uploads/2020/01/wbw-beginnings-light-scaled-1.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+	border-bottom: 4px solid #b4a269;
+	@include breakpoint (md) {
+		min-height: 1000px;
+	}
+}
+#homeHero {
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+img {
+  &#homeHero {
+    -webkit-animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -ms-animation: fadein 3s;
+    -o-animation: fadein 3s;
+    animation: fadein 3s;
+  }
+
+  &.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  &.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .modal-open > .page-header > .header-img-right {
 background-position: top right 32px;
 }
