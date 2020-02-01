@@ -21,7 +21,7 @@
 	background-image: url('../../../../uploads/2020/01/wbw-beginnings-light-scaled-1.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
-	border-bottom: 4px solid #b4a269;
+	border-bottom: 0px solid #b4a269;
 	@include breakpoint (md) {
 		min-height: 1000px;
 	}
@@ -139,6 +139,10 @@ img {
     opacity: 1;
   }
 }
+
+.delayImg {
+	opacity:0;
+}​
 
 .modal-open > .page-header > .header-img-right {
 background-position: top right 32px;

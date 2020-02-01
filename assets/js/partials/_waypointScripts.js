@@ -1,10 +1,5 @@
 (function( $ ) {
 	$( document ).ready(function() {
-		$('.logo-img').waypoint(function() {
-			$('.logo-img').addClass('animated fadeInUp');
-		}, {
-			duration: '600'
-		});
 		$('.beer-header, .cider-header').waypoint(function() {
 			$('.beer-header, .cider-header').find('img').addClass('animated fadeInDown');
 		}, {
