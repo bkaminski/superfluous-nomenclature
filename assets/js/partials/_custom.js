@@ -1,6 +1,6 @@
 (function( $ ) {
 	$( document ).ready(function() {
-	
+
 	//Parallax Background
 	$window = $(window);
 	$('section[data-type="background"]').each(function(){
@@ -43,7 +43,6 @@
     	$(this).stop().animate({"opacity": "1"}, "slow");
     });
 
-    
     //TRIGGER SEARCH MODAL
     $(".wbw-search-modal").click(function(){
         $("#searchModal").modal('show');
@@ -83,15 +82,5 @@ document.addEventListener('DOMContentLoaded', function () {
 		.toggleClass('fa-times');
 	});
 });
-
-//MAIN LOGO FADE
-$(document).ready(function() {
-    $(".delayImg").each(function() {
-        this.onload = function() {
-            $(this).animate({opacity: 1}, 4000);
-        };
-        this.src = this.getAttribute("delayedSrc");
-    });
-});​
 
 })( jQuery );

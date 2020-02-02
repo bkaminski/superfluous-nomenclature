@@ -1,13 +1,7 @@
 <?php get_header(); ?>
 <header>
-	<div class="wbw-home-head1">
-		<div id="homeHero" class="wbw-home-head2">
-			<div class="container text-center">
+	<?php get_template_part( 'parts/home', 'hero' ); ?>
 
-				<?php $uploads = wp_upload_dir(); echo '<img class="img-fluid logo-img delayImg" delayedSrc="' . esc_url( $uploads['baseurl'] . '/2020/01/wbw-diamond-gold.svg' ) . '" height="500" width="500" alt="Wilmington Brew Works Logo" />' ;?>
-			</div>
-		</div>
-	</div>
 </header>
 <main class="mission">
 	<?php get_template_part( 'parts/home', 'about' ); ?>

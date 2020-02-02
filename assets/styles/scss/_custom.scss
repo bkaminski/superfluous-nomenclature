@@ -139,13 +139,21 @@ img {
     opacity: 1;
   }
 }
-
-.delayImg {
-	opacity:0;
-}​
-
-.modal-open > .page-header > .header-img-right {
-background-position: top right 32px;
+.modal {
+    overflow-y: auto;
+    padding-right: 0px !important;
+}
+.modal-open {
+    overflow: auto;
+}
+.modal-open[style] {
+    padding-right: 0px !important;
+} 
+.modal-open > .wbw-navbar-solid {
+	padding-right: 16px !important;
+}
+.modal-open > .wbw-navbar {
+	padding-right: 16px !important;
 }
 .wbw-beer-bg::after {
 	content:"\A";
