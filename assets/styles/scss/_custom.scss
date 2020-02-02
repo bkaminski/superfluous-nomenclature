@@ -155,6 +155,7 @@ img {
 .modal-open > .wbw-navbar {
 	padding-right: 16px !important;
 }
+
 .wbw-beer-bg::after {
 	content:"\A";
 	padding-top: 500px;
@@ -167,6 +168,8 @@ img {
 }
 .logo-img {
 	padding-top: 170px;
+	-webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 .event-carousel-area {
 	width: 100%;
