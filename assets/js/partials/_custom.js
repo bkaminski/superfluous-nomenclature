@@ -1,6 +1,12 @@
 (function( $ ) {
 	$( document ).ready(function() {
 
+	//DELAY LOGO LOAD
+	var $rows = $('#logoHero').addClass('visible');
+	setTimeout(function() {
+		$rows.removeClass('invisible');
+	}, 1000);
+
 	//Parallax Background
 	$window = $(window);
 	$('section[data-type="background"]').each(function(){

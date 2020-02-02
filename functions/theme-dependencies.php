@@ -1,6 +1,7 @@
 <?php 
 //LOAD SCRIPTS
 function enqueue_wbwbeer_scripts() {
+	wp_enqueue_script('jQuery-UI', 'https://code.jquery.com/ui/1.12.0/jquery-ui.min.js', false, null, true, null);
     wp_enqueue_script('Ajax-Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', false, null, true, null);
     wp_enqueue_script('Bootstrap-4.1.3', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), null, true, null);
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/9a1bb2c83f.js', false, null, true, false);
