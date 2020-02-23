@@ -7,7 +7,7 @@
 .wbw-home-head1 {
 	min-height: 700px;
 	width: 100%;
-	background-image: url('../../../../uploads/2020/01/wbw-beginnings-dark-scaled-cropped.jpg');
+	background-image: url('../../../../uploads/2020/02/wbw-beginnings-dark-scaled-cropped.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
 	border-bottom: 4px solid #b4a269;
@@ -18,7 +18,7 @@
 .wbw-home-head2 {
 	min-height: 700px;
 	width: 100%;
-	background-image: url('../../../../uploads/2020/01/wbw-beginnings-light-scaled-1.jpg');
+	background-image: url('../../../../uploads/2020/02/wbw-beginnings-light-scaled-1.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
 	border-bottom: 0px solid #b4a269;
@@ -359,4 +359,14 @@ img {
 	@include breakpoint (md) {
 		
 	}
+}
+
+// Untappd Overrides
+.menu-website,
+.menu-list,
+#menu-60157 {
+	display: none !important;
+}
+.ut-menu-standard .tab-content:nth-child(n+2) {
+    display: block !important;
 }

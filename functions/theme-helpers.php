@@ -14,6 +14,20 @@ add_theme_support( 'automatic-feed-links' );
 function tags_support_all() {
     register_taxonomy_for_object_type('post_tag', 'page');
 }
+//WordPress Fluid Images Bootstrap 4.1.0
+function bootstrap_fluid_images($html)
+{
+    $classes = 'img-fluid';
+    if (preg_match('/<img.*? class="/', $html)) {
+        $html = preg_replace('/(<img.*? class=".*?)(".*?\/>)/', '$1 ' . $classes . '$2', $html);
+    } else {
+        $html = preg_replace('/(<img.*?)(\/>)/', '$1 class="' . $classes . '"$2', $html);
+    }
+    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
+    return $html;
+}
+add_filter('the_content', 'bootstrap_fluid_images', 10);
+add_filter('post_thumbnail_html', 'bootstrap_fluid_images', 10);
 //DISABLE EMOJI BLOAT
 function disable_wp_emoji() {
 //REMOVE ALL ACTIONS USING EMOJI
