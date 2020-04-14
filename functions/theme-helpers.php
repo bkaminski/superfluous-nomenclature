@@ -9,12 +9,28 @@ add_theme_support( 'title-tag' );
 //ALLOW POSTS AND PAGES FEATURED IMAGE
 add_theme_support('post-thumbnails');
 //ADD RSS/ATOM SUPPORT
-add_theme_support( 'automatic-feed-links' );
+//add_theme_support( 'automatic-feed-links' );
 //ADD TAG SUPPORT TO PAGES
 function tags_support_all() {
     register_taxonomy_for_object_type('post_tag', 'page');
 }
-//WordPress Fluid Images Bootstrap 4.1.0
+//SIDEBAR REGISTER 
+add_action( 'widgets_init', 'wbwbeer_register_sidebars' );
+function wbwbeer_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'primary',
+            'name'          => __( 'Primary Sidebar' ),
+            'description'   => __( '' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+//WordPress Fluid Images Bootstrap 4.3.1
 function bootstrap_fluid_images($html)
 {
     $classes = 'img-fluid';
@@ -97,10 +113,7 @@ function excerpt_read_more_link($output)
 add_filter('the_excerpt', 'excerpt_read_more_link');
 //REMOVE COMMENTS FEED RSS
 add_filter( 'feed_links_show_comments_feed', '__return_false' );
-//REMOVE JSON API
-remove_action( 'wp_head', 'rest_output_link_wp_head');
-remove_action( 'wp_head', 'wp_oembed_add_discovery_links');
-remove_action( 'template_redirect', 'rest_output_link_header', 11);
+
 //REMOVE WP VERSION FROM CODE
 function wbwBeer_remove_version() {
 return '';
@@ -222,3 +235,42 @@ function search_title_highlight() {
 
     echo $title;
 }
+
+//DESTROY RENDER BLOCKING RESOURCES
+function defer_parsing_of_js($url)
+{
+  if (is_admin()) return $url; //don't break WP Admin
+  if (false === strpos($url, '.js')) return $url;
+  if (strpos($url, 'jquery.js')) return $url;
+  return str_replace(' src', ' defer src', $url);
+}
+add_filter('script_loader_tag', 'defer_parsing_of_js', 10);
+
+
+//REMOVE YOAST OG TAGS FROM EVENTS
+add_action('wp_head', 'remove_all_wpseo_og', 1);
+function remove_all_wpseo_og() {
+	if ( eme_is_events_page() ) {
+		remove_action( 'wpseo_head', array( $GLOBALS['wpseo_og'], 'opengraph' ), 30 );
+	}
+}
+
+add_action('wp_head', 'remove_all_wpseo_twitter', 1);
+function remove_all_wpseo_twitter() {
+	if ( eme_is_events_page() ) {
+		remove_action( 'wpseo_head' , array( 'WPSEO_Twitter' , 'get_instance' ) , 40 );
+	}
+}
+
+//WOOCOMMERCE SUPPORT
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+

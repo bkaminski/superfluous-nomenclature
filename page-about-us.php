@@ -9,6 +9,8 @@
 get_header(); ?>
 
 <div class="page-header">
+	<div class="header-img-left"></div>
+	<div class="header-img-right"></div>
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

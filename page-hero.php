@@ -23,16 +23,12 @@ get_header(); ?>
 				
 		</figure>
 	</div>
-	<?php if ( is_page( array('contact', 'wbw-events', 'online-store' ))) {
-	//do nothing
-	} else { ?>
 	<div class="container-fluid kill-padding d-none d-sm-none d-md-block">
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 		<section id="hero-img" data-speed="3" data-type="background" style="background: url('<?php echo $backgroundImg[0]; ?>') 70% 0 fixed;background-repeat: no-repeat;background-size:cover;">
 			
 		</section>
 	</div>
-	<?php }; ?>
 	<div class="container">
 		<main class="main-content-area pb-3 pt-3">
 			<?php the_content(); ?>

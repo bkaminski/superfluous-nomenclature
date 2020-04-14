@@ -55,7 +55,7 @@ get_header(); ?>
 				<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="John Fusco">
 				<?php endif; ?>
 				<div class="card-body">
-					<h5 class="card-title text-center font-weight-bold">John Fusco<br /> VP of Marketing and Brand Management</h5>
+					<h5 class="card-title text-center font-weight-bold">John Fusco<br /> VP Creative &amp; Brand Marketing</h5>
 					<p class="card-text small">
 						<?php the_field('john_bio'); ?>
 						
@@ -87,7 +87,7 @@ get_header(); ?>
 				<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="Derek Berkeley">
 				<?php endif; ?>
 				<div class="card-body">
-					<h5 class="card-title text-center font-weight-bold">Derek Berkeley<br /> Facilities Maintenance</h5>
+					<h5 class="card-title text-center font-weight-bold">Derek Berkeley<br /> Facilities and Maintenance Manager</h5>
 					<p class="card-text small">
 						<?php the_field('derek_bio'); ?>
 							
@@ -97,6 +97,40 @@ get_header(); ?>
 		</div>
 		<hr>
 		<h2 class="text-center pt-3">Staff:</h2>
+		<div class="card-deck">
+			<div class="card">
+				<?php 
+				$image = get_field('jen_image');
+				if( !empty($image) ): ?>
+				
+				<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="Jennifer Hughes">
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold">Jennifer Hughes<br /> Director of Administration</h5>
+					<p class="card-text small">
+						<?php the_field('jen_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<?php 
+				$image = get_field('ryan_image');
+				if( !empty($image) ): ?>
+				
+				<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="Ryan Rice">
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold">Ryan Rice<br /> Production Assistant and Draught Technician</h5>
+					<p class="card-text small">
+						<?php the_field('ryan_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
 		<?php the_content(); ?>
 	</div>
 	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">

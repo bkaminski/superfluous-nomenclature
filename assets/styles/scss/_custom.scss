@@ -4,6 +4,12 @@
 	background-position: 50% 50%;
 	min-height: 300px;
 }
+.error404 {
+	background-image: url('../../../../uploads/2020/03/lacing404-scaled.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
 .wbw-home-head1 {
 	min-height: 700px;
 	width: 100%;
@@ -370,4 +376,14 @@ img {
 }
 .ut-menu-standard .tab-content:nth-child(n+2) {
     display: block !important;
+}
+
+//WooCommerce OVerrides
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+background-color: #28a745 !important;
+color: #fff;
+-webkit-font-smoothing: antialiased;
 }

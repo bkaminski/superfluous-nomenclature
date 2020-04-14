@@ -31,7 +31,7 @@
 							(302) 722-4828<br />
 						</address>
 						<p><a class="text-white" href="https://g.page/wilmingtonbrewworks?share" target="_blank">Map</a><br /></p>
-						<!-- <a class="text-white" href="<?php //echo get_home_url(); ?>/privacy-policy/">Privacy Policy</a></p> -->
+						<a class="text-white" href="<?php echo get_home_url(); ?>/privacy-policy/">Privacy Policy</a></p>
 					</div>
 				</div>
 			</div>

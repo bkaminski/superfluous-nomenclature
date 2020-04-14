@@ -5,7 +5,7 @@ function enqueue_wbwbeer_scripts() {
     wp_enqueue_script('Bootstrap-4.1.3', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'), null, true, null);
     wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/9a1bb2c83f.js', false, null, true, false);
     wp_enqueue_script('wbw-scripts', get_template_directory_uri() . '/assets/js/wbwScripts.min.js', array('jquery'), null, true, null);
-    wp_enqueue_script('google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap', false);
+    wp_enqueue_script('google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap', array(), '1.0' );
 }
 add_action('wp_enqueue_scripts', 'enqueue_wbwbeer_scripts');
 //LOAD CSS

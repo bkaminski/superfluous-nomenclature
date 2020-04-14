@@ -16,7 +16,7 @@
               <button id="wbwCookieModalOverTwentyOne" type="button" class="btn btn-success btn-block rounded-0 btn-lg" data-dismiss="modal">I am over 21 and accept</button>
             </div>
             <div class="col-sm-12">
-              <a href="https://www.youtube.com/watch?v=p6WPWyAIw9o" type="button" class="btn btn-secondary btn-lg btn-block rounded-0">I am under 21 or decline</a>
+              <a class="btn btn-warning btn-lg btn-block rounded-0" href="https://www.youtube.com/watch?v=p6WPWyAIw9o" type="button">I am under 21 or decline</a>
             </div>
           </div>
         </div>

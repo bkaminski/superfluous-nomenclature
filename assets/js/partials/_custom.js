@@ -89,4 +89,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+//WOOCOMMERCE FIXES
+$('#billing_first_name_field, #account_username_field, #createaccount, #shipping_postcode_field, #shipping_state_field, #shipping_city_field, #shipping_address_1_field, #shipping_address_2_field, #account_password_field, #shipping_country_field, #billing_last_name_field, #billing_company_field, #shipping_company_field, #billing_country_field, #billing_address_1_field, #billing_address_2_field, #billing_city_field, #billing_state_field, #billing_postcode_field, #billing_phone_field, #billing_email_field, #order_comments_field, #shipping_first_name_field, #shipping_last_name_field').addClass('form-group').removeClass('form-row form-row-first form-row-last');
+$('#billing_first_name, #billing_last_name, #shipping_city, #shipping_postcode, #shipping_state, #account_username, #shipping_address_1, #shipping_address_2, #account_password, #shipping_country, #billing_company, #billing_country, #shipping_company, #billing_address_1, #billing_address_2, #billing_city, #billing_state, #billing_postcode, #billing_phone, #billing_email, #order_comments, #shipping_first_name, #shipping_last_name').addClass('form-control');
+$('.col-1').addClass('noClass').removeClass('col-1');
+$('.col-2').addClass('noClass').removeClass('col-2');
+$('.checkout-button').removeClass('button alt wc-forward').addClass('btn btn-blue text-uppercase');
+$('.add_to_cart_button').removeClass('button product_type_variable add_to_cart_button').addClass('btn btn-blue rounded-0 btn-lg');
+$('.single_add_to_cart_button').removeClass('single_add_to_cart_button button btn alt').addClass('btn btn-blue text-uppercase rounded-0 pr-4 pl-4');
+$('.product_title').addClass('text-uppercase');
+$('.donation_note').hide();
+$('.wdgk_donation').addClass('form-control');
+$('.wdgk_donation').before('<h3>Gratuity is always welcomed for staff</h2><small>please enter dollar amount</small>');
+$('.wdgk_donation').attr('placeholder', '$' );
+$('.wdgk_donation_content').each(function() {
+	$(this).insertAfter($(this).parent().find('.woocommerce-additional-fields__field-wrapper'));
+});
+
+
+
+
 })( jQuery );
