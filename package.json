@@ -29,14 +29,15 @@
   },
   "homepage": "https://github.com/bkaminski/superfluous-nomenclature#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "minimist": "^1.2.5"
   },
   "dependencies": {
     "bourbon": "^6.0.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-load-plugins": "^2.0.1",
+    "gulp-load-plugins": "^2.0.3",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
@@ -46,5 +47,14 @@
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
     "lodash.template": "^4.5.0"
-  }
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
+  },
+  "scripts": {
+  "preinstall": "npx npm-force-resolutions"
 }
+}
+
+  
+
