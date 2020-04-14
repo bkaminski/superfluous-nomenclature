@@ -4,7 +4,7 @@
   "description": "Custom WordPress theme exclusively for Wilmington Brew Works",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "homepage": "https://github.com/bkaminski/superfluous-nomenclature#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "kind-of": "^6.0.3",
     "minimist": "^1.2.5"
   },
   "dependencies": {
@@ -50,11 +51,5 @@
   },
   "resolutions": {
     "minimist": "^1.2.5"
-  },
-  "scripts": {
-  "preinstall": "npx npm-force-resolutions"
+  }
 }
-}
-
-  
-
