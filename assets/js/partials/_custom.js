@@ -102,9 +102,9 @@ $('.donation_note').hide();
 $('.wdgk_donation').addClass('form-control');
 $('.wdgk_donation').before('<h3>Gratuity is always welcomed for staff</h2><small>please enter dollar amount</small>');
 $('.wdgk_donation').attr('placeholder', '$' );
-$('.wdgk_donation_content').each(function() {
-	$(this).insertAfter($(this).parent().find('.woocommerce-additional-fields__field-wrapper'));
-});
+//$('.wdgk_donation_content').each(function() {
+//	$(this).insertAfter($(this).parent().find('.woocommerce-additional-fields__field-wrapper'));
+//});
 
 
 
