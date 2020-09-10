@@ -11,6 +11,8 @@ require_once(get_template_directory(). '/functions/widgets.php');
 require_once(get_template_directory(). '/functions/custom-post-types.php');
 //LOG IN SCREEN CUSTOMIZATION
 require_once(get_template_directory(). '/functions/log-in-screen.php');
+//GET WOOCOMMERCE HOOKS 
+require_once(get_template_directory(). '/functions/woocommerce-helpers.php');
 //GET WBW API
 //require_once(get_template_directory(). '/functions/beers-api.php');
 //GET URBAN CIDERS API

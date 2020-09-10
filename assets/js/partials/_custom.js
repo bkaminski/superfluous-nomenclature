@@ -26,6 +26,9 @@
 		$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
 	});
 
+	//Require all fields on Flights -- WooCommerce
+	$('select#drink-1, select#drink-2, select#drink-3, select#drink-4, select#drink-5').prop("required", true);
+
 	//REMOVE TITLE TAG FROM LINK HOVER
 	$('.nav-link').removeAttr('title');
 

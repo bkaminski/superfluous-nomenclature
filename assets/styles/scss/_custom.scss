@@ -39,6 +39,11 @@
   -o-animation: fadein 3s;
   animation: fadein 3s;
 }
+.covid-statement {
+	width: 100%;
+	background: #fff;
+	min-height: 60px;
+}
 
 @-webkit-keyframes fadein {
   from {
@@ -365,6 +370,11 @@ img {
 	@include breakpoint (md) {
 		
 	}
+}
+
+//Woo Fix Capitalization on Category Page
+.page-title {
+	text-transform: uppercase;
 }
 
 // Untappd Overrides

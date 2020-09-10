@@ -10,13 +10,10 @@
 	<main class="main-content-area pb-3 pt-3">
 		
 		<?php woocommerce_content(); ?>
-		
-	
-			
+
+		<div class="col text-center shop-button">
+			<a href="/store/merchandise/" class="btn btn-lg btn-blue rounded-0"><i class="fas fa-shopping-basket"></i> View Merchandise Shop</a>
+		</div>
 	</main>
-	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
-		<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
-			
-	</div>
 </div>
 <?php get_footer(); ?>
