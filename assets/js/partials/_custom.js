@@ -1,4 +1,5 @@
 (function( $ ) {
+	
 	$( document ).ready(function() {
 
 	//DELAY LOGO LOAD
@@ -105,11 +106,18 @@ $('.donation_note').hide();
 $('.wdgk_donation').addClass('form-control');
 $('.wdgk_donation').before('<h3>Gratuity is always welcomed for staff</h2><small>please enter dollar amount</small>');
 $('.wdgk_donation').attr('placeholder', '$' );
+
+if ($('p').hasClass('out-of-stock')) {
+	$('p.out-of-stock').closest('tr').css('display', 'none');
+};
 //$('.wdgk_donation_content').each(function() {
 //	$(this).insertAfter($(this).parent().find('.woocommerce-additional-fields__field-wrapper'));
 //});
 
 
+})
+
 
 
 })( jQuery );
+
