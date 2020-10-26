@@ -13,10 +13,6 @@ require_once(get_template_directory(). '/functions/custom-post-types.php');
 require_once(get_template_directory(). '/functions/log-in-screen.php');
 //GET WOOCOMMERCE HOOKS 
 require_once(get_template_directory(). '/functions/woocommerce-helpers.php');
-//GET WBW API
-//require_once(get_template_directory(). '/functions/beers-api.php');
-//GET URBAN CIDERS API
-//require_once(get_template_directory(). '/functions/ciders-api.php');
 //INCLUDE ACF IN SEARCH RESULTS
 require_once(get_template_directory(). '/functions/acf-search.php');
 

@@ -20,6 +20,9 @@ get_header(); ?>
 </div>
 <div class="container">
 	<main class="main-content-area pb-3 pt-3">
+		<div class="col-md-12 kill-padding">
+		<?php the_content(); ?>
+	</div>
 		<div class="row">
 			<div class="col-md-6">
 				<!-- BEER -->
@@ -37,8 +40,7 @@ get_header(); ?>
 						<?php the_field('specialty_item_1_price'); ?>
 					</span>
 					
-				</p>
-				
+				</p>	
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_2_name'); ?>
 						
@@ -50,7 +52,6 @@ get_header(); ?>
 					</span>
 					
 				</p>
-				
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_3_name'); ?>
 						
@@ -62,7 +63,6 @@ get_header(); ?>
 					</span>
 					
 				</p>
-			
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_4_name'); ?>
 						
@@ -74,7 +74,6 @@ get_header(); ?>
 					</span>
 					
 				</p>
-			
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_5_name'); ?>
 						
@@ -86,7 +85,6 @@ get_header(); ?>
 					</span>
 					
 				</p>
-		
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_6_name'); ?>
 						
@@ -109,6 +107,126 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_8_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_8_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_8_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_9_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_9_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_9_price'); ?>
+					</span>
+					
+				</p>
+
+				<!-- SODA WORKS -->
+				
+				<div class="soda--works">
+
+					<h2 class="text-uppercase pb-3 text-center">
+						<u><?php the_field('soda_works'); ?></u>
+							
+					</h2>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_1_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_1_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_1_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_2_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_2_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_2_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_3_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_3_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_3_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_4_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_4_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_4_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_5_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_5_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_5_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_6_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_6_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_6_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_7_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_7_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_7_price'); ?>
+						</span>
+						
+					</p>
+					<p class="h5 text-uppercase font-weight-bold">
+						<?php the_field('soda_works_8_name'); ?>
+							
+					</p>
+					<p class="pb-3">
+						<?php the_field('soda_works_8_desc'); ?>
+						<span class="float-right font-weight-bold">
+							<?php the_field('soda_works_8_price'); ?>
+						</span>
+						
+					</p>
+				</div>
 				<!-- WINE -->
 				<h2 class="text-uppercase pb-3 text-center">
 					<u><?php the_field('wine_offerings'); ?></u>
@@ -269,12 +387,20 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_9_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_9_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_9_price'); ?>
+					</span>
+					
+				</p>
 			</div>
 		</div>		
 	</main>
-	<div class="col-md-12 kill-padding">
-		<?php the_content(); ?>
-	</div>
 	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
 		<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
 				
