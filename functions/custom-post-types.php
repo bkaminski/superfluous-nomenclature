@@ -107,4 +107,4 @@ function register_employee_section_cpt() {
 function employee_tag() {
 	register_taxonomy_for_object_type('post_tag', 'employee-section');
 }
-add_action('init', 'employee-section');
+add_action('init', 'employee_tag');

@@ -22,6 +22,6 @@
 	</div>
 </nav>
 <div class="covid-statement text-center pt-3" style="margin-top: 110px;">
-	<p><a href="covid-operations">Read how taproom operations have changed during COVID</a></p>
+	<p><a href="<?php echo get_home_url(); ?>/covid-operations">Read how taproom operations have changed during COVID</a></p>
 </div>
 

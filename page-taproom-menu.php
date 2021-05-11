@@ -129,6 +129,39 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_10_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_10_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_10_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_11_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_11_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_11_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_12_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_12_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_12_price'); ?>
+					</span>
+					
+				</p>
 
 				<!-- SODA WORKS -->
 				
@@ -395,6 +428,39 @@ get_header(); ?>
 					<?php the_field('snack_9_desc'); ?>
 					<span class="float-right font-weight-bold">
 						<?php the_field('snack_9_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_10_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_10_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_10_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_11_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_11_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_11_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_12_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_12_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_12_price'); ?>
 					</span>
 					
 				</p>

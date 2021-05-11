@@ -12,7 +12,8 @@ require_once(get_template_directory(). '/functions/custom-post-types.php');
 //LOG IN SCREEN CUSTOMIZATION
 require_once(get_template_directory(). '/functions/log-in-screen.php');
 //GET WOOCOMMERCE HOOKS 
-require_once(get_template_directory(). '/functions/woocommerce-helpers.php');
+//require_once(get_template_directory(). '/functions/woocommerce-helpers.php');
+
 //INCLUDE ACF IN SEARCH RESULTS
 require_once(get_template_directory(). '/functions/acf-search.php');
 

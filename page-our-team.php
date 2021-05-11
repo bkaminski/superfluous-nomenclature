@@ -195,6 +195,8 @@ get_header(); ?>
 				'post_type' => 'employee-section',
 				'posts_per_page' => 30,
 				'category_name' => 'wbw-employees',
+				'orderby' => 'date',
+            	'order'   => 'ASC',
 			);
 			$my_query = null;
 			$my_query = new WP_Query($args);
@@ -206,10 +208,10 @@ get_header(); ?>
 						<?php } ?>
 						<div class="col-lg-4 mb-4">
 							<div class="card shadow h-100">
-								<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid aligncenter mt-2 shadow' ) ); ?>
+								<?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid aligncenter mt-2 shadow' ) ); ?>
 								<div class="card-body p-0">
 									<p class="card-title text-center pt-2"><?php the_title(); ?></p>
-									<div class="card-text text-center">
+									<div class="card-text p-3" style="font-size: 1rem;">
 										<?php the_content(); ?>
 											
 									</div>
@@ -221,6 +223,7 @@ get_header(); ?>
 						<div class="clearfix"></div>
 					<?php } ?>
 				<?php endwhile; } wp_reset_query(); ?>
+			</div>
 		</div>
 	</div>
 	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
