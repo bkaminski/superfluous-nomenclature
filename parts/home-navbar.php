@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md wbw-navbar-solid fixed-top shadow">
+<nav class="navbar navbar-expand-md wbw-navbar fixed-top shadow">
 	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 		<?php $uploads = wp_upload_dir(); 
 		echo '<img src="' . esc_url( $uploads['baseurl'] . '/2019/12/wbw-navbar-logo.svg' ) . '" width="133" alt="Wilmington Brew Works Logo">'; ?>
@@ -21,7 +21,3 @@
 		
 	</div>
 </nav>
-<div class="covid-statement text-center pt-3" style="margin-top: 110px;">
-	<p><a href="<?php echo get_home_url(); ?>/covid-operations">Read how taproom operations have changed during COVID</a></p>
-</div>
-

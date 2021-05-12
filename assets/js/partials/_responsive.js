@@ -8,10 +8,12 @@
 		if ($window.width() < 828) {
 			$('#wbwFrame').addClass('embed-responsive-1by1 pb-5').css('height', '200vh');
 			$('#logoVector').find('img').css('height', 'inherit');
+			$('.hours').removeClass('pl-5'); 
 		};
 		if ($window.width() >= 828) {
 			$('#wbwFrame').removeClass('embed-responsive-1by1 pb-5').addClass('embed-responsive-16by9').css('height', 'inherit');
 			$('#logoVector').find('img').css('height', '270');
+			$('.hours').addClass('pl-5'); 
 		}
 	}
 	
