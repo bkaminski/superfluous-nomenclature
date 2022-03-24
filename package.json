@@ -31,7 +31,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "kind-of": "^6.0.3",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   },
   "dependencies": {
     "bourbon": "^6.0.0",
