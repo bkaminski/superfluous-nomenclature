@@ -1,7 +1,7 @@
 	<footer class="wbw-footer">
 		<div class="container-fluid pt-3">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="left-foot text-center pt-3">
 						<?php $uploads = wp_upload_dir(); 
 						echo '<img class="img-fluid pb-3" src="' . esc_url( $uploads['baseurl'] . '/2019/11/proudly-independent-delaware.svg' ) . '" width="250px" alt="Proudly Independently Crafted in the First State">'; ?>
@@ -14,7 +14,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="middle-foot pt-4">
 						<h5 class="text-white pb-2">Email List:</h5>
 						<small class="mt-0 text-white">Subscribe to our emailing list and never miss an update.</small>
@@ -22,7 +22,14 @@
 
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3 pt-4 pl-5 hours">
+					<h5 class="text-white">Hours of Operation:</h5>
+					<p class="text-white">Mon - Tue: 5pm to 9pm<br />
+					Wed - Thurs: 3pm - 9pm<br />
+					Fri - Sat: 12pm to 10pm<br />
+					Sun: 12pm to 6pm</p>
+				</div>
+				<div class="col-md-3">
 					<div class="right-foot pt-4">
 						<h5 class="text-white">Wilmington Brew Works:</h5>
 						<address class="text-white">

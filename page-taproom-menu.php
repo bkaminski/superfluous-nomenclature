@@ -26,10 +26,10 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-6">
 				<!-- BEER -->
-				<h2 class="text-uppercase pb-3 text-center">
-					<u><?php the_field('specialty'); ?></u>
+				<figure class="text-uppercase pb-3 text-center">
+					<img src="<?php the_field('specialty_image'); ?>" class="img-fluid" alt="Artic Slush" />
 						
-				</h2>
+				</figure>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_1_name'); ?>
 						
