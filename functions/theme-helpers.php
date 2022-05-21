@@ -9,7 +9,7 @@ add_theme_support( 'title-tag' );
 //ALLOW POSTS AND PAGES FEATURED IMAGE
 add_theme_support('post-thumbnails');
 //ADD RSS/ATOM SUPPORT
-//add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'automatic-feed-links' );
 //ADD TAG SUPPORT TO PAGES
 function tags_support_all() {
     register_taxonomy_for_object_type('post_tag', 'page');
@@ -125,8 +125,6 @@ if (defined('WPSEO_VERSION')) {
  return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
  }); },~PHP_INT_MAX);
 }
-//AUTO UPDATE PLUGINS
-add_filter( 'auto_update_plugin', '__return_true' );
 
 //DISABLE GUTENBERG CSS
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );

@@ -11,7 +11,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<h1 class="display-3 text-center pg-title text-uppercase"><?php the_title(); ?></h1>
 	</div>
-	<div class="container pb-5">
+	<div class="container">
 		<div class="main-content-area pb-3">
 			<h2 class="text-center pt-3">Ownership Team:</h2>
 			<div class="card-deck mt-3 mb-3">
@@ -157,6 +157,40 @@ get_header(); ?>
 			<?php endif; ?>
 		</div>
 		<div class="card-deck">
+			<?php if( get_field('senior_shift_3_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_3'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_3_name');?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_3_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_3_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php if( get_field('senior_shift_4_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_4'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_4_name'); ?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_4_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_4_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="card-deck">
 			<div class="card mb-3">
 				<?php $image = get_field('ben_image'); if( !empty($image) ): ?>
 				<figure>
@@ -260,11 +294,12 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+
 	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
 		<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
 			
 	</div>
-
+</div>
 <?php if( ! is_page( array ('contact', 'events') ) ) {
 	get_template_part( 'parts/page', 'contact-us' );
 }?>	
