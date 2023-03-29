@@ -2,11 +2,6 @@
 	
 	$( document ).ready(function() {
 
-	//DELAY LOGO LOAD
-	var $rows = $('#logoHero').addClass('visible');
-	setTimeout(function() {
-		$rows.removeClass('invisible');
-	}, 1000);
 
 	//Parallax Background
 	$window = $(window);
@@ -70,19 +65,18 @@
     $('.eme_event_image').addClass('img-fluid mx-auto d-block');
 
     //REMOVE TRANSPARENT HEADER ON SCROLL
-   // $(function() {
+    $(function() {
     //caches a jQuery object containing the header element
-  //  var header = $(".wbw-navbar");
-   // $(window).scroll(function() {
-    //	var scroll = $(window).scrollTop();
-   // 	if (scroll >= 300) {
-    //		header.removeClass('wbw-navbar').addClass('wbw-navbar-solid shadow-lg');
-    //	} else {
-    //		header.removeClass("wbw-navbar-solid shadow-lg").addClass('wbw-navbar');
-    //	}
-   // });
-  //});
-//});
+    var header = $(".wbw-navbar");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 300) {
+        header.removeClass('wbw-navbar').addClass('wbw-navbar-solid shadow-lg');
+        } else {
+        header.removeClass("wbw-navbar-solid shadow-lg").addClass('wbw-navbar');
+    	}
+    });
+  });
 //TOGGLE FONTAWESOME ON CLICK
 document.addEventListener('DOMContentLoaded', function () {
 	$('.navbar-toggler').on('click', function () {

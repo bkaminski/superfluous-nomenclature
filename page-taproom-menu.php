@@ -25,23 +25,28 @@ get_header(); ?>
 	</div>
 		<div class="row">
 			<div class="col-md-6">
-				<!-- BEER -->
-				<h2 class="text-uppercase pb-3 text-center">
-					<u><?php the_field('specialty'); ?></u>
+				<!-- SLUSHIES -->
+				<figure class="text-uppercase pb-3 text-center">
+					<img src="<?php the_field('specialty_image'); ?>" class="img-fluid" alt="<?php the_field('specialty_item_1_name'); ?>" />
 						
-				</h2>
+				</figure>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_1_name'); ?>
 						
 				</p>
-				<p class="pb-3">
+				<p class="pb-5">
 					<?php the_field('specialty_item_1_desc'); ?>
 					<span class="float-right font-weight-bold">
 						<?php the_field('specialty_item_1_price'); ?>
 					</span>
-					
-				</p>	
-				<p class="h5 text-uppercase font-weight-bold">
+				</p>
+
+
+
+				<!-- COCKTAILS -->
+				<h2 class="text-uppercase pb-3 text-center pt-4"> <u>Cocktails</u></h2>
+				
+				<p class="h5 text-uppercase font-weight-bold pt-4">
 					<?php the_field('specialty_item_2_name'); ?>
 						
 				</p>
@@ -85,6 +90,7 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<?php if( get_field('specialty_item_6_name') ): ?>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_6_name'); ?>
 						
@@ -94,8 +100,10 @@ get_header(); ?>
 					<span class="float-right font-weight-bold">
 						<?php the_field('specialty_item_6_price'); ?>
 					</span>
-					
+				
 				</p>
+			    <?php endif; ?>
+			    <?php if( get_field('specialty_item_7_name') ): ?>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_7_name'); ?>
 						
@@ -107,6 +115,8 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<?php endif; ?>
+				<?php if( get_field('specialty_item_8_name') ): ?>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_8_name'); ?>
 						
@@ -118,6 +128,8 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<?php endif; ?>
+				<?php if( get_field('specialty_item_9_name') ): ?>
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_9_name'); ?>
 						
@@ -129,6 +141,46 @@ get_header(); ?>
 					</span>
 					
 				</p>
+				<?php endif; ?>
+				<?php if( get_field('specialty_item_10_name') ): ?>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_10_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_10_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_10_price'); ?>
+					</span>
+					
+				</p>
+				<?php endif; ?>
+				<?php if( get_field('specialty_item_11_name') ): ?>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_11_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_11_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_11_price'); ?>
+					</span>
+					
+				</p>
+				<?php endif; ?>
+				<?php if( get_field('specialty_item_12_name') ): ?>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('specialty_item_12_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('specialty_item_12_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('specialty_item_12_price'); ?>
+					</span>
+					
+				</p>
+				<?php endif; ?>
 
 				<!-- SODA WORKS -->
 				
@@ -138,6 +190,7 @@ get_header(); ?>
 						<u><?php the_field('soda_works'); ?></u>
 							
 					</h2>
+					<?php if( get_field('soda_works_1_name') ): ?>
 					<p class="h5 text-uppercase font-weight-bold">
 						<?php the_field('soda_works_1_name'); ?>
 							
@@ -149,6 +202,8 @@ get_header(); ?>
 						</span>
 						
 					</p>
+					<?php endif; ?>
+					<?php if( get_field('soda_works_2_name') ): ?>
 					<p class="h5 text-uppercase font-weight-bold">
 						<?php the_field('soda_works_2_name'); ?>
 							
@@ -160,6 +215,7 @@ get_header(); ?>
 						</span>
 						
 					</p>
+					<?php endif; ?>
 					<p class="h5 text-uppercase font-weight-bold">
 						<?php the_field('soda_works_3_name'); ?>
 							
@@ -232,6 +288,7 @@ get_header(); ?>
 					<u><?php the_field('wine_offerings'); ?></u>
 						
 				</h2>
+
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('wine_1_name'); ?>
 						
@@ -395,6 +452,39 @@ get_header(); ?>
 					<?php the_field('snack_9_desc'); ?>
 					<span class="float-right font-weight-bold">
 						<?php the_field('snack_9_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_10_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_10_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_10_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_11_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_11_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_11_price'); ?>
+					</span>
+					
+				</p>
+				<p class="h5 text-uppercase font-weight-bold">
+					<?php the_field('snack_12_name'); ?>
+						
+				</p>
+				<p class="pb-3">
+					<?php the_field('snack_12_desc'); ?>
+					<span class="float-right font-weight-bold">
+						<?php the_field('snack_12_price'); ?>
 					</span>
 					
 				</p>

@@ -9,7 +9,7 @@ add_theme_support( 'title-tag' );
 //ALLOW POSTS AND PAGES FEATURED IMAGE
 add_theme_support('post-thumbnails');
 //ADD RSS/ATOM SUPPORT
-//add_theme_support( 'automatic-feed-links' );
+add_theme_support( 'automatic-feed-links' );
 //ADD TAG SUPPORT TO PAGES
 function tags_support_all() {
     register_taxonomy_for_object_type('post_tag', 'page');
@@ -125,8 +125,6 @@ if (defined('WPSEO_VERSION')) {
  return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
  }); },~PHP_INT_MAX);
 }
-//AUTO UPDATE PLUGINS
-add_filter( 'auto_update_plugin', '__return_true' );
 
 //DISABLE GUTENBERG CSS
 add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
@@ -236,31 +234,8 @@ function search_title_highlight() {
     echo $title;
 }
 
-//DESTROY RENDER BLOCKING RESOURCES
-function defer_parsing_of_js($url)
-{
-  if (is_admin()) return $url; //don't break WP Admin
-  if (false === strpos($url, '.js')) return $url;
-  if (strpos($url, 'jquery.js')) return $url;
-  return str_replace(' src', ' defer src', $url);
-}
-add_filter('script_loader_tag', 'defer_parsing_of_js', 10);
 
 
-//REMOVE YOAST OG TAGS FROM EVENTS
-add_action('wp_head', 'remove_all_wpseo_og', 1);
-function remove_all_wpseo_og() {
-	if ( eme_is_events_page() ) {
-		remove_action( 'wpseo_head', array( $GLOBALS['wpseo_og'], 'opengraph' ), 30 );
-	}
-}
-
-add_action('wp_head', 'remove_all_wpseo_twitter', 1);
-function remove_all_wpseo_twitter() {
-	if ( eme_is_events_page() ) {
-		remove_action( 'wpseo_head' , array( 'WPSEO_Twitter' , 'get_instance' ) , 40 );
-	}
-}
 
 //WOOCOMMERCE SUPPORT
 function mytheme_add_woocommerce_support() {

@@ -32,42 +32,42 @@ add_action('admin_head', 'fontawesome_icon_dashboard');
 
 // ======================================================================================== //
 
-//add_action('init', 'register_beers_cpt');
-//function register_beers_cpt() {
-//	register_post_type('wbwbeers', [
-//		'label' => 'WBW Beers',
-//		'public' => true, 
-//		'capability_type' => 'post',
-//		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
-//		'taxonomies'  => array( 'category' ),
-//	]);
-//}
+add_action('init', 'register_beers_cpt');
+function register_beers_cpt() {
+	register_post_type('wbwbeers', [
+		'label' => 'Beers',
+		'public' => true, 
+		'capability_type' => 'post',
+		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'  => array( 'category' ),
+	]);
+}
 
 // Add Tag Support
-//function beer_tag() {
-//	register_taxonomy_for_object_type('post_tag', 'wbwbeers');
-//}
-//add_action('init', 'beer_tag');
+function beer_tag() {
+	register_taxonomy_for_object_type('post_tag', 'wbwbeers');
+}
+add_action('init', 'beer_tag');
 
 // ======================================================================================== //
 
 
-//add_action('init', 'register_ciders_cpt');
-//function register_ciders_cpt() {
-//	register_post_type('urban-orchard-works', [
-//		'label' => 'Urban Orchard',
-//		'public' => true, 
-//		'capability_type' => 'post',
-//		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
-//		'taxonomies'  => array( 'category' ),
-//	]);
-//}
+add_action('init', 'register_ciders_cpt');
+function register_ciders_cpt() {
+	register_post_type('urban-orchard-works', [
+		'label' => 'Ciders',
+		'public' => true, 
+		'capability_type' => 'post',
+		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+		'taxonomies'  => array( 'category' ),
+	]);
+}
 
 // Add Tag Support
-//function cider_tag() {
-//	register_taxonomy_for_object_type('post_tag', 'urban-orchard-works');
-//}
-//add_action('init', 'cider_tag');
+function cider_tag() {
+	register_taxonomy_for_object_type('post_tag', 'urban-orchard-works');
+}
+add_action('init', 'cider_tag');
 
 // ======================================================================================== //
 
@@ -107,4 +107,4 @@ function register_employee_section_cpt() {
 function employee_tag() {
 	register_taxonomy_for_object_type('post_tag', 'employee-section');
 }
-add_action('init', 'employee-section');
+add_action('init', 'employee_tag');
