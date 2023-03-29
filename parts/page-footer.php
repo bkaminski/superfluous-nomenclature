@@ -25,7 +25,11 @@
 				<div class="col-md-3 pt-4 pl-5 hours">
 					<h5 class="text-white">Hours of Operation:</h5>
 					<p class="text-white">Mon - Tue: 5pm to 9pm<br />
+<<<<<<< HEAD
 					Wed - Thurs: 3pm - 10pm<br />
+=======
+					Wed - Thurs: 3pm - 9pm<br />
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 					Fri - Sat: 12pm to 10pm<br />
 					Sun: 12pm to 6pm</p>
 				</div>

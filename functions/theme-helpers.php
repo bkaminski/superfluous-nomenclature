@@ -234,7 +234,10 @@ function search_title_highlight() {
     echo $title;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 
 
 //WOOCOMMERCE SUPPORT

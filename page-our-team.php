@@ -158,6 +158,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="card-deck">
+<<<<<<< HEAD
 			<?php if (get_field('senior_shift_1_name')) : ?>
 				<div class="card mb-3">
 					<?php $image = get_field('senior_shift_1');
@@ -175,6 +176,76 @@ get_header(); ?>
 					</div>
 				</div>
 			<?php endif; ?>
+=======
+			<?php if( get_field('senior_shift_1_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_1'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_1_name');?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_1_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_1_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php if( get_field('senior_shift_2_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_2'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_2_name'); ?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_2_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_2_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="card-deck">
+			<?php if( get_field('senior_shift_3_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_3'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_3_name');?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_3_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_3_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+			<?php if( get_field('senior_shift_4_name') ): ?>
+			<div class="card mb-3">
+				<?php $image = get_field('senior_shift_4'); if( !empty($image) ): ?>
+				<figure>
+					<img src="<?php echo $image['url']; ?>" class="card-img-top about--img" alt="<?php echo the_field('senior_shift_4_name'); ?>">
+				</figure>
+				<?php endif; ?>
+				<div class="card-body">
+					<h5 class="card-title text-center font-weight-bold"><?php echo the_field('senior_shift_4_name'); ?></h5>
+					<p class="card-text small">
+						<?php the_field('senior_shift_4_bio'); ?>
+							
+					</p>
+				</div>
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="card-deck">
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 			<div class="card mb-3">
 				<?php $image = get_field('lisa_image');
 				if (!empty($image)) : ?>
@@ -353,6 +424,7 @@ get_header(); ?>
 		</div>
 		<br />
 		<br />
+<<<<<<< HEAD
 	</div>
 <?php endwhile;
 	else : ?>
@@ -396,6 +468,55 @@ get_header(); ?>
 	<?php endwhile;
 	}
 	wp_reset_query(); ?>
+=======
+		<?php the_content(); ?>
+		<?php endwhile; else : ?>
+			<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
+		<!-- Employee Loop -->
+		<div class="col">
+			<h4 class="text-center text-uppercase">Employees</h4>
+			<?php $args=array(
+				'post_type' => 'employee-section',
+				'posts_per_page' => 30,
+				'category_name' => 'wbw-employees',
+				'orderby' => 'date',
+            	'order'   => 'ASC',
+			);
+			$my_query = null;
+			$my_query = new WP_Query($args);
+			if( $my_query->have_posts() ) {
+				$i = 0;
+				while ($my_query->have_posts()) : $my_query->the_post();
+					if($i % 3 == 0) { ?>
+						<div class="row">
+						<?php } ?>
+						<div class="col-lg-4 mb-4">
+							<div class="card shadow h-100">
+								<?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid aligncenter mt-2 shadow' ) ); ?>
+								<div class="card-body p-0">
+									<p class="card-title text-center pt-2"><?php the_title(); ?></p>
+									<div class="card-text p-3" style="font-size: 1rem;">
+										<?php the_content(); ?>
+											
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php $i++; if($i != 0 && $i % 3 == 0) { ?>
+						</div>
+						<div class="clearfix"></div>
+					<?php } ?>
+				<?php endwhile; } wp_reset_query(); ?>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12 pt-3 pb-3 beer-tags shadow">
+		<?php the_tags('<span class="badge badge-secondary"><i class="fas fa-tags"></i> Related:</span>  ', ', '); ?>
+			
+	</div>
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 </div>
 </div>
 </div>

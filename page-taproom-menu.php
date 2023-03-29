@@ -25,9 +25,15 @@ get_header(); ?>
 	</div>
 		<div class="row">
 			<div class="col-md-6">
+<<<<<<< HEAD
 				<!-- SLUSHIES -->
 				<figure class="text-uppercase pb-3 text-center">
 					<img src="<?php the_field('specialty_image'); ?>" class="img-fluid" alt="<?php the_field('specialty_item_1_name'); ?>" />
+=======
+				<!-- BEER -->
+				<figure class="text-uppercase pb-3 text-center">
+					<img src="<?php the_field('specialty_image'); ?>" class="img-fluid" alt="Artic Slush" />
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 						
 				</figure>
 				<p class="h5 text-uppercase font-weight-bold">
@@ -141,8 +147,11 @@ get_header(); ?>
 					</span>
 					
 				</p>
+<<<<<<< HEAD
 				<?php endif; ?>
 				<?php if( get_field('specialty_item_10_name') ): ?>
+=======
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_10_name'); ?>
 						
@@ -154,8 +163,11 @@ get_header(); ?>
 					</span>
 					
 				</p>
+<<<<<<< HEAD
 				<?php endif; ?>
 				<?php if( get_field('specialty_item_11_name') ): ?>
+=======
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_11_name'); ?>
 						
@@ -167,8 +179,11 @@ get_header(); ?>
 					</span>
 					
 				</p>
+<<<<<<< HEAD
 				<?php endif; ?>
 				<?php if( get_field('specialty_item_12_name') ): ?>
+=======
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 				<p class="h5 text-uppercase font-weight-bold">
 					<?php the_field('specialty_item_12_name'); ?>
 						
@@ -180,7 +195,10 @@ get_header(); ?>
 					</span>
 					
 				</p>
+<<<<<<< HEAD
 				<?php endif; ?>
+=======
+>>>>>>> 472ccfc63be2e5778f999e5f53a8a5efa9dcec62
 
 				<!-- SODA WORKS -->
 				
